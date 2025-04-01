@@ -4,10 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="css/simple.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
   <title>Document</title>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        events: '../test.json'
+      });
+      calendar.render();
+    });
+  </script>
 </head>
 <body>
   Tom side
+  <div style="padding: 100px;">
+    <div id="calendar"></div>
+  </div>
 </body>
 </html>

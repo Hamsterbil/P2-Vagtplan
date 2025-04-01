@@ -5,6 +5,7 @@
   "main": "app.js",
   "type": "module",
   "dependencies": {
+    "fullcalendar": "^6.1.15",
     "mysql": "^2.18.1"
   },
   "devDependencies": {

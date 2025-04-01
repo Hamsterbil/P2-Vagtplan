@@ -51,20 +51,23 @@ function securePath(userPath){
 
 
 /* send contents as file as response */
-function fileResponse(res, filename){
-  const sPath=securePath(filename);
-  console.log("Reading:"+sPath);
+function fileResponse(res, filename) {
+  // Strip query parameters from the filename
+  const cleanFilename = filename.split('?')[0]; // Remove anything after '?'
+  const sPath = securePath(cleanFilename); // Secure the path
+  console.log("Reading: " + sPath);
+
   fs.readFile(sPath, (err, data) => {
     if (err) {
       console.error(err);
-      errorResponse(res,404,String(err));
-    }else {
+      errorResponse(res, 404, String(err));
+    } else {
       res.statusCode = 200;
-      res.setHeader('Content-Type', guessMimeType(filename));
+      res.setHeader('Content-Type', guessMimeType(cleanFilename));
       res.write(data);
       res.end('\n');
     }
-  })
+  });
 }
 
 //A helper function that converts filename suffix to the corresponding HTTP content type
