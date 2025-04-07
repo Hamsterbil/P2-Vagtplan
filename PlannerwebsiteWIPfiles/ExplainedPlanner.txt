@@ -1,0 +1,165 @@
+ExplainedPlanner.txt
+=====================
+
+Purpose:
+--------
+This HTML file (`plannerPage.html`) provides the user interface for viewing and managing shift schedules. It integrates the FullCalendar.io library to display shifts visually. It includes different functionalities based on whether the logged-in user is an "Admin" or a regular user. Key features include displaying a calendar, allowing Admins to upload and manage schedules via JSON files (with a preview/confirmation step), and allowing regular users to view the schedule and toggle between seeing all shifts or only their own.
+
+Dependencies:
+-------------
+* **FullCalendar.io:** A JavaScript library for creating interactive calendars. Included via CDN link in the `<head>`.
+* **Browser Features:** Uses `sessionStorage` (to get the logged-in username) and `localStorage` (to persist the main shift schedule and user preferences).
+
+HTML Structure (`<body>`):
+-------------------------
+The page is structured using several main `div` elements within a `.container`:
+
+1.  **`<header>`:** Displays the page title ("Shift Planner") and user-specific controls on the right (`.header-right`):
+    * `#currentUser`: Shows the logged-in username.
+    * `#specializationDisplay`: Shows the user's selected role preference.
+    * `#settingsBtn`: Button to open the role selection modal.
+    * `.logout-btn`: Button to log out.
+
+2.  **`<div id="adminControlsPanel">`:** (Visible only to Admins - `.admin-only` class)
+    * Contains controls for managing the schedule via JSON files.
+    * `#jsonUpload`: File input (`<input type="file">`) for selecting a JSON schedule file.
+    * `#loadScheduleBtn`: Button to trigger the loading of the selected JSON file for preview.
+    * `#confirmSection`: A hidden `div` containing:
+        * `#confirmScheduleBtn`: Button to publish the previewed schedule, making it live.
+        * `#cancelPreviewBtn`: Button to discard the preview and revert to the live schedule view.
+    * `#adminInstruction`: Text providing guidance to the admin.
+
+3.  **`<div class="user-info">`:** Displays information about the logged-in user:
+    * `#displayUser`: Shows the username again.
+    * `#shiftCount`: Shows the number of upcoming shifts assigned to the current user (from the live schedule).
+    * `#viewToggleBtn`: (Visible only to non-admins - `.non-admin-only` class) Button to toggle between viewing "All Shifts" and "My Shifts Only".
+
+4.  **`<div id="errorMessage">`:** A placeholder `div` used by JavaScript (`showError` function) to display temporary error or success messages.
+
+5.  **`<div id='calendar'>`:** The main container where the FullCalendar instance will be rendered by the JavaScript.
+
+6.  **`<div id="settingsModal">`:** (Initially hidden - `.modal` class)
+    * A pop-up dialog for users to select their role/specialization preference (`Runner`, `ER`, `Fire`).
+    * Contains `.specialization-option` divs and a close button (`#closeModalBtn`).
+
+CSS Styling (`<style>` in `<head>`):
+----------------------------------
+* Provides basic layout using CSS for the container, header, user info panel, admin panel, buttons, modal, etc.
+* Defines colors for different roles (`.runner`, `.er`, `.fire`) used in the modal and for FullCalendar event backgrounds.
+* Includes helper classes `.admin-only` and `.non-admin-only` to control visibility based on user role (JavaScript adds/removes the `display` style).
+* Styles FullCalendar event appearance (`.fc-event.*`, `.fc-event-title`).
+
+JavaScript Logic (`<script>` at end of `<body>`):
+-------------------------------------------------
+
+### 1. State Variables:
+
+These variables hold the application's current state:
+
+* `shiftData` (Object): Holds the **live, published** shift schedule. Loaded from `localStorage` on startup and saved back whenever the live schedule is confirmed or modified (e.g., by admin removal). Structure: `{ "shiftId": [{user: "...", spec: "..."}, ...], ... }`.
+* `stagedShiftData` (Object | null): Holds the schedule loaded from a JSON file by the Admin for **preview**. It's `null` initially and when no preview is active. It's copied to `shiftData` upon confirmation.
+* `currentUser` (String): The username of the logged-in user, retrieved from `sessionStorage`.
+* `currentSpecialization` (String): The user's selected role preference (e.g., 'runner', 'er', 'fire'), loaded from `localStorage` (`userSpec_USERNAME`). Note: This version primarily stores the preference; assignment logic uses the 'spec' from the JSON.
+* `isAdmin` (Boolean): `true` if `currentUser` is exactly "Admin", `false` otherwise. Used extensively to control UI and functionality.
+* `viewMode` (String): Determines schedule view for non-admins ('all' or 'mine'). Loaded from `localStorage` (`viewMode_USERNAME`), defaults to 'all'. Admins always effectively use 'all'.
+* `calendarInstance` (Object | null): Holds the FullCalendar object instance after initialization.
+
+### 2. Mappings:
+
+* `shiftKeyToTimeMap`, `shiftIndexToTimeMap` (Objects): Used to map between shift names used in the JSON ("morning", "noon", etc.) and their corresponding internal index (1-5) and start/end times for FullCalendar display.
+
+### 3. Initialization (`initializeApp`, `initializeCalendar`):
+
+* `initializeApp`: The main starting point, called when the DOM is ready.
+    * Checks if `currentUser` exists in `sessionStorage`; redirects to login if not.
+    * Loads `shiftData` (live schedule) from `localStorage`.
+    * Loads `currentSpecialization` and `viewMode` preferences from `localStorage` for the current user.
+    * Sets up basic UI text (username, role).
+    * Shows/hides the `#adminControlsPanel` based on `isAdmin`.
+    * Sets up the `#viewToggleBtn` visibility and initial text for non-admins based on `viewMode`.
+    * Calls `initializeCalendar()` to set up FullCalendar.
+    * Calls `updateShiftCount()` to display the user's initial shift count from the live data.
+    * Calls `setupEventListeners()` to attach click handlers.
+* `initializeCalendar`:
+    * Creates the FullCalendar instance (`new FullCalendar.Calendar(...)`) targeting the `<div id='calendar'>`.
+    * Configures basic options (initial view, header buttons, `dateClick` and `eventClick` handlers).
+    * Calls `calendarInstance.render()` to draw the calendar structure.
+    * Calls `displayLiveSchedule()` to perform the initial population of events based on the loaded `shiftData` and the user's `viewMode`.
+
+### 4. Event Generation & Display (`generateEventsFromData`, `displayLiveSchedule`, `displayStagedSchedule`):
+
+* `generateEventsFromData(dataToFormat)`: **Crucial function.**
+    * Takes a shift data object (`shiftData` or `stagedShiftData`) as input.
+    * Iterates through each `shiftId` in the input data.
+    * Determines if filtering is needed (`applyUserFilter = !isAdmin && viewMode === 'mine'`).
+    * Filters the list of users assigned to the shift if `applyUserFilter` is true.
+    * **Only if** there are relevant users *after* filtering, it calculates the correct date/time for the shift based on the current week structure and the `shiftId`.
+    * Creates a FullCalendar event object containing `id`, `title` (showing relevant users), `start`, `end`, `className` (for color), and `extendedProps` (storing *all* original users for the slot).
+    * Returns an array of these event objects.
+* `displayLiveSchedule()`: Called on initialization and after confirming/cancelling a preview.
+    * Calls `generateEventsFromData(shiftData)` to get events based on the current live data and user `viewMode`.
+    * Updates the calendar visually using `calendarInstance.setOption('events', liveEvents)`.
+* `displayStagedSchedule()`: Called after an admin successfully loads a JSON for preview.
+    * Calls `generateEventsFromData(stagedShiftData)` (forcing an 'all' view temporarily) to get events for the preview.
+    * Updates the calendar visually using `calendarInstance.setOption('events', stagedEvents)`.
+
+### 5. Admin JSON Upload & Confirmation (`processUploadedSchedule`, `confirmAndPublishSchedule`, `cancelSchedulePreview`):
+
+* `processUploadedSchedule(file)`: Triggered when Admin clicks "Load Preview".
+    * Uses `FileReader` to read the selected JSON file.
+    * Parses the JSON text. Validates the structure (must be an array).
+    * Iterates through the array, validating each shift object (`date`, `shift`, `spec`, `user`).
+    * Builds the `newStagedData` object using the internal `shiftId` format ("index-dayOfWeek"). Logs warnings for invalid items.
+    * Stores the result in the global `stagedShiftData` variable.
+    * Calls `displayStagedSchedule()` to show the preview on the calendar.
+    * Updates the UI to show the "Confirm" and "Cancel" buttons.
+* `confirmAndPublishSchedule()`: Triggered by the "Confirm & Publish" button.
+    * Checks if `stagedShiftData` exists.
+    * Copies `stagedShiftData` to the live `shiftData` variable.
+    * Clears `stagedShiftData` (exits preview mode).
+    * Calls `saveShifts()` to persist the new `shiftData` to `localStorage`.
+    * Calls `displayLiveSchedule()` to update the calendar to the now-live data.
+    * Resets the Admin UI (hides confirm/cancel buttons, clears file input).
+    * Calls `updateShiftCount()` for the admin.
+* `cancelSchedulePreview()`: Triggered by the "Cancel Preview" button.
+    * Clears `stagedShiftData`.
+    * Calls `displayLiveSchedule()` to revert the calendar view to the previously live `shiftData`.
+    * Resets the Admin UI.
+
+### 6. Event Interaction (`handleEventClick`, `handleDateClick`):
+
+* These functions are attached to the calendar's `eventClick` and `dateClick` options.
+* **Both** functions now first check if the Admin is in preview mode (`stagedShiftData !== null`). If so, they show a message and `return`, preventing any action on the previewed schedule.
+* `handleEventClick`: If not in preview mode and the user is Admin, it proceeds with the logic to remove a shift from the **live** schedule:
+    * Gets the `event` object and `shiftId`.
+    * Confirms the removal with the Admin using `confirm()`.
+    * If confirmed:
+        * Deletes the entry from the live `shiftData` object (`delete shiftData[shiftId]`).
+        * Calls `saveShifts()` to update `localStorage`.
+        * Calls `event.remove()` to visually remove the event from the calendar immediately.
+        * Calls `updateShiftCount()`.
+    * Non-admins clicking events on the live schedule trigger an informational message but no action.
+* `handleDateClick`: If not in preview mode and the user is Admin, it currently just logs the click and shows a message (no add functionality is implemented via clicking dates). Non-admins trigger an informational message.
+
+### 7. User Settings (`settingsModal`, Role Selection Listener in `setupEventListeners`):
+
+* The "Change Role" button (`#settingsBtn`) opens the `#settingsModal`.
+* Clicking a role (`.specialization-option`) inside the modal updates the `currentSpecialization` state variable, saves this preference to `localStorage` (key: `userSpec_USERNAME`), updates the display (`#specializationDisplay`), and closes the modal.
+
+### 8. Utility Functions:
+
+* `saveShifts()`: Saves the current state of the **live** `shiftData` object to `localStorage` after converting it to a JSON string.
+* `updateShiftCount()`: Recalculates and updates the text in `#shiftCount` based on how many shifts in the **live** `shiftData` are assigned to the `currentUser`.
+* `showError(message, isSuccess)`: Displays messages in the `#errorMessage` div. Green for success, red for error. Clears automatically after 5 seconds.
+* `closeModal()`: Hides the `#settingsModal`.
+* `logout()`: Removes `currentUser` from `sessionStorage` and redirects to `login.html`.
+
+### 9. Event Listeners Setup (`setupEventListeners`, `DOMContentLoaded`):
+
+* `setupEventListeners`: This function sets up all the necessary `.addEventListener` calls for buttons and modals *after* the `initializeApp` has run.
+    * Attaches listeners for `#settingsBtn`, `.specialization-option` clicks, and `#closeModalBtn`.
+    * **Conditionally** attaches listeners for Admin controls (`#loadScheduleBtn`, `#confirmScheduleBtn`, `#cancelPreviewBtn`) only if `isAdmin` is true.
+    * **Conditionally** attaches a listener for the non-admin view toggle button (`#viewToggleBtn`) only if `isAdmin` is false. The toggle handler updates `viewMode`, saves it, updates button text, and calls `displayLiveSchedule()` to refresh the view.
+* `DOMContentLoaded`: The entire application startup is wrapped in an event listener for `DOMContentLoaded`. This ensures that the HTML is fully parsed and ready before the JavaScript attempts to access DOM elements or initialize FullCalendar. It calls `initializeApp` to begin the process.
+
+This structure creates a functional shift planner with distinct roles, schedule management via JSON upload (including a safe preview stage), and user-configurable viewing options, all managed within the browser using JavaScript, `localStorage`, and the FullCalendar library.
