@@ -5,6 +5,7 @@
   "main": "app.js",
   "type": "module",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "fullcalendar": "^6.1.15",
     "mysql": "^2.18.1"
   },
