@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preference</title>
+    <script defer src="scheduler.js"></script>
+</head>
+<body>
+    <h1>Preferences for scheduling</h1>
+    <form id="preferencesForm">
+        <label>On a scale of 1 to 10, how much do you prefer to work week days (Monday to Friday)? (1 = Would rather not, 10 = Preferred)</label><br>
+        <input type="number" id="weekdays" min="1" max="10" required><br>
+        <label>On a scale of 1 to 10, how much do you prefer to work weekends (Saturday and Sunday)? (1 = Would rather not, 10 = Preferred)</label><br>
+        <input type="number" id="weekends" min="1" max="10" required><br>
+        <br>
+
+        <label>Are there any days you would prefer to work? (Monday to Sunday)</label><br>
+        <input type="checkbox" id="Monday" name="preferredDays" value="Monday">
+        <label for="Monday"> Monday</label><br>
+
+        <input type="checkbox" id="Tuesday" name="preferredDays" value="Tuesday">
+        <label for="Tuesday"> Tuesday</label><br>
+
+        <input type="checkbox" id="Wednesday" name="preferredDays" value="Wednesday">
+        <label for="Wednesday"> Wednesday</label><br>
+
+        <input type="checkbox" id="Thursday" name="preferredDays" value="Thursday">
+        <label for="Thursday"> Thursday</label><br>
+
+        <input type="checkbox" id="Friday" name="preferredDays" value="Friday">
+        <label for="Friday"> Friday</label><br>
+
+        <input type="checkbox" id="Saturday" name="preferredDays" value="Saturday">
+        <label for="Saturday"> Saturday</label><br>
+
+        <input type="checkbox" id="Sunday" name="preferredDays" value="Sunday">
+        <label for="Sunday"> Sunday</label><br>
+
+        <br>
+        <label>Are there any days you would prefer NOT to work? (Monday to Sunday)</label><br>
+        <input type="checkbox" id="notMonday" name="notPreferredDays" value="notMonday">
+        <label for="notMonday"> Monday</label><br>
+
+        <input type="checkbox" id="notTuesday" name="notPreferredDays" value="notTuesday">
+        <label for="notTuesday"> Tuesday</label><br>
+
+        <input type="checkbox" id="notWednesday" name="notPreferredDays" value="notWednesday">
+        <label for="notWednesday"> Wednesday</label><br>
+
+        <input type="checkbox" id="notThursday" name="notPreferredDays" value="notThursday">
+        <label for="notThursday"> Thursday</label><br>
+
+        <input type="checkbox" id="notFriday" name="notPreferredDays" value="notFriday">
+        <label for="notFriday"> Friday</label><br>
+        
+        <input type="checkbox" id="notSaturday" name="notPreferredDays" value="notSaturday">
+        <label for="notSaturday"> Saturday</label><br>
+        
+        <input type="checkbox" id="notSunday" name="notPreferredDays" value="notSunday">
+        <label for="notSunday"> Sunday</label><br>
+
+        <p>On a scale of 1 to 10, rate each shift based on your preferences. (1 = Would rather not, 10 = Preferred)</p>
+
+        <label for="shift1">07:00 to 14:24</label><br>
+        <input type="number" id="shift1" name="shift1" min="1" max="10" required><br><br>
+
+        <label for="shift2">07:00 to 15:00</label><br>
+        <input type="number" id="shift2" name="shift2" min="1" max="10" required><br><br>
+
+        <label for="shift3">08:00 to 15:24</label><br>
+        <input type="number" id="shift3" name="shift3" min="1" max="10" required><br><br>
+
+        <label for="shift4">08:00 to 16:00</label><br>
+        <input type="number" id="shift4" name="shift4" min="1" max="10" required><br><br>
+
+        <label for="shift5">11:00 to 19:00</label><br>
+        <input type="number" id="shift5" name="shift5" min="1" max="10" required><br><br>
+
+        <label for="shift6">15:00 to 23:00</label><br>
+        <input type="number" id="shift6" name="shift6" min="1" max="10" required><br><br>
+
+        <label for="shift7">23:00 to 07:00</label><br>
+        <input type="number" id="shift7" name="shift7" min="1" max="10" required><br><br>
+
+        <button type="submit" id="submitBtn">Submit</button>
+    </form>
+    <script>
+        
+    </script>
+</body>
+</html>
