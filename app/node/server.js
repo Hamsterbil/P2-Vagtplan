@@ -31,7 +31,7 @@ const port = 3000;
 
 /* ***                 Setup Serving of files ***                  */ 
 
-const publicResources="node/PublicResources/";
+const publicResources="app/node/PublicResources/";
 //secture file system access as described on 
 //https://nodejs.org/en/knowledge/file-system/security/introduction/
 const rootFileSystem=process.cwd();
