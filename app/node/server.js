@@ -156,21 +156,18 @@ function collectPostBody(req){
   return new Promise(collectPostBodyExecutor);
 }
 
-
-
 /* extract the enclosed JSON object in body of a POST to JavaScript Object */ 
 /* Aught also to check that Content-Type is application/json before parsing*/
 function extractJSON(req){
   if(isJsonEncoded(req.headers['content-type']))
    return collectPostBody(req).then(body=> {
-     let x= JSON.parse(body);
+     let x = JSON.parse(body);
      //console.log(x);
      return x;
   });
   else
     return Promise.reject(new Error(ValidationError)); //create a rejected promise
 }
-
 
 /* extract the enclosed forms data in the pody of POST */
 /* Returns a promise */
@@ -204,7 +201,6 @@ function isJsonEncoded(contentType){
   return (ctType==="application/json"); 
 //would be more robust to use the content-type module and  contentType.parse(..)
 }
-
 
 function reportError(res,error){
   if(error.message===ValidationError){

@@ -1,9 +1,5 @@
 'use strict'
 
-// import { selectUserEntries } from "./app.js";
-// let currentUser;
-
-
 /* *******************************************************
 * Helper functions to communicate with server
 * ********************************************************* */
@@ -20,9 +16,19 @@ function jsonParse(response) {
     throw new Error("Non HTTP OK response");
 }
 
+// function jsonParse(response) {
+//   if (response.headers.get("Content-Type") === "application/json") {
+//     return response.json().then(data => {
+//       return { ok: response.ok, status: response.status, data }; // Include status and data
+//     });
+//   } else {
+//     return Promise.resolve({ ok: response.ok, status: response.status, data: null }); // Gracefully handle non-JSON responses
+//   }
+// }
+
 //GET a json document at URL
 function jsonFetch(url) {
-  return  fetch(url).then(jsonParse);
+  return fetch(url).then(jsonParse);
 }
 
 //POST a json document in data to URL
@@ -38,10 +44,6 @@ function jsonPost(url = '', data={}) {
     };
   return fetch(url,options).then(jsonParse);
 }
-
-/* *******************************************************
-* BMI APPLICATION CODE 
-* ********************************************************* */
 
 //some helper functions to show/hide/enable/diable elements of the HTML page
 function hideElem(elem) {
@@ -100,18 +102,12 @@ function loginForm() {
 
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-
     try {
-      const response = await fetch('/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password }),
-      });
+      const response = await jsonPost("/login", { username, password })
 
-      if (response.ok) {
+      if (response.success) {
         sessionStorage.setItem('currentUser', username);
-        window.location.href = 'html/planner.html';
-        currentUser = selectUserEntries(username);
+        window.location.href = '/html/planner.html';
       } else {
         document.getElementById('errorMessage').textContent = "Incorrect username or password";
         document.getElementById('errorMessage').style.display = 'block';
@@ -121,3 +117,32 @@ function loginForm() {
     }
   });
 }
+
+function preferenceForm() {
+  document.getElementById('preferenceForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const weekdays = document.getElementById('weekdays').value;
+    const weekends = document.getElementById('weekends').value;
+    const preferred = document.getElementById('preferred').value;
+    const not_preferred = document.getElementById('not_preferred').value;
+    const shifts = document.getElementById('shifts').value;
+
+    try {
+
+    } catch (err) {
+      console.error(err);
+    }
+  })
+}
+
+// function updatePreferences(weekdays, weekends, preferred, not_preferred, shifts) {
+//   let user = currentUser.preferences;
+//   user.weekdays = weekdays;
+//   user.weekends = weekends;
+//   for (let i = 0; i < 7; i++) {
+//     user.preferred[i] = preferred[i];
+//     user.notPreferred[i] = not_preferred[i];
+//     user.shiftPreference[i] = shifts[i];
+//   }
+// }
