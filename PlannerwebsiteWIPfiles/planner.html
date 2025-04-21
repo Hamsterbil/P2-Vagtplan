@@ -157,20 +157,25 @@
         function showError(message, isSuccess = false) { const el = document.getElementById('errorMessage'); if (!message) { el.classList.add('d-none'); return; } el.textContent = message; el.classList.remove('d-none', 'alert-danger', 'alert-success'); el.classList.add(isSuccess ? 'alert-success' : 'alert-danger'); setTimeout(() => { if (el.textContent === message) { el.classList.add('d-none'); } }, 5000); }
         function logout() { sessionStorage.removeItem('currentUser'); window.location.href = 'login.html'; }
 
-        // Connect buttons and inputs to functions
-        function setupEventListeners() {
-            // Settings Button
-            const settingsBtn = document.getElementById('settingsBtn');
-            if (settingsBtn) {
-                settingsBtn.addEventListener('click', () => {
-                    if (isAdmin) { console.log("Admin settings click."); generateAdminSettingsSliders(); if (adminSettingsModalInstance) adminSettingsModalInstance.show(); }
-                    else { console.log("Non-admin settings click -> redirect."); window.location.href = 'preferences.html'; }
-                });
-            }
-
-            // Admin: Save Day Settings Button
-            const saveSettingsBtn = document.getElementById('saveDaySettingsBtn');
-            if (saveSettingsBtn && isAdmin) { saveSettingsBtn.addEventListener('click', saveAdminDaySettings); }
+       // Connect buttons and inputs to functions
+    function setupEventListeners() {
+        // Settings Button
+        const settingsBtn = document.getElementById('settingsBtn');
+        if (settingsBtn) {
+            settingsBtn.addEventListener('click', () => {
+                if (isAdmin) { 
+                    console.log("Admin settings click."); 
+                    generateAdminSettingsSliders(); 
+                    if (adminSettingsModalInstance) adminSettingsModalInstance.show(); 
+                }
+                else { 
+                    console.log("Non-admin settings click -> redirect."); 
+                    // Note: Currently redirects to Preferences.html in the same directory
+                    // If path changes in future, update this to reflect new location
+                    window.location.href = 'Preferences.html'; 
+                }
+            });
+        }
 
             // Admin schedule management buttons
             if (isAdmin) {
