@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shift Planner - Preferences</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="../js/client.js"></script>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <style>
+        /* Basic body styling */
+        body {
+            background-color: #f8f9fa;
+            padding-top: 20px;
+        }
+        /* Container for the main preferences form */
+        .preferences-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        /* Styling for each section within the form */
+        .form-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        /* --- Styles for dynamically generated content --- */
+        /* Grid layout for day checkboxes */
+        .day-checkboxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Responsive grid */
+            gap: 10px;
+            margin-top: 15px;
+        }
+        /* Flex container for each checkbox item (input + label) */
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+        }
+        /* Style for the actual checkbox input */
+        .checkbox-item input {
+            margin-right: 8px;
+            transform: scale(1.3); /* Make checkboxes slightly larger */
+        }
+        /* Grid layout for shift rating items */
+        .shift-rating {
+            display: grid;
+            grid-template-columns: 1fr; /* Default to 1 column on small screens */
+            gap: 15px;
+        }
+        /* Make shift rating 2 columns on medium screens and up */
+        @media (min-width: 768px) {
+             .shift-rating {
+                 grid-template-columns: 1fr 1fr;
+                 gap: 20px;
+             }
+        }
+        /* Flex container for each shift rating item (label + select) */
+        .shift-rating-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+        /* Styling for the shift time label */
+        .shift-label {
+            margin-right: 15px;
+            flex-shrink: 0; /* Prevent label from shrinking */
+        }
+        /* Styling for the shift rating select input */
+        .shift-rating-item .form-select {
+              width: 100px; /* Fixed width for the select dropdown */
+              flex-shrink: 0; /* Prevent select from shrinking */
+        }
+        /* --- End dynamic content styles --- */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border rounded mb-4 p-2">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Shift Planner</a>
+                <div class="ms-auto d-flex align-items-center">
+                    <span class="navbar-text me-2 small" id="currentUser">User</span>
+                    <button class="btn btn-sm btn-danger" onclick="window.location.href='planner.html'">Back to Planner</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="preferences-container">
+            <h2 class="mb-4">Your Scheduling Preferences</h2>
+
+            <form id="preferenceForm">
+                <div class="form-section">
+                    <div class="row mb-3">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <label for="weekdays" class="form-label">Weekday Preference (Mon-Fri)</label>
+                            <select class="form-select" id="weekdays" required>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="weekends" class="form-label">Weekend Preference (Sat-Sun)</label>
+                            <select class="form-select" id="weekends" required>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h5 class="mb-3">Preferred Work Days</h5>
+                    <p class="text-muted">Check all days you would prefer to work</p>
+                    <div class="day-checkboxes" id="preferredDaysCheckboxes">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h5 class="mb-3">Days to Avoid</h5>
+                    <p class="text-muted">Check all days you would prefer NOT to work</p>
+                    <div class="day-checkboxes" id="notPreferredDaysCheckboxes">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h5 class="mb-3">Shift Time Preferences</h5>
+                    <p class="text-muted">Rate each shift (1 = Would rather not, 10 = Preferred)</p>
+                    <div class="shift-rating" id="shiftRatingContainer">
+                        <div class="shift-rating-item">
+                            <label for="shift1" class="shift-label">07:00 to 14:24</label>
+                        </div>
+                        <div class="shift-rating-item">
+                            <label for="shift2" class="shift-label">07:00 to 15:00</label>
+                        </div>
+                        <div class="shift-rating-item">
+                            <label for="shift3" class="shift-label">08:00 to 15:24</label>
+                        </div>
+                        <div class="shift-rating-item">
+                            <label for="shift4" class="shift-label">08:00 to 16:00</label>
+                        </div>
+                        <div class="shift-rating-item">
+                            <label for="shift5" class="shift-label">11:00 to 19:00</label>
+                        </div>
+                        <div class="shift-rating-item">
+                            <label for="shift6" class="shift-label">15:00 to 23:00</label>
+                        </div>
+                        <div class="shift-rating-item">
+                            <label for="shift7" class="shift-label">23:00 to 07:00</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="submit" class="btn btn-primary">Save Preferences</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Wait for the DOM to be fully loaded before running scripts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Setup the form and its elements
+            const weekdays = document.getElementById('weekdays');
+            const weekends = document.getElementById('weekends');
+            const preferredCheckboxes = document.getElementById('preferredDaysCheckboxes');
+            const notPreferredCheckboxes = document.getElementById('notPreferredDaysCheckboxes');
+            const shiftRatingContainers = document.getElementById('shiftRatingContainer').children;
+            const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+            const daysHTML = 
+                `<option value="" disabled selected>Select preference (1-10)</option>
+                <option value="1">1 - Would rather not</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 - Neutral</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 - Strongly prefer</option>`;
+            
+            weekdays.innerHTML = daysHTML;
+            weekends.innerHTML = daysHTML;
+
+            for (let i = 0; i < 7; i++) {
+                const preferredHTML = 
+                    `<div class="checkbox-item form-check">
+                        <input class="form-check-input" type="checkbox" id="${days[i]}" name="preferredDays" value="${days[i]}">
+                        <label class="form-check-label" for="${days[i]}">${days[i]}</label>
+                    </div>`;
+
+                const notPreferredHTML = 
+                    `<div class="checkbox-item form-check">
+                        <input class="form-check-input" type="checkbox" id="not${days[i]}" name="notPreferredDays" value="${days[i]}">
+                        <label class="form-check-label" for="not${days[i]}">${days[i]}</label>
+                    </div>`;
+
+                const shiftSelectHTML = 
+                    `<select class="form-select" id="shift${i+1}" name="shift" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>`;
+
+                preferredCheckboxes.innerHTML += preferredHTML;
+                notPreferredCheckboxes.innerHTML += notPreferredHTML;
+                shiftRatingContainers[i].innerHTML += shiftSelectHTML;
+            }
+
+            preferenceForm();
+        });
+    </script>
+</body>
+</html>

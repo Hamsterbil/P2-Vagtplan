@@ -1,5 +1,5 @@
 export {ValidationError, NoResourceError, processReq};
-import {selectUserEntries, getDB, validateLogin, getCurrentUser} from "./app.js";
+import {selectUserEntries, getDB, validateLogin, getCurrentUser, updatePreferences} from "./app.js";
 import {extractJSON, fileResponse, htmlResponse, extractForm, jsonResponse, errorResponse, reportError, startServer, fs} from "./server.js";
 
 const ValidationError = "Validation Error";
@@ -20,9 +20,9 @@ function processReq(req, res){
   console.log(pathElements);
 
   // Keep people out if they aren't logged in
-  let user = getCurrentUser(req);
+  let currentUser = getCurrentUser(req);
 
-  if (!user && pathElements[1] !== "login" && pathElements[1] !== "js") {
+  if (!currentUser && pathElements[1] !== "login" && pathElements[1] !== "js") {
     fileResponse(res, "/html/login.html");
     console.log("Access denied.");
     return;
@@ -36,16 +36,20 @@ function processReq(req, res){
           break;
         }
         case "logout": {
-          handleLogout(req, res);
+          handleLogout(res);
+          break;
+        }
+        case "register": {
+          handleRegister(req, res);
           break;
         }
         case "preferences": {
-          // handlePreferences(req, res);
+          handlePreferences(req, res);
           break;
         }
         default: {
           console.error("Resource doesn't exist");
-          reportError(res, new Error(NoResourceError)); 
+          reportError(res, new Error(NoResourceError));
         }
       }
       break; //END POST URL
@@ -53,36 +57,39 @@ function processReq(req, res){
     case "GET": {
       switch(pathElements[1]) {     
         case "": { // "/"
-          if (user) {
+          if (currentUser)
             fileResponse(res, "/html/planner.html");
-          } else {
+          else
             fileResponse(res, "/html/login.html");
-          }
           break;
         }
         case "date": {
           let date = new Date();
           console.log(date);
-          jsonResponse(res,date);
+          jsonResponse(res, date);
           break;
         }
-        case "records": {
-          try { 
-            if((pathElements.length===2) && (searchParms.toString().length===0)) {
-                jsonResponse(res, getDB);
-            }
-            else //resource does not exist
-              reportError(res, new Error(NoResourceError));
-          }catch(error){
-            reportError(res,error)
-          } 
+        case "database": {
+          let db = getDB();
+          if (db)
+            jsonResponse(res, db);
+          else
+            reportError(res, new Error(NoResourceError));
           break;
         }
-        default: { //for anything else we assume it is a file to be served
+        case "user": {
+          let username = searchParms.get("username") || currentUser.user;
+          let userEntries = selectUserEntries(username);
+          if (userEntries)
+            jsonResponse(res, userEntries);
+          else
+            reportError(res, new Error("User not found"));
+          break;
+        }
+        default: //for anything else we assume it is a file to be served
           fileResponse(res, req.url);
-        }
       }
-      break;
+      break; //END GET URL
     }
     default:
       reportError(res, new Error(NoResourceError)); 
@@ -96,35 +103,33 @@ function handleLogin(req, res) {
       res.setHeader('Set-Cookie',
         `currentUser=${encodeURIComponent(username)}; Path=/; HttpOnly; Secure; Max-Age=3600`);
       jsonResponse(res, { success: true, message: "Login successful" });
-    } else {
-      jsonResponse(res, { success: false, message: "Invalid username or password" });
-    }
+    } else throw new Error("Invalid username or password");
   })
   .catch((err) => {
     reportError(res, err);
   });
 }
 
-function handleLogout(req, res) {
+function handleLogout(res) {
   res.setHeader('Set-Cookie',
     'currentUser=; Path=/; HttpOnly; Secure; Max-Age=0'
   );
   jsonResponse(res, { success: true, message: "Logout successful" });
 }
 
-// function handlePreferences(req, res) {
-//   extractJSON(req)
-//   .then(({ weekdays, weekends, preferred, not_preferred, shifts }) => {
-//     if (!preferred.isArray() || !not_preferred.isArray() || !shifts.isArray()) {
-//       throw new Error("Invalid type of input");
-//     }
-//     if (updatePreferences(weekdays, weekends, preferred, not_preferred, shifts)) {
-//       jsonResponse(res, { success: true, message: "Preferences updated successfully" })
-//     } else {
-//       throw new Error("Could not update preferences of user in the database");
-//     }
-//   })
-//   .catch((err) => {
-//     reportError(res, err);
-//   })
-// }
+function handleRegister(req, res) {
+
+}
+
+function handlePreferences(req, res) {
+  extractJSON(req)
+  .then(({ username, weekdays, weekends, preferred, notPreferred, shifts }) => {
+    req.body = { username, weekdays, weekends, preferred, notPreferred, shifts };
+    if (updatePreferences(req)) {
+      jsonResponse(res, { success: true, message: "Preferences updated successfully" })
+    } else throw new Error("Failed to update preferences");
+  })
+  .catch((err) => {
+    reportError(res, err);
+  })
+}

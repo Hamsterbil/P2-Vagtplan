@@ -31,7 +31,7 @@ const port = 3000;
 
 /* ***                 Setup Serving of files ***                  */ 
 
-const publicResources="app/node/PublicResources/";
+const publicResources="node/PublicResources/";
 //secture file system access as described on 
 //https://nodejs.org/en/knowledge/file-system/security/introduction/
 const rootFileSystem=process.cwd();
@@ -204,14 +204,14 @@ function isJsonEncoded(contentType){
 
 function reportError(res,error){
   if(error.message===ValidationError){
-    return errorResponse(res,400,error.message);
+    return errorResponse(res, 400, error.message);
   }
   if(error.message===NoResourceError){
-    return errorResponse(res,404,error.message);
+    return errorResponse(res, 404, error.message);
   }
   else {
-    console.log(InternalError + ": " +error);
-    return errorResponse(res,500,"");
+    console.log(InternalError + ": " + error.message);
+    return errorResponse(res, 500, error.message);
   }
 }
 
@@ -220,12 +220,12 @@ function reportError(res,error){
    Setup HTTP server and route handling 
    ******************************************************************** */
 const server = http.createServer(requestHandler);
-function requestHandler(req,res){
-  try{
-   processReq(req,res);
-  }catch(e){
-    console.log(InternalError +"!!: " +e);
-   errorResponse(res,500,"");
+function requestHandler(req, res){
+  try {
+    processReq(req, res);
+  } catch(e) {
+    console.log(InternalError + "!!: " + e);
+    errorResponse(res, 500, "");
   }
 }
 
