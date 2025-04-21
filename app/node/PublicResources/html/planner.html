@@ -3,417 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-    <title>Shift Planner - Automated</title>
+    <title>Shift Planner - Bootstrap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+
     <style>
-        /* Main page styling */
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f5f5f5; }
-        .container { max-width: 1400px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #eee; flex-wrap: wrap; } /* Added flex-wrap */
-        .header-left { flex-grow: 1; } /* Allow title to take space */
-        .header-right { display: flex; align-items: center; flex-wrap: wrap; } /* Group right items */
-        .user-info { background-color: #f0f0f0; padding: 10px; border-radius: 4px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;} /* Use flex */
-        .admin-controls { background-color: #e8f4fc; padding: 15px; border-radius: 4px; margin-bottom: 20px; border: 1px solid #2196F3; }
-        .admin-controls label { font-weight: bold; margin-right: 10px; }
-        /* Hide elements by default */
-        .admin-only, .non-admin-only { display: none; }
-        button { padding: 8px 12px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; margin: 2px 5px 2px 0; } /* Adjusted margin */
-        button:hover { opacity: 0.9; }
-        .logout-btn { background-color: #e74c3c; }
-        .view-toggle-btn { background-color: #6c757d; } /* Style for view toggle */
-        .error-message { color: #e74c3c; margin: 10px 0; display: none; font-weight: bold;}
-        .modal { display: none; position: fixed; z-index: 10; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.4); }
-        .modal-content { background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 300px; border-radius: 8px; }
-        .specialization-option { padding: 10px; margin: 5px 0; cursor: pointer; border-radius: 4px; text-align: center; }
-        .specialization-option:hover { opacity: 0.8; }
-        .runner { background-color: #ff6b6b; color: white; }
-        .er { background-color: #5c6bc0; color: white; }
-        .fire { background-color: #44af4a; color: white; }
-        #calendar { margin-top: 20px; margin-bottom: 20px; }
-        /* FullCalendar event colors */
-        .fc-event.event-runner { background-color: #ff6b6b; border-color: #ff6b6b; color: white !important; }
-        .fc-event.event-er { background-color: #5c6bc0; border-color: #5c6bc0; color: white !important; }
-        .fc-event.event-fire { background-color: #44af4a; border-color: #44af4a; color: white !important; }
+        /* Keep minimal custom styles */
+        .fc-event.event-runner { background-color: #ff6b6b !important; border-color: #ff6b6b !important; color: white !important; }
+        .fc-event.event-er    { background-color: #5c6bc0 !important; border-color: #5c6bc0 !important; color: white !important; }
+        .fc-event.event-fire  { background-color: #44af4a !important; border-color: #44af4a !important; color: white !important; }
         .fc-event-title { font-weight: bold; }
-        /* Style for confirm section */
-        #confirmSection div { margin-top: 5px; }
+
+        /* Ensure slider value span is aligned */
+        .slider-container label { display: block; }
+        .slider-container .form-range { width: calc(100% - 40px); display: inline-block; vertical-align: middle; }
+        .slider-container .slider-value { display: inline-block; width: 30px; text-align: right; font-weight: bold; vertical-align: middle; margin-left: 5px;}
+
+        /* Utility to hide elements */
+        .admin-only:not(.d-block), .non-admin-only:not(.d-inline-block) { display: none; }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <div class="header-left"> <h1>Shift Planner</h1>
-            </div>
-            <div class="header-right"> <span id="currentUser">User</span> |
-                <span id="specializationDisplay">No Role Set</span> |
-                <button id="settingsBtn">Change Role</button>
-                <button class="logout-btn" onclick="logout()">Logout</button>
-            </div>
-        </header>
+<body class="bg-light">
 
-        <div id="adminControlsPanel" class="admin-controls admin-only">
-            <h2>Admin Controls</h2>
-            <div>
-                <label for="jsonUpload">Upload New Schedule (JSON):</label>
-                <input type="file" id="jsonUpload" accept=".json">
-                <button id="loadScheduleBtn" style="margin-left: 10px;">Load Preview</button>
+    <div class="container-fluid my-3">
+
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border rounded mb-3 p-2">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Shift Planner</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <div class="ms-auto d-flex align-items-center flex-wrap">
+                        <span class="navbar-text me-2 small" id="currentUser">User</span> <span class="navbar-text me-3 small">|</span>
+                        <span class="navbar-text me-2 small" id="specializationDisplay">No Role Set</span> <span class="navbar-text me-3 small">|</span>
+                        <button type="button" class="btn btn-sm btn-outline-secondary me-2" id="settingsBtn"> Settings </button>
+                        <button class="btn btn-sm btn-danger" onclick="logout()">Logout</button>
+                    </div>
+                </div>
             </div>
-            <div id="confirmSection" style="margin-top: 15px; display: none;">
-                 <button id="confirmScheduleBtn" style="background-color: #28a745;">Confirm & Publish Schedule</button>
-                 <button id="cancelPreviewBtn" style="background-color: #ffc107;">Cancel Preview</button>
-                 <p style="font-size: 0.9em; margin-top: 5px;">Preview loaded. Confirm to make it live for all users.</p>
+        </nav>
+
+        <div id="adminControlsPanel" class="card admin-only mb-3">
+             <h5 class="card-header bg-info-subtle">Admin Controls</h5>
+            <div class="card-body">
+                <div class="mb-3">
+                     <label for="jsonUpload" class="form-label">Upload New Schedule (JSON):</label>
+                     <div class="input-group">
+                         <input type="file" class="form-control form-control-sm" id="jsonUpload" accept=".json">
+                         <button id="loadScheduleBtn" class="btn btn-primary btn-sm">Load Preview</button>
+                     </div>
+                </div>
+                <div id="confirmSection" class="mt-3 border-top pt-3 d-none">
+                     <button id="confirmScheduleBtn" class="btn btn-success me-2">Confirm & Publish</button>
+                     <button id="cancelPreviewBtn" class="btn btn-warning">Cancel Preview</button>
+                     <p class="form-text mt-2 mb-0">Preview loaded.</p>
+                </div>
+                 <p id="adminInstruction" class="form-text mt-2 mb-0">Load a JSON file to preview. Admins can remove shifts from the live schedule.</p>
+
+                 <div class="mt-3 border-top pt-3">
+                     <button id="generateScheduleBtn" class="btn btn-info btn-sm">Generate Schedule (Test)</button>
+                     <p class="form-text mt-1 mb-0">Click to trigger automatic schedule generation algorithm (placeholder).</p>
+                 </div>
+
             </div>
-            <p id="adminInstruction" style="font-size: 0.9em; margin-top: 10px;">Load a JSON file to preview the schedule. Admins can remove shifts from the *live* schedule by clicking on them.</p>
         </div>
 
-        <div class="user-info">
-             <div> <h3 id="displayUser" style="margin-bottom: 5px;">User</h3> <p id="shiftCount" style="margin: 0;">0 upcoming shifts</p> </div>
-             <button id="viewToggleBtn" class="view-toggle-btn non-admin-only">Show My Shifts Only</button>
+        <div class="user-info p-3 mb-3 bg-body-secondary rounded d-flex justify-content-between align-items-center flex-wrap">
+             <div> <h3 id="displayUser" class="h5 mb-1">User</h3> <p id="shiftCount" class="mb-0 text-muted small">0 upcoming shifts</p> </div>
+             <button id="viewToggleBtn" class="btn btn-sm btn-secondary non-admin-only">Show My Shifts Only</button>
         </div>
 
-        <div id="errorMessage" class="error-message">
-            Error message will appear here
-        </div>
+        <div id="errorMessage" class="alert alert-danger mt-2 d-none" role="alert"></div>
 
-        <div id='calendar'></div>
+        <div id='calendar' class="bg-white p-3 rounded border"></div>
 
-    </div>
-
-    <div id="settingsModal" class="modal">
+    </div> <div class="modal fade" id="adminDaySettingsModal" tabindex="-1" aria-labelledby="adminDaySettingsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
-            <h2>Select Your Role</h2>
-            <div class="specialization-option runner" data-spec="Runner" data-class="runner">Runner (Red)</div>
-            <div class="specialization-option er" data-spec="ER" data-class="er">ER (Blue)</div>
-            <div class="specialization-option fire" data-spec="Fire" data-class="fire">Fire (Green)</div>
-            <button style="margin-top: 20px; width: 100%;" id="closeModalBtn">Close</button>
+          <div class="modal-header"> <h1 class="modal-title fs-5" id="adminDaySettingsModalLabel">Daily Role Needs</h1> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> </div>
+          <div class="modal-body"> <p class="text-muted small mb-3">Set the desired number of staff for each role per day.</p> <div id="daySettingsContainer"> </div> </div>
+          <div class="modal-footer"> <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> <button type="button" class="btn btn-primary" id="saveDaySettingsBtn">Save Settings</button> </div>
         </div>
+      </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script>
-        // --- Application State ---
-        let shiftData = {}; // Holds the LIVE schedule from localStorage
-        let stagedShiftData = null; // Holds the schedule loaded from JSON for PREVIEW
-        let currentUser = sessionStorage.getItem('currentUser');
-        let currentSpecialization = localStorage.getItem(`userSpec_${currentUser}`) || ''; // Load user's saved role preference
+        // Keep track of app's data and settings
+        let shiftData = {}; let stagedShiftData = null; let currentUser = sessionStorage.getItem('currentUser');
+        let currentSpecialization = localStorage.getItem(`userSpec_${currentUser}`) || '';
         let isAdmin = currentUser === 'Admin';
-        let viewMode = isAdmin ? 'all' : (localStorage.getItem(`viewMode_${currentUser}`) || 'all'); // 'all' or 'mine', default 'all' for non-admins
-        let calendarInstance = null;
+        let viewMode = isAdmin ? 'all' : (localStorage.getItem(`viewMode_${currentUser}`) || 'all');
+        let daySettings = {}; let calendarInstance = null; let adminSettingsModalInstance = null;
 
-        // --- Mappings ---
-        const shiftKeyToTimeMap = { /* ... same as before ... */
-            'morning':   { index: 1, start: '06:00:00', end: '10:00:00' }, 'noon':      { index: 2, start: '10:00:00', end: '14:00:00' },
-            'afternoon': { index: 3, start: '14:00:00', end: '18:00:00' }, 'evening':   { index: 4, start: '18:00:00', end: '22:00:00' },
-            'night':     { index: 5, start: '22:00:00', end: '06:00:00', nextDay: true }
-        };
-        const shiftIndexToTimeMap = { /* ... same as before ... */
-            1: shiftKeyToTimeMap['morning'], 2: shiftKeyToTimeMap['noon'], 3: shiftKeyToTimeMap['afternoon'],
-            4: shiftKeyToTimeMap['evening'], 5: shiftKeyToTimeMap['night'],
-        };
+        // Fixed values used throughout the app
+        const DAYS_OF_WEEK = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']; const ROLES = ['runner', 'er', 'fire'];
+        const shiftKeyToTimeMap = { 'morning': { index: 1, start: '06:00:00', end: '10:00:00' }, 'noon': { index: 2, start: '10:00:00', end: '14:00:00' }, 'afternoon': { index: 3, start: '14:00:00', end: '18:00:00' }, 'evening': { index: 4, start: '18:00:00', end: '22:00:00' }, 'night': { index: 5, start: '22:00:00', end: '06:00:00', nextDay: true } };
+        const shiftIndexToTimeMap = { 1: shiftKeyToTimeMap['morning'], 2: shiftKeyToTimeMap['noon'], 3: shiftKeyToTimeMap['afternoon'], 4: shiftKeyToTimeMap['evening'], 5: shiftKeyToTimeMap['night'], };
 
-        // --- Initialization ---
-        function initializeApp() {
-            if (!currentUser) { window.location.href = '/html/login.html'; return; }
-            shiftData = JSON.parse(localStorage.getItem('shiftData')) || {}; // Load LIVE data
-
-            // Setup UI elements
-            document.getElementById('currentUser').textContent = currentUser;
-            document.getElementById('displayUser').textContent = currentUser;
-            document.getElementById('specializationDisplay').textContent = currentSpecialization ? currentSpecialization.toUpperCase() : 'No Role Set';
-
+        // Initialize the application
+        function initializeApp() { // Load saved data, configure UI based on user type (admin/regular)
+            if (!currentUser) { window.location.href = 'login.html'; return; }
+            shiftData = JSON.parse(localStorage.getItem('shiftData')) || {};
+            daySettings = JSON.parse(localStorage.getItem('daySettings')) || getDefaultDaySettings();
+            document.getElementById('currentUser').textContent = currentUser; document.getElementById('displayUser').textContent = currentUser; document.getElementById('specializationDisplay').textContent = currentSpecialization ? currentSpecialization.toUpperCase() : 'No Role Set';
+            const adminPanel = document.getElementById('adminControlsPanel'); const toggleBtn = document.getElementById('viewToggleBtn');
             if (isAdmin) {
-                document.getElementById('adminControlsPanel').style.display = 'block';
+                adminPanel.classList.remove('d-none'); adminPanel.classList.add('d-block'); toggleBtn.classList.add('d-none');
+                generateAdminSettingsSliders(); // Generate sliders for modal
             } else {
-                // Setup view toggle button for non-admins
-                const toggleBtn = document.getElementById('viewToggleBtn');
-                toggleBtn.style.display = 'inline-block'; // Show the button
-                toggleBtn.textContent = (viewMode === 'mine') ? 'Show All Shifts' : 'Show My Shifts Only'; // Set initial text
+                adminPanel.classList.add('d-none'); toggleBtn.classList.remove('d-none'); toggleBtn.classList.add('d-inline-block'); toggleBtn.textContent = (viewMode === 'mine') ? 'Show All Shifts' : 'Show My Shifts Only';
             }
-
-            initializeCalendar(); // Init calendar AFTER UI setup
-            updateShiftCount(); // Calculate initial count based on LIVE data
-            setupEventListeners(); // Setup button listeners
+            const adminModalEl = document.getElementById('adminDaySettingsModal'); if (adminModalEl) { adminSettingsModalInstance = new bootstrap.Modal(adminModalEl); }
+            initializeCalendar(); updateShiftCount(); setupEventListeners();
+        }
+        function initializeCalendar() { /* ... same ... */
+             const calendarEl = document.getElementById('calendar'); calendarInstance = new FullCalendar.Calendar(calendarEl, { /* ... options ... */ initialView: 'timeGridWeek', headerToolbar: { left: 'prev,next today', center: 'title', right: 'dayGridMonth,timeGridWeek,timeGridDay' }, editable: false, selectable: false, dateClick: handleDateClick, eventClick: handleEventClick }); calendarInstance.render(); console.log("Rendered."); displayLiveSchedule(); console.log("Initialized.");
+        }
+        function getDefaultDaySettings() { /* ... same ... */ const defaults = {}; DAYS_OF_WEEK.forEach(day => { defaults[day] = {}; ROLES.forEach(role => { defaults[day][role] = 0; }); }); return defaults; }
+        function generateAdminSettingsSliders() { /* ... same ... */
+             const container = document.getElementById('daySettingsContainer'); if (!container) return; let html = '';
+             DAYS_OF_WEEK.forEach(day => { html += `<div class="mb-4 border-bottom pb-2"><h5 class="text-capitalize">${day}</h5>`; ROLES.forEach(role => { const settingValue = daySettings[day]?.[role] ?? 0; const sliderId = `settings-${day}-${role}`; html += `<div class="slider-container mb-2"><label for="${sliderId}" class="form-label text-capitalize">${role}:</label><input type="range" class="form-range" min="0" max="10" step="1" id="${sliderId}" value="${settingValue}"><span class="slider-value">${settingValue}</span></div>`; }); html += `</div>`; });
+             container.innerHTML = html;
+             container.querySelectorAll('.form-range').forEach(slider => { slider.addEventListener('input', (e) => { const valueSpan = e.target.nextElementSibling; if (valueSpan?.classList.contains('slider-value')) { valueSpan.textContent = e.target.value; } }); });
         }
 
-        function initializeCalendar() {
-            const calendarEl = document.getElementById('calendar');
-            calendarInstance = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'timeGridWeek',
-                headerToolbar: { /* ... same as before ... */
-                    left: 'prev,next today', center: 'title', right: 'dayGridMonth,timeGridWeek,timeGridDay'
-                },
-                events: '../test.json',
-                editable: false, selectable: false,
-                dateClick: handleDateClick, eventClick: handleEventClick
-            });
-            calendarInstance.render();
-            console.log("Calendar rendered.");
-
-            // Load initial live events respecting the user's viewMode
-            displayLiveSchedule(); // Use the display function which respects viewMode
-            console.log("Initialized calendar with LIVE data respecting viewMode.");
+        // Functions to create calendar events and display them
+        function generateEventsFromData(dataToFormat) { /* ... same (respects viewMode) ... */
+            const events = []; const today = new Date(); const applyUserFilter = !isAdmin && viewMode === 'mine';
+            for (const shiftId in dataToFormat) { const [idx, day] = shiftId.split('-'); const users = dataToFormat[shiftId]; let relevant = users; if (applyUserFilter) { relevant = users.filter(u => u.user === currentUser); } if (relevant?.length > 0 && shiftIndexToTimeMap[idx]) { /* ... create event object ... */ const timeInfo = shiftIndexToTimeMap[idx]; let date = new Date(today); let diff = ((parseInt(day) + 1) % 7) - date.getDay(); date.setDate(date.getDate() + diff); let start = `${date.toISOString().split('T')[0]}T${timeInfo.start}`; let end = `${date.toISOString().split('T')[0]}T${timeInfo.end}`; if (timeInfo.nextDay) { const nextDay = new Date(date); nextDay.setDate(date.getDate() + 1); end = `${nextDay.toISOString().split('T')[0]}T${timeInfo.end}`; } const title = relevant.map(u => `${u.user}(${u.spec})`).join(', '); const cls = relevant[0] ? `event-${relevant[0].spec}` : ''; events.push({ id: shiftId, title: title, start: start, end: end, allDay: false, extendedProps: { users: users }, className: cls }); } }
+            console.log(`Generated ${events.length} (Mode: ${viewMode}, Filter: ${applyUserFilter})`); return events;
         }
+        function displayStagedSchedule() { /* ... same (uses setOption) ... */ if (!calendarInstance || stagedShiftData === null) return; console.log("Display STAGED"); try { const currentVM = viewMode; viewMode = 'all'; const ev = generateEventsFromData(stagedShiftData); viewMode = currentVM; calendarInstance.setOption('events', ev); console.log("Set staged."); } catch (e) { console.error("Err display staged:", e); showError("Err preview."); } }
+        function displayLiveSchedule() { /* ... same (uses setOption) ... */ if (!calendarInstance) return; console.log("Display LIVE"); try { const ev = generateEventsFromData(shiftData); calendarInstance.setOption('events', ev); console.log("Set live."); } catch (e) { console.error("Err display live:", e); showError("Err schedule."); } }
 
-        // --- Event Generation & Display ---
+        // Admin-specific features
+        function processUploadedSchedule(file) { /* ... same ... */ console.log("Processing upload..."); if (!file) { showError("No file."); return; } const reader = new FileReader(); reader.onload = function(event) { try { const json = JSON.parse(event.target.result); if (!Array.isArray(json)) throw new Error("Need array."); const data = {}; let err = false; json.forEach((item, i) => { if (!item.date || !item.shift || !item.spec || !item.user) { console.warn(`Skip invalid ${i}`); err = true; return; } const timeInfo = shiftKeyToTimeMap[item.shift.toLowerCase()]; if (!timeInfo) { console.warn(`Skip ${i}: Bad key`); err = true; return; } const idx = timeInfo.index; const date = new Date(item.date + 'T00:00:00'); if (isNaN(date.getTime())) { console.warn(`Skip ${i}: Bad date`); err = true; return; } const day = (date.getDay() + 6) % 7; const id = `${idx}-${day}`; if (!data[id]) { data[id] = []; } data[id].push({ user: item.user, spec: item.spec.toLowerCase() }); }); console.log("Staging done:", data); stagedShiftData = data; displayStagedSchedule(); document.getElementById('confirmSection').classList.remove('d-none'); document.getElementById('adminInstruction').classList.add('d-none'); showError(err ? "Preview errors." : "Preview loaded.", !err); } catch (e) { stagedShiftData = null; document.getElementById('confirmSection').classList.add('d-none'); document.getElementById('adminInstruction').classList.remove('d-none'); showError(`JSON Err: ${e.message}`); } }; reader.onerror = function() { showError("Read Err."); stagedShiftData = null; document.getElementById('confirmSection').classList.add('d-none'); document.getElementById('adminInstruction').classList.remove('d-none'); }; reader.readAsText(file); }
+        function confirmAndPublishSchedule() { /* ... same ... */ console.log("Confirm click."); if (stagedShiftData === null) { showError("No staged data."); return; } shiftData = stagedShiftData; stagedShiftData = null; saveShifts(); console.log("Saved."); displayLiveSchedule(); document.getElementById('confirmSection').classList.add('d-none'); document.getElementById('adminInstruction').classList.remove('d-none'); document.getElementById('jsonUpload').value = ''; showError("Published!", true); updateShiftCount(); }
+        function cancelSchedulePreview() { /* ... same ... */ console.log("Cancel click."); stagedShiftData = null; displayLiveSchedule(); document.getElementById('confirmSection').classList.add('d-none'); document.getElementById('adminInstruction').classList.remove('d-none'); document.getElementById('jsonUpload').value = ''; showError("Preview cancelled."); }
+        function saveAdminDaySettings() { /* ... same ... */ console.log("Saving day settings..."); const newSettings = getDefaultDaySettings(); let error = false; try { DAYS_OF_WEEK.forEach(day => { ROLES.forEach(role => { const slider = document.getElementById(`settings-${day}-${role}`); if (slider) { newSettings[day][role] = parseInt(slider.value, 10); } else { console.error(`Slider not found: settings-${day}-${role}`); error = true; } }); }); if (error) throw new Error("Slider read error."); daySettings = newSettings; localStorage.setItem('daySettings', JSON.stringify(daySettings)); console.log("Saved settings:", daySettings); showError("Daily settings saved!", true); if(adminSettingsModalInstance) adminSettingsModalInstance.hide(); } catch (e) { console.error("Err save settings:", e); showError(`Err save settings: ${e.message}`); } }
 
-        // Generates event objects, respecting viewMode for non-admins
-        function generateEventsFromData(dataToFormat) {
-             const events = [];
-             const today = new Date();
-             // Determine if filtering is needed: non-admin user AND viewMode is 'mine'
-             const applyUserFilter = !isAdmin && viewMode === 'mine';
+        // Handling calendar clicks
+        function handleDateClick(info) { /* ... same (preview check) ... */ if (stagedShiftData !== null && isAdmin) { console.log("Preview: Date click ignored."); showError("Viewing preview."); return; } if (!isAdmin) { showError("Shifts assigned automatically."); return; } console.log('Admin clicked empty slot:', info.dateStr); showError("Add via click disabled."); }
+        function handleEventClick(info) { /* ... same (preview check, admin removal) ... */ if (stagedShiftData !== null && isAdmin) { console.log("Preview: Event click ignored."); showError("Viewing preview."); return; } if (!isAdmin) { showError("Cannot modify shifts."); return; } const event = info.event; const shiftId = event.id; console.log("Admin click LIVE:", shiftId); if (!shiftId || !shiftData[shiftId]) { console.error("Cannot find ID:", shiftId); showError("Cannot find shift."); return; } if (confirm(`Remove shift ${shiftId} (${event.title}) from LIVE?`)) { console.log("Deleting LIVE:", shiftId); try { delete shiftData[shiftId]; saveShifts(); event.remove(); updateShiftCount(); showError("Removed.", true); } catch (e) { console.error("Error removing:", e); showError(`Error remove: ${e.message}`); } } else { console.log("Cancel remove."); } }
 
-             for (const shiftId in dataToFormat) {
-                 const [shiftIndexStr, dayOfWeekStr] = shiftId.split('-');
-                 const shiftIndex = parseInt(shiftIndexStr, 10);
-                 const dayOfWeek = parseInt(dayOfWeekStr, 10);
-                 const users = dataToFormat[shiftId]; // All users assigned to this slot
-
-                 let relevantUsers = users; // Assume all users are relevant initially
-                 if (applyUserFilter) {
-                     // If filtering is needed, filter down to the current user
-                     relevantUsers = users.filter(u => u.user === currentUser);
-                 }
-
-                 // Only create an event if there are relevant users for the current view
-                 if (relevantUsers && relevantUsers.length > 0 && shiftIndexToTimeMap[shiftIndex]) {
-                     const timeInfo = shiftIndexToTimeMap[shiftIndex];
-                     // Date calculation logic...
-                     let shiftDate = new Date(today); let currentDay = shiftDate.getDay(); let targetDay = (dayOfWeek + 1) % 7;
-                     let diff = targetDay - currentDay; shiftDate.setDate(shiftDate.getDate() + diff);
-                     // End date calculation
-
-                     let startDateTimeStr = `${shiftDate.toISOString().split('T')[0]}T${timeInfo.start}`;
-                     let endDateTimeStr = `${shiftDate.toISOString().split('T')[0]}T${timeInfo.end}`;
-                     if (timeInfo.nextDay) {
-                         const nextDayDate = new Date(shiftDate); nextDayDate.setDate(shiftDate.getDate() + 1);
-                         endDateTimeStr = `${nextDayDate.toISOString().split('T')[0]}T${timeInfo.end}`;
-                     }
-
-                     // Title shows only relevant users for the current view
-                     const title = relevantUsers.map(u => `${u.user} (${u.spec})`).join(', ');
-                     // Color based on the first relevant user
-                     const primarySpecClass = relevantUsers[0] ? `event-${relevantUsers[0].spec}` : '';
-
-                     events.push({
-                         id: shiftId, title: title, start: startDateTimeStr, end: endDateTimeStr,
-                         allDay: false,
-                         // Store ALL original users in extendedProps for potential Admin actions
-                         extendedProps: { users: users },
-                         className: primarySpecClass
-                     });
-                 }
-             }
-             console.log(`Generated ${events.length} events for display (ViewMode: ${viewMode}, Filter Applied: ${applyUserFilter})`); // DEBUG
-             return events;
-         }
-
-        // Displays the STAGED schedule (Admin Preview only - always shows all users)
-        function displayStagedSchedule() {
-            if (!calendarInstance || stagedShiftData === null) return;
-            console.log("Displaying STAGED schedule...");
-            try {
-                // Force 'all' view for admin preview, pass 'stagedShiftData'
-                const currentAdminViewMode = viewMode; // Store current mode
-                viewMode = 'all'; // Temporarily set to 'all' for generation
-                const stagedEvents = generateEventsFromData(stagedShiftData);
-                viewMode = currentAdminViewMode; // Restore admin's actual mode
-                
-                calendarInstance.setOption('events', stagedEvents);
-                console.log("Set staged events on calendar.");
-            } catch (e) { console.error("Error displaying staged schedule:", e); showError("Error displaying preview."); }
-        }
-
-        // Displays the LIVE schedule (respects current user's viewMode)
-        function displayLiveSchedule() {
-             if (!calendarInstance) return;
-             console.log("Displaying LIVE schedule...");
-             try {
-                 // Generate events from LIVE data, respecting the current viewMode
-                 const liveEvents = generateEventsFromData(shiftData);
-                 calendarInstance.setOption('events', liveEvents);
-                 console.log("Set live events on calendar.");
-             } catch (e) { console.error("Error displaying live schedule:", e); showError("Error displaying schedule."); }
-        }
-
-        // --- Admin Actions ---
-
-        // Process uploaded JSON into STAGING area
-        function processUploadedSchedule(file) {
-             console.log("Starting processUploadedSchedule for PREVIEW...");
-             // ... (Validation and parsing logic remains the same) ...
-             // ... Populates 'newStagedData' ...
-             const reader = new FileReader();
-             reader.onload = function(event) {
-                 try {
-                     const uploadedJson = JSON.parse(event.target.result);
-                     if (!Array.isArray(uploadedJson)) throw new Error("JSON must be an array.");
-
-                     const newStagedData = {}; let processingError = false;
-                     uploadedJson.forEach((item, index) => {
-                         if (!item.date || !item.shift || !item.spec || !item.user) { console.warn(`Skipping invalid item ${index}`); processingError = true; return; }
-                         const timeInfo = shiftKeyToTimeMap[item.shift.toLowerCase()]; if (!timeInfo) { console.warn(`Skipping item ${index}: Bad shift key`); processingError = true; return; }
-                         const shiftIndex = timeInfo.index; const itemDate = new Date(item.date + 'T00:00:00');
-                         if (isNaN(itemDate.getTime())) { console.warn(`Skipping item ${index}: Bad date`); processingError = true; return; }
-                         const dayOfWeek = (itemDate.getDay() + 6) % 7; const shiftId = `${shiftIndex}-${dayOfWeek}`;
-                         if (!newStagedData[shiftId]) { newStagedData[shiftId] = []; }
-                         newStagedData[shiftId].push({ user: item.user, spec: item.spec.toLowerCase() });
-                     });
-
-                     console.log("Finished processing JSON for staging. Staged data:", newStagedData);
-                     stagedShiftData = newStagedData;
-                     displayStagedSchedule(); // Show preview (always 'all' view)
-
-                     document.getElementById('confirmSection').style.display = 'block';
-                     document.getElementById('adminInstruction').style.display = 'none';
-                     showError(processingError ? "Preview loaded with some errors (see console)." : "Preview loaded.", !processingError);
-
-                 } catch (e) { /* ... Error handling ... */
-                    stagedShiftData = null; document.getElementById('confirmSection').style.display = 'none';
-                    document.getElementById('adminInstruction').style.display = 'block'; showError(`Error processing JSON: ${e.message}`);
-                 }
-             };
-             reader.onerror = function() { /* ... Error handling ... */
-                 showError("Error reading file."); stagedShiftData = null; document.getElementById('confirmSection').style.display = 'none';
-                 document.getElementById('adminInstruction').style.display = 'block';
-             };
-             reader.readAsText(file);
-        }
-
-        // Confirm and Publish the staged schedule
-        function confirmAndPublishSchedule() {
-            console.log("Confirm & Publish clicked.");
-            if (stagedShiftData === null) { showError("No staged schedule."); return; }
-            shiftData = stagedShiftData; // Make staged data live
-            stagedShiftData = null; // Clear staging
-            saveShifts(); // Save live data to localStorage
-            console.log("Confirmed schedule saved.");
-            displayLiveSchedule(); // Display new live data (respecting admin's viewMode which is 'all')
-            document.getElementById('confirmSection').style.display = 'none';
-            document.getElementById('adminInstruction').style.display = 'block';
-            document.getElementById('jsonUpload').value = '';
-            showError("Schedule confirmed and published!", true);
-            updateShiftCount();
-        }
-
-        // Cancel the preview
-        function cancelSchedulePreview() {
-            console.log("Cancel Preview clicked.");
-            stagedShiftData = null; // Discard staged data
-            displayLiveSchedule(); // Revert calendar to live data (respecting admin's viewMode)
-            document.getElementById('confirmSection').style.display = 'none';
-            document.getElementById('adminInstruction').style.display = 'block';
-            document.getElementById('jsonUpload').value = '';
-            showError("Preview cancelled.");
-        }
-
-        // Handle clicks on empty date slots (LIVE only)
-        function handleDateClick(info) {
-            if (stagedShiftData !== null && isAdmin) { console.log("Preview mode: Date click ignored."); showError("Currently viewing preview."); return; }
-            if (!isAdmin) { showError("Shifts assigned automatically."); return; }
-            console.log('Admin clicked empty slot:', info.dateStr); showError("Functionality to add shifts via click not implemented.");
-        }
-
-        // Handle clicks on existing events (LIVE only, Admin only for removal)
-        function handleEventClick(info) {
-            if (stagedShiftData !== null && isAdmin) { console.log("Preview mode: Event click ignored."); showError("Currently viewing preview."); return; }
-            if (!isAdmin) { showError("Click event ignored for non-admin."); return; } // Non-admins cannot remove shifts
-
-            // Admin removal logic for LIVE shifts
-            const event = info.event; const shiftId = event.id;
-            console.log("Admin clicked event on LIVE schedule:", event); console.log("Shift ID:", shiftId);
-            if (!shiftId || !shiftData[shiftId]) { console.error("Cannot find shiftId in live data:", shiftId); showError("Cannot find shift in live data."); return; }
-
-            if (confirm(`Remove shift slot ${shiftId} (${event.title}) from LIVE schedule?`)) {
-                console.log("Attempting delete on LIVE shiftData:", shiftId);
-                try {
-                    delete shiftData[shiftId]; // Delete from live data
-                    saveShifts(); // Save updated live data
-                    event.remove(); // Remove visually
-                    updateShiftCount(); // Update count display
-                    showError("Shift removed from LIVE schedule.", true);
-                } catch (e) { console.error("Error removing live shift:", e); showError(`Error removing shift: ${e.message}`); }
-            } else { console.log("Admin cancelled removal."); }
-        }
-
-        // --- Utility Functions ---
-
-        // Save LIVE shifts to localStorage
+        // Helper functions used elsewhere
         function saveShifts() { localStorage.setItem('shiftData', JSON.stringify(shiftData)); }
-
-        // Update user's personal shift count from LIVE data
-        function updateShiftCount() {
-            let count = 0;
-            for (const shiftId in shiftData) { if (shiftData[shiftId]?.some(u => u.user === currentUser)) { count++; } }
-            document.getElementById('shiftCount').textContent = `${count} upcoming shifts assigned to you`;
-        }
-
-        // Show error/success message banner
-        function showError(message, isSuccess = false) { /* ... same as before ... */
-             const errorElement = document.getElementById('errorMessage'); errorElement.textContent = message;
-             errorElement.style.color = isSuccess ? '#28a745' : '#e74c3c'; errorElement.style.display = message ? 'block' : 'none';
-             if(message) { setTimeout(() => { if (errorElement.textContent === message) { errorElement.style.display = 'none'; } }, 5000); }
-        }
-
-        // Close modal dialog
-        function closeModal() { document.getElementById('settingsModal').style.display = 'none'; }
-
-        // Handle logout
+        function updateShiftCount() { let count = 0; for (const id in shiftData) { if (shiftData[id]?.some(u => u.user === currentUser)) { count++; } } document.getElementById('shiftCount').textContent = `${count} shifts assigned`; }
+        function showError(message, isSuccess = false) { const el = document.getElementById('errorMessage'); if (!message) { el.classList.add('d-none'); return; } el.textContent = message; el.classList.remove('d-none', 'alert-danger', 'alert-success'); el.classList.add(isSuccess ? 'alert-success' : 'alert-danger'); setTimeout(() => { if (el.textContent === message) { el.classList.add('d-none'); } }, 5000); }
         function logout() { sessionStorage.removeItem('currentUser'); window.location.href = 'login.html'; }
 
-        // --- Event Listeners Setup ---
-        function setupEventListeners() {
-            // Settings button
-            document.getElementById('settingsBtn').addEventListener('click', () => { document.getElementById('settingsModal').style.display = 'block'; });
-            // Role selection options
-            document.querySelectorAll('.specialization-option').forEach(option => {
-                option.addEventListener('click', function() {
-                    const spec = this.getAttribute('data-spec'); const specClass = this.getAttribute('data-class');
-                    currentSpecialization = specClass; // Note: Only affects preference, not assignment logic here
-                    localStorage.setItem(`userSpec_${currentUser}`, currentSpecialization);
-                    document.getElementById('specializationDisplay').textContent = spec;
-                    closeModal(); showError("Role preference updated.", true);
-                });
+       // Connect buttons and inputs to functions
+    function setupEventListeners() {
+        // Settings Button
+        const settingsBtn = document.getElementById('settingsBtn');
+        if (settingsBtn) {
+            settingsBtn.addEventListener('click', () => {
+                if (isAdmin) { 
+                    console.log("Admin settings click."); 
+                    generateAdminSettingsSliders(); 
+                    if (adminSettingsModalInstance) adminSettingsModalInstance.show(); 
+                }
+                else { 
+                    console.log("Non-admin settings click -> redirect."); 
+                    // Note: Currently redirects to Preferences.html in the same directory
+                    // If path changes in future, update this to reflect new location
+                    window.location.href = 'Preferences.html'; 
+                }
             });
-            // Close modal button
-            document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+        }
 
-            // Admin listeners
+            // Admin schedule management buttons
             if (isAdmin) {
                 const loadBtn = document.getElementById('loadScheduleBtn'); const fileInput = document.getElementById('jsonUpload');
                 const confirmBtn = document.getElementById('confirmScheduleBtn'); const cancelBtn = document.getElementById('cancelPreviewBtn');
-                if (loadBtn && fileInput && confirmBtn && cancelBtn) {
-                     console.log("Admin controls found, adding listeners...");
-                     loadBtn.addEventListener('click', () => {
-                        const file = fileInput.files[0]; console.log("Load Preview clicked. File:", file);
-                        if (file) { processUploadedSchedule(file); } else { showError("Select JSON file first."); }
-                     });
+                const generateBtn = document.getElementById('generateScheduleBtn'); // Get generate button
+
+                if (loadBtn && fileInput && confirmBtn && cancelBtn && generateBtn) { // Check generateBtn too
+                     console.log("Admin controls listeners setup...");
+                     loadBtn.addEventListener('click', () => { const file = fileInput.files[0]; if (file) { processUploadedSchedule(file); } else { showError("Select JSON."); } });
                      confirmBtn.addEventListener('click', confirmAndPublishSchedule);
                      cancelBtn.addEventListener('click', cancelSchedulePreview);
-                } else { console.error("Admin control elements not found."); }
+                     // Add listener for Generate button
+                     generateBtn.addEventListener('click', () => {
+                         console.log("calling algorithm"); // Placeholder action
+                         // Future: Replace console.log with actual function call
+                         showError("Generate schedule process initiated (placeholder).", true); // Optional feedback
+                     });
+                } else { console.error("Admin control buttons/inputs not found."); }
             } else {
-                // Non-Admin: Add listener for the view toggle button
+                // Non-Admin: View Toggle listener
                  const toggleBtn = document.getElementById('viewToggleBtn');
                  if(toggleBtn) {
                      toggleBtn.addEventListener('click', () => {
-                         if (viewMode === 'all') {
-                             viewMode = 'mine';
-                             toggleBtn.textContent = 'Show All Shifts';
-                         } else {
-                             viewMode = 'all';
-                             toggleBtn.textContent = 'Show My Shifts Only';
-                         }
-                         localStorage.setItem('viewMode_' + currentUser, viewMode); // Save preference
-                         console.log(`View mode toggled to: ${viewMode}`); // DEBUG
-                         displayLiveSchedule(); // Refresh calendar view with new mode
+                         viewMode = (viewMode === 'all') ? 'mine' : 'all'; toggleBtn.textContent = (viewMode === 'mine') ? 'Show All Shifts' : 'Show My Shifts Only';
+                         localStorage.setItem('viewMode_' + currentUser, viewMode); console.log(`View mode: ${viewMode}`); displayLiveSchedule();
                      });
-                 } else { console.error("View toggle button not found for non-admin."); }
+                 } else { console.error("View toggle button not found."); }
             }
         }
 
-        // Start the application
+        // Kick things off once the page is ready
         document.addEventListener('DOMContentLoaded', initializeApp);
 
     </script>
+
 </body>
 </html>
