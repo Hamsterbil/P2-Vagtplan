@@ -1,4 +1,4 @@
-export {selectUserEntries, getDB, getCurrentUser, validateLogin, updatePreferences};
+export {selectUserEntries, getDB, getCurrentUser, validateLogin, updateDatabase};
 import { ValidationError } from "./router.js";
 import fs from 'fs';
 import bcrypt from 'bcrypt';
@@ -24,16 +24,16 @@ function sanitize(str, isArray = false){
 }
 
 // Just for creating the initial hashed password for the database
-// async function generateHash(pass) {
-//   const saltRounds = 10;
+async function generateHash(pass) {
+  const saltRounds = 10;
 
-//   try {
-//     const hash = await bcrypt.hash(pass, saltRounds);
-//     return hash;
-//   } catch (err) {
-//     throw new Error(`Error generating hash: ${err.message}`);
-//   }
-// }
+  try {
+    const hash = await bcrypt.hash(pass, saltRounds);
+    return hash;
+  } catch (err) {
+    throw new Error("Error generating hash: ", err);
+  }
+}
 // (async () => {
 //   try {
 //     const hashedPassword = await generateHash("123456");
@@ -55,12 +55,12 @@ function validateUserName(username) {
 }
 
 function validateLogin(username, password) {
-  try {
-    const user = selectUserEntries(validateUserName(username));
+  const user = selectUserEntries(validateUserName(username));
 
-    if (!user) {
-      throw new Error("User not found");
-    }
+  if (!user) {
+    return false;
+  }
+  try {
 
     const pass = sanitize(password);
     if (!bcrypt.compareSync(pass, user.password)) {
@@ -69,21 +69,23 @@ function validateLogin(username, password) {
 
     return true; // If everything is fine
   } catch (err) {
-    console.error("Error during login validation:", err);
+    console.error("Error during login validation: ", err);
     return false;
   }
+
+  // If everything is fine
+  return true;
 }
 
 function selectUserEntries(username) {
   // Search for the user in the employees array
-  const name = sanitize(username);
-  const employee = DB.employees.find(e => e.user === name);
+  const employee = DB.employees.find(e => e.user === sanitize(username));
   if (employee) {
     return employee;
   }
 
   // Search for the user in the admins array
-  const admin = DB.admins.find(a => a.user === name);
+  const admin = DB.admins.find(a => a.user === sanitize(username));
   if (admin) {
     return admin;
   }
@@ -105,24 +107,53 @@ function getCurrentUser(req) {
   return selectUserEntries(username);
 }
 
-function updatePreferences(req) {
+function updateDatabase(data, entry) {
   try {
-    let { username, weekdays, weekends, preferred, notPreferred, shifts } = req.body;
+    let user;
+    if (data.username) {
+      user = selectUserEntries(validateUserName(data.username));
+      if (!user) throw new Error("User not found");
+    }
 
-    const user = selectUserEntries(validateUserName(username)).preferences;
-    if (!user) throw new Error("User not found");
+    switch (entry) {
+      case "user password": {
+        user.password = generateHash(sanitize(data.plainPassword));
+        break;
+      }
+      case "user preferences": {
+        user = user.preferences;
+        user.weekdays = sanitize(data.weekdays);
+        user.weekends = sanitize(data.weekends);
+        user.preferred = sanitize(data.preferred, true);
+        user.notPreferred = sanitize(data.notPreferred, true);
+        user.shiftPreference = sanitize(data.shifts, true);
+            
+        break;
+      }
+      case "user score": {
+        user = user.score;
+        user.days = data.days;
+        user.shifts = data.shifts;
 
-    user.weekdays = sanitize(weekdays);
-    user.weekends = sanitize(weekends);
-    user.preferred = sanitize(preferred, true);
-    user.notPreferred = sanitize(notPreferred, true);
-    user.shiftPreference = sanitize(shifts, true);
+        break;
+      }
+      case "weights": {
+        DB.algoWeights = data.weights;
+        break;
+      }
+      case "worker count": {
+        DB.workerCount = data.count;
+        break;
+      }
+      default: {
+        throw new Error("Entry not defined accordingly");
+      }
+    }
 
     fs.writeFileSync(sampleData, JSON.stringify(DB, null, 2), 'utf-8');
-
     return true;
   } catch (err) {
-    console.error("Error updating preferences:", err);
+    console.error(err);
     return false;
   }
 }

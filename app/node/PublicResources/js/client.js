@@ -105,13 +105,18 @@ async function preferenceForm() {
     const shifts = Array.from(shiftsArray).map(shift => shift.value);
 
     try {
-      const response = await jsonPost("/preferences", { username, weekdays, weekends, preferred, notPreferred, shifts });
+      if (preferred.some(day => notPreferred.includes(day)))
+        throw new Error("You cannot select the same day as preferred and not preferred.");
+
+      const data = { username, weekdays, weekends, preferred, notPreferred, shifts };
+      const entry = "user preferences";
+      const response = await jsonPost("/database", { data, entry });
 
       if (response.success) {
         alert("Preferences saved successfully!");
       }
     } catch (err) {
-      alert("Failed to save preferences.");
+      alert("Error saving preferences: " + err.message);
       console.error(err);
     }
   })

@@ -2,7 +2,8 @@
     {
       "date": "2025-04-14",
       "shift": "morning",
-      "spec": "runner",
+      "start": "08:00",
+      "minutes": 0,
       "user": "Alice"
     },
     {

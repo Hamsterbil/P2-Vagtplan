@@ -4,29 +4,30 @@
       "user": "test",
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "preferences": {
-        "weekdays": "5",
-        "weekends": "9",
+        "weekdays": "7",
+        "weekends": "2",
         "preferred": [
           "Monday",
+          "Tuesday",
+          "Sunday"
+        ],
+        "notPreferred": [
+          "Wednesday",
+          "Thursday",
           "Friday",
           "Saturday"
         ],
-        "notPreferred": [
-          "Tuesday",
-          "Wednesday",
-          "Sunday"
-        ],
         "shiftPreference": [
-          "2",
-          "8",
-          "8",
+          "10",
           "1",
+          "10",
+          "3",
           "4",
           "9",
           "3"
         ]
       },
-      "weights": {
+      "score": {
         "days": {
           "Monday": 0,
           "Tuesday": 0,
@@ -50,17 +51,29 @@
   ],
   "admins": [
     {
-      "user": "",
-      "password": ""
+      "user": "admin",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW"
     }
   ],
-  "weights": {
-    "w1": 0,
-    "w2": 0,
-    "w3": 0,
-    "w4": 0,
-    "w5": 0,
-    "w6": 0,
-    "w7": 0
+  "algoWeights": {
+    "w_mon": 0,
+    "w_tue": 0,
+    "w_wed": 0,
+    "w_thu": 0,
+    "w_fri": 0,
+    "w_sat": 0,
+    "w_sun": 0,
+    "w_morning": 0,
+    "w_evening": 0,
+    "w_night": 0
+  },
+  "workerCount": {
+    "Monday": 0,
+    "Tuesday": 0,
+    "Wednesday": 0,
+    "Thursday": 0,
+    "Friday": 0,
+    "Saturday": 0,
+    "Sunday": 0
   }
 }
