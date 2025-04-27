@@ -19,6 +19,10 @@ function processReq(req, res){
   let pathElements = queryPath.split("/"); 
   console.log(pathElements);
 
+  if (!req.headers.cookie) {
+    res.setHeader('Set-Cookie', 'currentUser=; Path=/; HttpOnly; Secure; Max-Age=3600');
+  }
+
   // Keep people out if they aren't logged in
   let currentUser = getCurrentUser(req);
 
