@@ -1,5 +1,6 @@
-'use strict'
+// Using IIFE to keep some client functions out of access and only return functions allowed to be used by users. Security
 
+var client = (function() {
 /* *******************************************************
 * Helper functions to communicate with server
 * ********************************************************* */
@@ -37,87 +38,111 @@ function jsonPost(url = '', data={}) {
   return fetch(url, options).then(jsonParse);
 }
 
-function loginForm() {
-  document.getElementById('loginForm').addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+return {
+  logout: async function() {
     try {
-      const response = await jsonPost("/login", { username, password });
+      const response = await jsonPost("/logout");
 
-      if (response.success) {
-        sessionStorage.setItem('currentUser', username);
-        window.location.href = '/html/planner.html';
-      }
+      if (response.success)
+        window.location.href = '/';
     } catch (err) {
-      document.getElementById('errorMessage').textContent = "Invalid username or password";
-      document.getElementById('errorMessage').style.display = 'block';
       console.error(err);
     }
-  });
-}
+  },
 
-async function preferenceForm() {
-  let user = await jsonFetch("/user")
-    .catch(err => { 
-      console.error("Failed to fetch user preferences:", err)
-  });
-  if (!user) return;
+  loginForm: function() {
+    document.getElementById('loginForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
 
-  const username = user.user;
-  user = user.preferences || { weekdays: 0, weekends: 0, preferred: [], notPreferred: [], shiftPreference: [] };
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      try {
+        const response = await jsonPost("/login", { username, password });
 
-  document.getElementById('currentUser').innerHTML = username;
+        if (response.success) {
+          // sessionStorage.setItem('currentUser', username);
+          window.location.href = '/html/planner.html';
+        }
+      } catch (err) {
+        document.getElementById('errorMessage').textContent = "Invalid username or password";
+        document.getElementById('errorMessage').style.display = 'block';
+        console.error(err);
+      }
+    });
+  },
 
-  //Updates the form to already include user preferences, for them to edit afterwards
-  document.getElementById('weekdays').value = user.weekdays;
-  document.getElementById('weekends').value = user.weekends;
-  const preferredDays = document.querySelectorAll('input[name="preferredDays"]');
-  const notPreferredDays = document.querySelectorAll('input[name="notPreferredDays"]');
-  const shiftsArray = document.querySelectorAll('select[name="shift"]');
+  preferenceForm: async function() {
+    let user = await jsonFetch("/user")
+      .catch(err => {
+        console.error("Failed to fetch user preferences:", err)
+    });
+    if (!user) return;
 
-  preferredDays.forEach(day => {
-    day.checked = user.preferred.includes(day.value);
-  });
-
-  notPreferredDays.forEach(day => {
-    day.checked = user.notPreferred.includes(day.value);
-  });
-
-  for (let i = 0; i < 7; i++) { 
-    shiftsArray[i].value = user.shiftPreference[i] || "";
-  }
-
-  document.getElementById('preferenceForm').addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    const weekdays = document.getElementById('weekdays').value;
-    const weekends = document.getElementById('weekends').value;
-    const preferredDays = document.querySelectorAll('input[name="preferredDays"]:checked');
-    const notPreferredDays = document.querySelectorAll('input[name="notPreferredDays"]:checked');
-    const shiftsArray = document.querySelectorAll('select[name="shift"]');
+    const { user: username, preferences } = user;
+    if (Object.keys(preferences).length > 0) {
+      user = preferences;
+    } else {
+      user = { weekdays: "", weekends: "", preferred: [], notPreferred: [], shiftPreference: [] };
+    }
     
-    // This only registers the checked days by making the nodeList into an array and filtering it to only include checked days
-    // Afterwards, maps the day values which is just the day as a string
-    const preferred = Array.from(preferredDays).map(day => day.value);
-    const notPreferred = Array.from(notPreferredDays).map(day => day.value);
-    const shifts = Array.from(shiftsArray).map(shift => shift.value);
+    document.getElementById('currentUser').innerHTML = username;
 
-    try {
-      if (preferred.some(day => notPreferred.includes(day)))
-        throw new Error("You cannot select the same day as preferred and not preferred.");
+    const weekdaysElem = document.getElementById('weekdays');
+    const weekendsElem = document.getElementById('weekends');
+    const preferredElem = document.querySelectorAll('input[name="preferredDays"]');
+    const notPreferredElem = document.querySelectorAll('input[name="notPreferredDays"]');
+    const shiftsElem = document.querySelectorAll('select[name="shift"]');
 
-      const data = { username, weekdays, weekends, preferred, notPreferred, shifts };
-      const entry = "user preferences";
-      const response = await jsonPost("/database", { data, entry });
+    //Updates the form to already include user preferences, for them to edit afterwards
+    weekdaysElem.value = user.weekdays;
+    weekendsElem.value = user.weekends;
 
-      if (response.success) {
-        alert("Preferences saved successfully!");
-      }
-    } catch (err) {
-      alert("Error saving preferences: " + err.message);
-      console.error(err);
+    updateCheckbox(preferredElem, user.preferred);
+    updateCheckbox(notPreferredElem, user.notPreferred);
+
+    for (let i = 0; i < 7; i++) { 
+      shiftsElem[i].value = user.shiftPreference[i] || "";
     }
-  })
+
+    function updateCheckbox(elements, values) {
+      elements.forEach(elem => {
+        elem.checked = values.includes(elem.value);
+      })
+    }
+
+    function getCheckedValues(elements) {
+      // This only registers the checked days by making the nodeList into an array and filtering it to only include checked days
+      // Afterwards, maps the day values which is just the day as a string
+      return Array.from(elements)
+        .filter(elem => elem.checked)
+        .map(elem => elem.value);
+    }
+
+    document.getElementById('preferenceForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const weekdays = weekdaysElem.value;
+      const weekends = weekendsElem.value;
+      const preferred = getCheckedValues(preferredElem);
+      const notPreferred = getCheckedValues(notPreferredElem);
+      const shifts = Array.from(shiftsElem).map(shift => shift.value);
+
+      try {
+        if (preferred.some(day => notPreferred.includes(day)))
+          throw new Error("You cannot select the same day as preferred and not preferred.");
+
+        const data = { username, weekdays, weekends, preferred, notPreferred, shifts };
+        const entry = "user preferences";
+        const response = await jsonPost("/database/preferences", { data, entry });
+
+        if (response.success) {
+          alert("Preferences saved successfully!");
+        }
+      } catch (err) {
+        alert("Error saving preferences: " + err.message);
+        console.error(err);
+      }
+    })
+  }
 }
+})();

@@ -46,6 +46,10 @@ function processReq(req, res){
           break;
         }
         case "database": {
+          if (currentUser.type !== "admin" && pathElements[2] !== "preferences") {
+            reportError(res, new Error("Access denied. Only admins can update the database."));
+            return;
+          }
           handleUpdateDatabase(req, res);
           break;
         }
@@ -67,6 +71,10 @@ function processReq(req, res){
           break;
         }
         case "database": {
+          if (currentUser.type !== "admin") {
+            reportError(res, new Error("Access denied. Only admins can access the database."));
+            return;
+          }
           let db = getDB();
           if (db)
             jsonResponse(res, db);
@@ -103,7 +111,7 @@ function handleLogin(req, res) {
         `currentUser=${encodeURIComponent(username)}; Path=/; HttpOnly; Secure; Max-Age=3600`);
       jsonResponse(res, { success: true, message: "Login successful" });
     } else {
-      jsonResponse(res, { success: false, message: "Invalid username or password" });
+      throw new Error('Invalid username or password');
     }
   })
   .catch((err) => {

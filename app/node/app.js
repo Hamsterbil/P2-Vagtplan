@@ -61,7 +61,6 @@ function validateLogin(username, password) {
     return false;
   }
   try {
-
     const pass = sanitize(password);
     if (!bcrypt.compareSync(pass, user.password)) {
       throw new Error("Invalid password");
@@ -72,22 +71,13 @@ function validateLogin(username, password) {
     console.error("Error during login validation: ", err);
     return false;
   }
-
-  // If everything is fine
-  return true;
 }
 
 function selectUserEntries(username) {
-  // Search for the user in the employees array
-  const employee = DB.employees.find(e => e.user === sanitize(username));
-  if (employee) {
-    return employee;
-  }
-
-  // Search for the user in the admins array
-  const admin = DB.admins.find(a => a.user === sanitize(username));
-  if (admin) {
-    return admin;
+  username = sanitize(username).toLowerCase();
+  const user = DB.users.find(e => e.user.toLowerCase() === username);
+  if (user) {
+    return user;
   }
 
   // If no match is found, return null

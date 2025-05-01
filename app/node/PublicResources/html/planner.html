@@ -91,7 +91,7 @@
               >
                 Settings
               </button>
-              <button class="btn btn-sm btn-danger" onclick="logout()">
+              <button class="btn btn-sm btn-danger" onclick="client.logout()">
                 Logout
               </button>
             </div>
@@ -219,6 +219,16 @@
     ></script>
 
     <script>
+      function jsonParse(response) {
+  if (response.ok) 
+     if (response.headers.get("Content-Type") === "application/json") 
+       return response.json();
+     else
+      throw new Error("Wrong Content Type. Expected application/json, got " + response.headers.get("Content-Type"));   
+  else
+    return response.text()
+      .then(text => { throw new Error(response.status + ": " + text); });
+}
         function jsonFetch(url) {
   return fetch(url).then(jsonParse);
 }
@@ -257,10 +267,6 @@
       // Initialize the application
       function initializeApp() {
         // Load saved data, configure UI based on user type (admin/regular)
-        if (!currentUser) {
-          window.location.href = "login.html";
-          return;
-        }
         shiftData = JSON.parse(localStorage.getItem("shiftData")) || {};
         daySettings =
           JSON.parse(localStorage.getItem("daySettings")) ||
