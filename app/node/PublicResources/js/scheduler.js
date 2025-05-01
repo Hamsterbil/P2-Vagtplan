@@ -1,8 +1,12 @@
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.btn.btn-primary').addEventListener('click', function(event){
+        event.preventDefault();
+        preferenceSubmit();
+    });
+});
 
-
-
-document.getElementById('preferencesForm').addEventListener('submit',function(event){
-    event.preventDefault();
+function preferenceSubmit(){
+    console.log("From submitted")
     const preferredDays = document.querySelectorAll('input[name="preferredDays"]:checked');
     const notPreferredDays = document.querySelectorAll('input[name="notPreferredDays"]:checked');
 
@@ -13,81 +17,238 @@ document.getElementById('preferencesForm').addEventListener('submit',function(ev
         alert('Please select at least one day you prefer NOT to work!');
         return;
     }
-    fetch("Users.json")
-        .then(response => response.json())
-        .then(data => { userPreference(data, preferredDays, notPreferredDays),
-                        softmax(data)
-            
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
 
+    async function fetchUserAndWeights() {
+        try {
+            // Fetch the user
+            const user = await jsonFetch("/user");
+            console.log("Fetched User:", user.preferences.weekdays);
     
-});
-
-function userPreference(data, preferredDays,notPreferredDays){
-
-    data.employees[0].Weekday = document.getElementById("weekdays").value;
-    // console.log(data.employees[0].Weekday);
-    data.employees[0].Weekend = document.getElementById("weekends").value;
-
-    preferredDays.forEach(day =>{data.employees[0].Preferred[day.value] = true});
-    notPreferredDays.forEach(day =>{
-        let dayValue = day.value.replace("not", "");
-        data.employees[0].NotPreferred[dayValue] = true
+            // Fetch the database
+            const database = await jsonFetch("/database");
+            console.log("Fetched Database:", database);
+    
+            // Extract weights from the database
+            const weights = database.weights;
+            console.log("Extracted Weights:", weights);
+    
+            // Assign them to variables
+            const currentUser = user;
+            // clone the users names values into a new array
+            const userNames = database.employees.map(employee => employee.user);
+            let availableUsers = database.employees[user]
+            console.log("Available Users:", userNames);
+            const currentWeights = weights;
+    
+            // Return them as an object for further use
+            return { currentUser, currentWeights };
+        } catch (error) {
+            console.error("Error fetching user or weights:", error);
+        }
+    }
+        fetchUserAndWeights().then(({ currentUser, currentWeights }) => {
+        console.log("User:", currentUser);
+        console.log("Weights:", currentWeights);
+    
+        // Example: Use the data in another function
+        const dayScores = calculateDay(currentUser, currentWeights);
+        const shiftScores = calculateShift(currentUser, currentWeights);
+        console.log("Day Scores:", dayScores);
+        console.log("Shift Scores:", shiftScores);
     });
 
-    for (let i = 1; i < 7; i++) {
-        let shiftValue = document.getElementById(`shift${i}`).value;
-        data.employees[0].ShiftPreference[`shift${i}`] = shiftValue;
-    }
-    data.employees[0].id = data.employees[0].user + data.employees[0].password
-    console.log(data.employees[0].id)
-    console.log(data)
+    // jsonFetch("/database")
+    // .then(data => { 
+    //     console.log(data.weights)
+    //     let weights = data.weights;
 
+    //     // userPreference(data, preferredDays, notPreferredDays);
+    //     // tempSoftmax(data);
+    // })
+    // .catch(error => console.error('Error fetching users:', error));
+
+    // jsonFetch("/user")
+    // .then(user => { 
+    //     console.log(user)
+    //     userPreference(user, preferredDays, notPreferredDays);
+    //     // tempSoftmax(user);
+    // })
+    
 }
 
-function softmax(data){
+
+
+// function userPreference(user, preferredDays,notPreferredDays){
+
+//     user.Weekday = document.getElementById("weekdays").value;
+//     console.log(user.Weekday);
+//     user.Weekend = document.getElementById("weekends").value;
+
+//     preferredDays.forEach(day =>{user.preferences.preferred[day.value] = true});
+//     notPreferredDays.forEach(day =>{
+//         // let dayValue = day.value.replace("not", "");
+//         user.preferences.notPreferred[day.value] = true
+//     });
+
+//     for (let i = 1; i < 7; i++) {
+//         let shiftValue = document.getElementById(`shift${i}`).value;
+//         user.preferences.shiftPreference[`shift${i}`] = shiftValue;
+//     }
+//     console.log(user)
+
+// }
+
+function softmax(array){
+    let exp = array.map(number => Math.exp(number));
+    let sum = exp.reduce((a, b)=> a + b, 0);
+    return exp.map(expValue => expValue / sum);
+}
+
+function calculateDay(user, weights){
+    const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    let bonus = 0.5;
+    let normalizeWeekday = user.preferences.weekdays / 10;
+    console.log(normalizeWeekday);
+    let normalizeWeekend = user.preferences.weekends / 10;
+    console.log(normalizeWeekend);
     
-    let weekMax = new Array();
-    for (let i = 0; i < 2; i++) {
-        let value = document.getElementById(i === 0 ? "weekdays" : "weekends").value;
-        weekMax.push(value);
-    }
+    //  find preference for hver dag og brug den til shifts;
+    let dayScore  = []
+    for (let i = 0; i < weekdays.length; i++) {
+        let weightDay = 0;
+        let day = weekdays[i];
+        // console.log(weights[day]);
+        let isWeekend = ['Saturday', 'Sunday'].includes(day);
 
-    let weekdayMax = Math.E ** weekMax[0] / (Math.E ** weekMax[0] + Math.E ** weekMax[1]);
-    let weekendMax = Math.E ** weekMax[1] / (Math.E ** weekMax[0] + Math.E ** weekMax[1]);
-
-    console.log(weekdayMax);
-    console.log(weekendMax);
-
-    console.log(weekdayMax+weekendMax);
-
-    weekMax[0] = weekdayMax;
-    weekMax[1] = weekendMax;
-
-
-    let shiftTotal = 0
-    for (let i = 1; i <= 7; i++) {
-        let shiftValue = parseFloat(document.getElementById(`shift${i}`).value);
-        data.employees[0].ShiftPreference[`shift${i}`] = shiftValue;
-        shiftTotal += Math.E ** shiftValue;
+        if(!isWeekend){
+            weightDay += weights[day] * (weights[day] * normalizeWeekday);
+            weightDay -= weights[day] * (weights[day] * (1 - normalizeWeekday));
+        }else{
+            weightDay += weights[day] * (weights[day] * normalizeWeekend);
+            weightDay -= weights[day] * (weights[day] * (1 - normalizeWeekend));
+        }
+    
+        if (user.preferences.preferred.includes(day)) {
+            weightDay += bonus;
+        }
         
-    }
+        if (user.preferences.notPreferred.includes(day)) {
+            weightDay -= bonus;
+        }
 
-    let shiftMax = [];
-    for (let i = 1; i <= 7; i++) {
-        let shiftValue = parseFloat(document.getElementById(`shift${i}`).value);
-        shiftMax.push(Math.E ** shiftValue / shiftTotal);
-        
+        dayScore.push(weightDay);
     }
+    // console.log(dayScore);
+    return softmax(dayScore);
+}
 
+function calculateShift(user, weights){
+    let shiftsScore = [];
+    let shift = user.preferences.shiftPreference;
+    for (let i = 0; i < shift.length; i++) {
+        let weightShift = 0;
+        if (i <= 3) {
+            weightShift += weights.Morning * shift[i];
+        }else if (i <= 5) {
+            weightShift += weights.Evening * shift[i];
+        }else{
+            weightShift += weights.Night * shift[i];
+        }
+        shiftsScore.push(weightShift);
+    }
+    console.log(shiftsScore);
+    return softmax(shiftsScore);
+}
+
+// function allShiftScore(users, weights){
+//     const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+//     let schedules = [];
+
+//     for (employee of users){
+//         let userSchedules = {user: employee.name, shiftPref: {}};
+
+//         for (let day of weekdays){
+//             let shiftPreference = user.preferences.shiftPreference;
+//             let score = calculateShift(employee, day, shiftPreference, weights)
+//             userSchedules.shiftPref[day] = score;
+//         }
+//         schedules.push(userSchedules);
+//     }
+
+  
+// }
+
+//FIX THIS:
+function randomUser(probabilities, randomValue) {
     let sum = 0;
-    for (let i = 0; i < shiftMax.length; i++) {
-        // sum += shiftMax[i];
-        // console.log(sum);
-        console.log(shiftMax[i]);
+    for (let i = 0; i < probabilities.length; i++){
+        sum += probabilities[i];
+        if (randomValue < sum) {
+            return i;
+        }
     }
+    // If no user is found, return the last one
+    return probabilities.length - 1;
+}
 
-    // return weekMax;
+function normalize(probabilities) {
+    let total = probabilities.reduce((a, b) => a + b, 0);
+    return probabilities.map(p => p / total);
+}
 
+function assignShifts(users, employeesPerShift, maxShiftsPerEmployee){
+    const schedule = {};
+    let shiftCount = {};
+
+    //Set shift count for all users to 0
+    for(let employee of users){
+        shiftCount[employee.user] = 0;
+    }
+    const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    const shifts = ["Shift1", "Shift2", "Shift3", "Shift4", "Shift5", "Shift6", "Shift7"];
+
+    for (let day of days){
+        // Initialize the schedule for each day
+        schedule[day] = {};
+        for (let shift of shifts){
+            schedule[day][shift] = [];
+
+            let dayScore = users.map(user => user.score.days[day]);
+            let shiftScore = users.map(user => user.score.shifts[shift]);
+
+            let dayProbability = softmax(dayScore);
+            let shiftProbability = softmax(shiftScore);
+
+            // Combine the day and shift probabilities
+            let combinedProbabilities = dayProbability.map((prob, index) => (prob + shiftProbability[index])/2);
+
+            // Normalize the combined probabilities
+            let normalizedProbabilities = normalize(combinedProbabilities);
+
+            let availableUsers = users.map(employee => employee.user);
+
+            for (let i = 0; i < employeesPerShift; i++){
+                if (availableUsers.length === 0) 
+                    break; 
+
+                // Get probabilities for available users
+                let currentProbs = availableUsers.map(user => {
+                    let index = users.findIndex(u => u.user === user.user);
+                    return normalizedProbabilities[index];
+                });
+                currentProbs = normalize(currentProbs);
+
+                let selectUserIndex = randomUser(currentProbs, Math.random());
+                let selectUser = availableUsers[selectUserIndex];
+
+                if (shiftCount[selectUser] < maxShiftsPerEmployee) {
+                    schedule[day][shift].push(selectUser);
+                    shiftCount[selectUser] += 1;
+                    availableUsers.splice(selectUserIndex, 1);
+                    
+                }
+            }
+        }
+    }
+    return schedule;
 }
