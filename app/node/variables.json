@@ -1,0 +1,23 @@
+{
+    "algoWeights": {
+        "Monday": 1,
+        "Tuesday": 2,
+        "Wednesday": 2,
+        "Thursday": 2,
+        "Friday": 1,
+        "Saturday": 1.5,
+        "Sunday": 1.5,
+        "Morning": 2,
+        "Evening": 2,
+        "Night": 1
+    },
+    "workerCount": {
+        "Monday": 0,
+        "Tuesday": 0,
+        "Wednesday": 0,
+        "Thursday": 0,
+        "Friday": 0,
+        "Saturday": 0,
+        "Sunday": 0
+    }
+}

@@ -60,9 +60,7 @@
   </head>
   <body class="bg-light">
     <div class="container-fluid my-3">
-      <nav
-        class="navbar navbar-expand-sm navbar-light bg-white border rounded mb-3 p-2"
-      >
+      <nav class="navbar navbar-expand-sm navbar-light bg-white border rounded mb-3 p-2">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Shift Planner</a>
           <button
@@ -72,28 +70,14 @@
             data-bs-target="#navbarContent"
             aria-controls="navbarContent"
             aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarContent">
             <div class="ms-auto d-flex align-items-center flex-wrap">
               <span class="navbar-text me-2 small" id="currentUser">User</span>
-              <span class="navbar-text me-3 small">|</span>
-              <span class="navbar-text me-2 small" id="specializationDisplay"
-                >No Role Set</span
-              >
-              <span class="navbar-text me-3 small">|</span>
-              <button
-                type="button"
-                class="btn btn-sm btn-outline-secondary me-2"
-                id="settingsBtn"
-              >
-                Settings
-              </button>
-              <button class="btn btn-sm btn-danger" onclick="client.logout()">
-                Logout
-              </button>
+              <button type="button" class="btn btn-sm btn-outline-secondary me-2" id="settingsBtn">Settings</button>
+              <button class="btn btn-sm btn-danger" onclick="client.logout()">Logout</button>
             </div>
           </div>
         </div>
@@ -144,42 +128,24 @@
         </div>
       </div>
 
-      <div
-        class="user-info p-3 mb-3 bg-body-secondary rounded d-flex justify-content-between align-items-center flex-wrap"
-      >
+      <div class="user-info p-3 mb-3 bg-body-secondary rounded d-flex justify-content-between align-items-center flex-wrap">
         <div>
           <h3 id="displayUser" class="h5 mb-1">User</h3>
           <p id="shiftCount" class="mb-0 text-muted small">0 upcoming shifts</p>
         </div>
-        <button
-          id="viewToggleBtn"
-          class="btn btn-sm btn-secondary non-admin-only"
-        >
-          Show My Shifts Only
-        </button>
+        <button id="viewToggleBtn" class="btn btn-sm btn-secondary non-admin-only">Show My Shifts Only</button>
       </div>
 
-      <div
-        id="errorMessage"
-        class="alert alert-danger mt-2 d-none"
-        role="alert"
-      ></div>
+      <div id="errorMessage" class="alert alert-danger mt-2 d-none" role="alert"></div>
 
       <div id="calendar" class="bg-white p-3 rounded border"></div>
     </div>
-    <div
-      class="modal fade"
-      id="adminDaySettingsModal"
-      tabindex="-1"
-      aria-labelledby="adminDaySettingsModalLabel"
-      aria-hidden="true"
-    >
+
+    <div class="modal fade" id="adminDaySettingsModal" tabindex="-1" aria-labelledby="adminDaySettingsModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="adminDaySettingsModalLabel">
-              Daily Role Needs
-            </h1>
+            <h1 class="modal-title fs-5" id="adminDaySettingsModalLabel">Daily Role Needs</h1>
             <button
               type="button"
               class="btn-close"
@@ -188,26 +154,12 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p class="text-muted small mb-3">
-              Set the desired number of staff for each role per day.
-            </p>
+            <p class="text-muted small mb-3">Set the desired number of staff for each role per day.</p>
             <div id="daySettingsContainer"></div>
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button
-              type="button"
-              class="btn btn-primary"
-              id="saveDaySettingsBtn"
-            >
-              Save Settings
-            </button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="saveDaySettingsBtn">Save Settings</button>
           </div>
         </div>
     </div>
@@ -215,8 +167,8 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous">
+    </script>
 
     <script>
       function jsonParse(response) {
@@ -235,7 +187,14 @@
       // Keep track of app's data and settings
       let shiftData = {};
       let stagedShiftData = null;
-      let currentUser = jsonFetch("/user");
+      let currentUser = jsonFetch("/user").then((data) => {
+        if (data && data.user) {
+          return data;
+        } else {
+          console.error("User data not found.");
+          return null;
+        }
+      });
       let currentSpecialization =
         localStorage.getItem(`userSpec_${currentUser}`) || "";
       let isAdmin = currentUser.user === "admin";
@@ -273,10 +232,6 @@
           getDefaultDaySettings();
         document.getElementById("currentUser").textContent = currentUser;
         document.getElementById("displayUser").textContent = currentUser;
-        document.getElementById("specializationDisplay").textContent =
-          currentSpecialization
-            ? currentSpecialization.toUpperCase()
-            : "No Role Set";
         const adminPanel = document.getElementById("adminControlsPanel");
         const toggleBtn = document.getElementById("viewToggleBtn");
         if (isAdmin) {
@@ -300,122 +255,160 @@
         setupEventListeners();
       }
       function initializeCalendar() {
+
+        fetch('../schedule.json')
+        .then(response => response.json())
+        .then(data => {
+          // Transform JSON data into FullCalendar events
+          const events = data.map(event => {
+            const startDateTime = new Date(`${event.date}T${event.start}`);
+            const endDateTime = new Date(startDateTime.getTime() + event.minutes * 60000); // Add minutes to start time
+
+            return {
+              title: `${event.user} (${event.shift})`,
+              start: startDateTime.toISOString(),
+              end: endDateTime.toISOString(),
+              allDay: false
+            };
+          });
+          console.log(events); // Debugging: Check the transformed events
+
+          // Initialize FullCalendar
+          const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'timeGridWeek', // Use a time grid to show event durations
+            events: events
+          });
+
+          calendar.render();
+        })
+        .catch(error => console.error('Error loading JSON:', error));
+      
         const calendarEl = document.getElementById("calendar");
-        calendarInstance = new FullCalendar.Calendar(calendarEl, {
-          initialView: "timeGridWeek",
-          headerToolbar: {
-            left: "prev,next today",
-            center: "title",
-            right: "dayGridMonth,timeGridWeek,timeGridDay",
-          },
-          editable: false,
-          selectable: false,
-          dateClick: handleDateClick,
-          eventClick: handleEventClick,
-        });
-        calendarInstance.render();
-        displayLiveSchedule();
-      }
-      function getDefaultDaySettings() {
-        /* ... same ... */ const defaults = {};
-        DAYS_OF_WEEK.forEach((day) => {
-          defaults[day] = {};
-          ROLES.forEach((role) => {
-            defaults[day][role] = 0;
-          });
-        });
-        return defaults;
-      }
-      function generateAdminSettingsSliders() {
-        /* ... same ... */
-        const container = document.getElementById("daySettingsContainer");
-        if (!container) return;
-        let html = "";
-        DAYS_OF_WEEK.forEach((day) => {
-          html += `<div class="mb-4 border-bottom pb-2"><h5 class="text-capitalize">${day}</h5>`;
-          ROLES.forEach((role) => {
-            const settingValue = daySettings[day]?.[role] ?? 0;
-            const sliderId = `settings-${day}-${role}`;
-            html += `<div class="slider-container mb-2"><label for="${sliderId}" class="form-label text-capitalize">${role}:</label><input type="range" class="form-range" min="0" max="10" step="1" id="${sliderId}" value="${settingValue}"><span class="slider-value">${settingValue}</span></div>`;
-          });
-          html += `</div>`;
-        });
-        container.innerHTML = html;
-        container.querySelectorAll(".form-range").forEach((slider) => {
-          slider.addEventListener("input", (e) => {
-            const valueSpan = e.target.nextElementSibling;
-            if (valueSpan?.classList.contains("slider-value")) {
-              valueSpan.textContent = e.target.value;
-            }
-          });
-        });
+        // calendarInstance = new FullCalendar.Calendar(calendarEl, {
+        //   initialView: "timeGridWeek",
+        //   headerToolbar: {
+        //     left: "prev,next today",
+        //     center: "title",
+        //     right: "dayGridMonth,timeGridWeek,timeGridDay",
+        //   },
+        //   editable: false,
+        //   selectable: false,
+        //   dateClick: handleDateClick,
+        //   eventClick: handleEventClick,
+        //   events
+        // });
+        // calendarInstance.render();
+        // displayLiveSchedule();
       }
 
+      function getUserEvents(user) {
+
+      }
+
+      function getAllEvents() {
+        
+      }
+
+      // function getDefaultDaySettings() {
+      //   /* ... same ... */ const defaults = {};
+      //   DAYS_OF_WEEK.forEach((day) => {
+      //     defaults[day] = {};
+      //     ROLES.forEach((role) => {
+      //       defaults[day][role] = 0;
+      //     });
+      //   });
+      //   return defaults;
+      // }
+      // function generateAdminSettingsSliders() {
+      //   /* ... same ... */
+      //   const container = document.getElementById("daySettingsContainer");
+      //   if (!container) return;
+      //   let html = "";
+      //   DAYS_OF_WEEK.forEach((day) => {
+      //     html += `<div class="mb-4 border-bottom pb-2"><h5 class="text-capitalize">${day}</h5>`;
+      //     ROLES.forEach((role) => {
+      //       const settingValue = daySettings[day]?.[role] ?? 0;
+      //       const sliderId = `settings-${day}-${role}`;
+      //       html += `<div class="slider-container mb-2"><label for="${sliderId}" class="form-label text-capitalize">${role}:</label><input type="range" class="form-range" min="0" max="10" step="1" id="${sliderId}" value="${settingValue}"><span class="slider-value">${settingValue}</span></div>`;
+      //     });
+      //     html += `</div>`;
+      //   });
+      //   container.innerHTML = html;
+      //   container.querySelectorAll(".form-range").forEach((slider) => {
+      //     slider.addEventListener("input", (e) => {
+      //       const valueSpan = e.target.nextElementSibling;
+      //       if (valueSpan?.classList.contains("slider-value")) {
+      //         valueSpan.textContent = e.target.value;
+      //       }
+      //     });
+      //   });
+      // }
+
       // Functions to create calendar events and display them
-      function generateEventsFromData(dataToFormat) {
-        /* ... same (respects viewMode) ... */
-        const events = [];
-        const today = new Date();
-        const applyUserFilter = !isAdmin && viewMode === "mine";
-        for (const shiftId in dataToFormat) {
-          const [idx, day] = shiftId.split("-");
-          const users = dataToFormat[shiftId];
-          let relevant = users;
-          if (applyUserFilter) {
-            relevant = users.filter((u) => u.user === currentUser);
-          }
-          if (relevant?.length > 0 && shiftIndexToTimeMap[idx]) {
-            /* ... create event object ... */ const timeInfo =
-              shiftIndexToTimeMap[idx];
-            let date = new Date(today);
-            let diff = ((parseInt(day) + 1) % 7) - date.getDay();
-            date.setDate(date.getDate() + diff);
-            let start = `${date.toISOString().split("T")[0]}T${timeInfo.start}`;
-            let end = `${date.toISOString().split("T")[0]}T${timeInfo.end}`;
-            if (timeInfo.nextDay) {
-              const nextDay = new Date(date);
-              nextDay.setDate(date.getDate() + 1);
-              end = `${nextDay.toISOString().split("T")[0]}T${timeInfo.end}`;
-            }
-            const title = relevant
-              .map((u) => `${u.user}(${u.spec})`)
-              .join(", ");
-            const cls = relevant[0] ? `event-${relevant[0].spec}` : "";
-            events.push({
-              id: shiftId,
-              title: title,
-              start: start,
-              end: end,
-              allDay: false,
-              extendedProps: { users: users },
-              className: cls,
-            });
-          }
-        }
-        console.log(
-          `Generated ${events.length} (Mode: ${viewMode}, Filter: ${applyUserFilter})`
-        );
-        return events;
-      }
-      function displayStagedSchedule() {
-        /* ... same (uses setOption) ... */ if (
-          !calendarInstance ||
-          stagedShiftData === null
-        )
-          return;
-        console.log("Display STAGED");
-        try {
-          const currentVM = viewMode;
-          viewMode = "all";
-          const ev = generateEventsFromData(stagedShiftData);
-          viewMode = currentVM;
-          calendarInstance.setOption("events", ev);
-          console.log("Set staged.");
-        } catch (e) {
-          console.error("Err display staged:", e);
-          showError("Err preview.");
-        }
-      }
+      // function generateEventsFromData(dataToFormat) {
+      //   /* ... same (respects viewMode) ... */
+      //   const events = [];
+      //   const today = new Date();
+      //   const applyUserFilter = !isAdmin && viewMode === "mine";
+      //   for (const shiftId in dataToFormat) {
+      //     const [idx, day] = shiftId.split("-");
+      //     const users = dataToFormat[shiftId];
+      //     let relevant = users;
+      //     if (applyUserFilter) {
+      //       relevant = users.filter((u) => u.user === currentUser);
+      //     }
+      //     if (relevant?.length > 0 && shiftIndexToTimeMap[idx]) {
+      //       /* ... create event object ... */ const timeInfo =
+      //         shiftIndexToTimeMap[idx];
+      //       let date = new Date(today);
+      //       let diff = ((parseInt(day) + 1) % 7) - date.getDay();
+      //       date.setDate(date.getDate() + diff);
+      //       let start = `${date.toISOString().split("T")[0]}T${timeInfo.start}`;
+      //       let end = `${date.toISOString().split("T")[0]}T${timeInfo.end}`;
+      //       if (timeInfo.nextDay) {
+      //         const nextDay = new Date(date);
+      //         nextDay.setDate(date.getDate() + 1);
+      //         end = `${nextDay.toISOString().split("T")[0]}T${timeInfo.end}`;
+      //       }
+      //       const title = relevant
+      //         .map((u) => `${u.user}(${u.spec})`)
+      //         .join(", ");
+      //       const cls = relevant[0] ? `event-${relevant[0].spec}` : "";
+      //       events.push({
+      //         id: shiftId,
+      //         title: title,
+      //         start: start,
+      //         end: end,
+      //         allDay: false,
+      //         extendedProps: { users: users },
+      //         className: cls,
+      //       });
+      //     }
+      //   }
+      //   console.log(
+      //     `Generated ${events.length} (Mode: ${viewMode}, Filter: ${applyUserFilter})`
+      //   );
+      //   return events;
+      // }
+      // function displayStagedSchedule() {
+      //   /* ... same (uses setOption) ... */ if (
+      //     !calendarInstance ||
+      //     stagedShiftData === null
+      //   )
+      //     return;
+      //   console.log("Display STAGED");
+      //   try {
+      //     const currentVM = viewMode;
+      //     viewMode = "all";
+      //     const ev = generateEventsFromData(stagedShiftData);
+      //     viewMode = currentVM;
+      //     calendarInstance.setOption("events", ev);
+      //     console.log("Set staged.");
+      //   } catch (e) {
+      //     console.error("Err display staged:", e);
+      //     showError("Err preview.");
+      //   }
+      // }
       function displayLiveSchedule() {
         /* ... same (uses setOption) ... */ if (!calendarInstance) return;
         console.log("Display LIVE");
@@ -430,89 +423,89 @@
       }
 
       // Admin-specific features
-      function processUploadedSchedule(file) {
-        /* ... same ... */ console.log("Processing upload...");
-        if (!file) {
-          showError("No file.");
-          return;
-        }
-        const reader = new FileReader();
-        reader.onload = function (event) {
-          try {
-            const json = JSON.parse(event.target.result);
-            if (!Array.isArray(json)) throw new Error("Need array.");
-            const data = {};
-            let err = false;
-            json.forEach((item, i) => {
-              if (!item.date || !item.shift || !item.spec || !item.user) {
-                console.warn(`Skip invalid ${i}`);
-                err = true;
-                return;
-              }
-              const timeInfo = shiftKeyToTimeMap[item.shift.toLowerCase()];
-              if (!timeInfo) {
-                console.warn(`Skip ${i}: Bad key`);
-                err = true;
-                return;
-              }
-              const idx = timeInfo.index;
-              const date = new Date(item.date + "T00:00:00");
-              if (isNaN(date.getTime())) {
-                console.warn(`Skip ${i}: Bad date`);
-                err = true;
-                return;
-              }
-              const day = (date.getDay() + 6) % 7;
-              const id = `${idx}-${day}`;
-              if (!data[id]) {
-                data[id] = [];
-              }
-              data[id].push({ user: item.user, spec: item.spec.toLowerCase() });
-            });
-            console.log("Staging done:", data);
-            stagedShiftData = data;
-            displayStagedSchedule();
-            document
-              .getElementById("confirmSection")
-              .classList.remove("d-none");
-            document.getElementById("adminInstruction").classList.add("d-none");
-            showError(err ? "Preview errors." : "Preview loaded.", !err);
-          } catch (e) {
-            stagedShiftData = null;
-            document.getElementById("confirmSection").classList.add("d-none");
-            document
-              .getElementById("adminInstruction")
-              .classList.remove("d-none");
-            showError(`JSON Err: ${e.message}`);
-          }
-        };
-        reader.onerror = function () {
-          showError("Read Err.");
-          stagedShiftData = null;
-          document.getElementById("confirmSection").classList.add("d-none");
-          document
-            .getElementById("adminInstruction")
-            .classList.remove("d-none");
-        };
-        reader.readAsText(file);
-      }
-      function confirmAndPublishSchedule() {
-        /* ... same ... */ console.log("Confirm click.");
-        if (stagedShiftData === null) {
-          showError("No staged data.");
-          return;
-        }
-        shiftData = stagedShiftData;
-        stagedShiftData = null;
-        saveShifts();
-        console.log("Saved.");
-        displayLiveSchedule();
-        document.getElementById("confirmSection").classList.add("d-none");
-        document.getElementById("adminInstruction").classList.remove("d-none");
-        document.getElementById("jsonUpload").value = "";
-        showError("Published!", true);
-        updateShiftCount();
-      }
+      // function processUploadedSchedule(file) {
+      //   /* ... same ... */ console.log("Processing upload...");
+      //   if (!file) {
+      //     showError("No file.");
+      //     return;
+      //   }
+      //   const reader = new FileReader();
+      //   reader.onload = function (event) {
+      //     try {
+      //       const json = JSON.parse(event.target.result);
+      //       if (!Array.isArray(json)) throw new Error("Need array.");
+      //       const data = {};
+      //       let err = false;
+      //       json.forEach((item, i) => {
+      //         if (!item.date || !item.shift || !item.spec || !item.user) {
+      //           console.warn(`Skip invalid ${i}`);
+      //           err = true;
+      //           return;
+      //         }
+      //         const timeInfo = shiftKeyToTimeMap[item.shift.toLowerCase()];
+      //         if (!timeInfo) {
+      //           console.warn(`Skip ${i}: Bad key`);
+      //           err = true;
+      //           return;
+      //         }
+      //         const idx = timeInfo.index;
+      //         const date = new Date(item.date + "T00:00:00");
+      //         if (isNaN(date.getTime())) {
+      //           console.warn(`Skip ${i}: Bad date`);
+      //           err = true;
+      //           return;
+      //         }
+      //         const day = (date.getDay() + 6) % 7;
+      //         const id = `${idx}-${day}`;
+      //         if (!data[id]) {
+      //           data[id] = [];
+      //         }
+      //         data[id].push({ user: item.user, spec: item.spec.toLowerCase() });
+      //       });
+      //       console.log("Staging done:", data);
+      //       stagedShiftData = data;
+      //       displayStagedSchedule();
+      //       document
+      //         .getElementById("confirmSection")
+      //         .classList.remove("d-none");
+      //       document.getElementById("adminInstruction").classList.add("d-none");
+      //       showError(err ? "Preview errors." : "Preview loaded.", !err);
+      //     } catch (e) {
+      //       stagedShiftData = null;
+      //       document.getElementById("confirmSection").classList.add("d-none");
+      //       document
+      //         .getElementById("adminInstruction")
+      //         .classList.remove("d-none");
+      //       showError(`JSON Err: ${e.message}`);
+      //     }
+      //   };
+      //   reader.onerror = function () {
+      //     showError("Read Err.");
+      //     stagedShiftData = null;
+      //     document.getElementById("confirmSection").classList.add("d-none");
+      //     document
+      //       .getElementById("adminInstruction")
+      //       .classList.remove("d-none");
+      //   };
+      //   reader.readAsText(file);
+      // }
+      // function confirmAndPublishSchedule() {
+      //   /* ... same ... */ console.log("Confirm click.");
+      //   if (stagedShiftData === null) {
+      //     showError("No staged data.");
+      //     return;
+      //   }
+      //   shiftData = stagedShiftData;
+      //   stagedShiftData = null;
+      //   saveShifts();
+      //   console.log("Saved.");
+      //   displayLiveSchedule();
+      //   document.getElementById("confirmSection").classList.add("d-none");
+      //   document.getElementById("adminInstruction").classList.remove("d-none");
+      //   document.getElementById("jsonUpload").value = "";
+      //   showError("Published!", true);
+      //   updateShiftCount();
+      // }
       function cancelSchedulePreview() {
         /* ... same ... */ console.log("Cancel click.");
         stagedShiftData = null;

@@ -1,33 +1,16 @@
 [
     {
-      "date": "2025-04-14",
+      "date": "2025-05-01",
       "shift": "morning",
       "start": "08:00",
-      "minutes": 0,
+      "minutes": 180,
       "user": "Alice"
     },
     {
-      "date": "2025-04-14",
-      "shift": "morning",
-      "spec": "er",
-      "user": "Bob"
-    },
-    {
-      "date": "2025-04-15",
-      "shift": "noon",
-      "spec": "fire",
-      "user": "Charlie"
-    },
-    {
-      "date": "2025-04-16",
+      "date": "2025-05-01",
       "shift": "afternoon",
-      "spec": "runner",
-      "user": "Alice"
-    },
-    {
-      "date": "2025-04-16",
-      "shift": "night",
-      "spec": "er",
-      "user": "David"
+      "start": "12:00",
+      "minutes": 180,
+      "user": "Bob"
     }
 ]

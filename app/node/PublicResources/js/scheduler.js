@@ -1,10 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    document.querySelector('.btn.btn-primary').addEventListener('click', function(event){
-        event.preventDefault();
-        preferenceSubmit();
-    });
-});
-
 function preferenceSubmit(){
     console.log("From submitted")
     const preferredDays = document.querySelectorAll('input[name="preferredDays"]:checked');
@@ -21,25 +14,32 @@ function preferenceSubmit(){
     async function fetchUserAndWeights() {
         try {
             // Fetch the user
-            const user = await jsonFetch("/user");
-            console.log("Fetched User:", user.preferences.weekdays);
-    
+            const currentUser = await client.jsonFetch("/user");
+            console.log("Fetched User:", currentUser.preferences.weekdays);
+
+            // Fetch weights and workerCount
+            const vars = await client.jsonFetch("/variables");
+
             // Fetch the database
-            const database = await jsonFetch("/database");
-            console.log("Fetched Database:", database);
-    
+            try {
+                const database = await client.jsonFetch("/database");
+                console.log("Fetched Database:", database);
+                //Do stuff
+
+            } catch (err) {
+                console.log("Could not fetch database. Is user admin?");
+                console.log(err);
+            }
+
             // Extract weights from the database
-            const weights = database.weights;
-            console.log("Extracted Weights:", weights);
-    
-            // Assign them to variables
-            const currentUser = user;
+            const currentWeights = vars.algoWeights;
+            console.log("Extracted Weights:", currentWeights);
+
             // clone the users names values into a new array
-            const userNames = database.employees.map(employee => employee.user);
-            let availableUsers = database.employees[user]
-            console.log("Available Users:", userNames);
-            const currentWeights = weights;
-    
+            // const userNames = database.employees.map(employee => employee.user);
+            // let availableUsers = database.employees[user]
+            // console.log("Available Users:", userNames);
+
             // Return them as an object for further use
             return { currentUser, currentWeights };
         } catch (error) {
@@ -49,16 +49,25 @@ function preferenceSubmit(){
         fetchUserAndWeights().then(({ currentUser, currentWeights }) => {
         console.log("User:", currentUser);
         console.log("Weights:", currentWeights);
-    
+
         // Example: Use the data in another function
         const dayScores = calculateDay(currentUser, currentWeights);
         const shiftScores = calculateShift(currentUser, currentWeights);
         console.log("Day Scores:", dayScores);
         console.log("Shift Scores:", shiftScores);
+
+        const username = currentUser.user;
+
+        const data = { username, dayScores, shiftScores };
+        const entry = "user score";
+        const response = client.jsonPost("/database/preferences", { data, entry });
+        console.log("Response:", response);
+    }).catch(error => {
+        console.error("Error:", error);
     });
 
     // jsonFetch("/database")
-    // .then(data => { 
+    // .then(data => {
     //     console.log(data.weights)
     //     let weights = data.weights;
 
@@ -68,12 +77,12 @@ function preferenceSubmit(){
     // .catch(error => console.error('Error fetching users:', error));
 
     // jsonFetch("/user")
-    // .then(user => { 
+    // .then(user => {
     //     console.log(user)
     //     userPreference(user, preferredDays, notPreferredDays);
     //     // tempSoftmax(user);
     // })
-    
+
 }
 
 
@@ -111,7 +120,7 @@ function calculateDay(user, weights){
     console.log(normalizeWeekday);
     let normalizeWeekend = user.preferences.weekends / 10;
     console.log(normalizeWeekend);
-    
+
     //  find preference for hver dag og brug den til shifts;
     let dayScore  = []
     for (let i = 0; i < weekdays.length; i++) {
@@ -127,11 +136,11 @@ function calculateDay(user, weights){
             weightDay += weights[day] * (weights[day] * normalizeWeekend);
             weightDay -= weights[day] * (weights[day] * (1 - normalizeWeekend));
         }
-    
+
         if (user.preferences.preferred.includes(day)) {
             weightDay += bonus;
         }
-        
+
         if (user.preferences.notPreferred.includes(day)) {
             weightDay -= bonus;
         }
@@ -139,7 +148,7 @@ function calculateDay(user, weights){
         dayScore.push(weightDay);
     }
     // console.log(dayScore);
-    return softmax(dayScore);
+    return dayScore;
 }
 
 function calculateShift(user, weights){
@@ -157,7 +166,7 @@ function calculateShift(user, weights){
         shiftsScore.push(weightShift);
     }
     console.log(shiftsScore);
-    return softmax(shiftsScore);
+    return shiftsScore;
 }
 
 // function allShiftScore(users, weights){
@@ -175,7 +184,7 @@ function calculateShift(user, weights){
 //         schedules.push(userSchedules);
 //     }
 
-  
+
 // }
 
 //FIX THIS:
@@ -228,8 +237,8 @@ function assignShifts(users, employeesPerShift, maxShiftsPerEmployee){
             let availableUsers = users.map(employee => employee.user);
 
             for (let i = 0; i < employeesPerShift; i++){
-                if (availableUsers.length === 0) 
-                    break; 
+                if (availableUsers.length === 0)
+                    break;
 
                 // Get probabilities for available users
                 let currentProbs = availableUsers.map(user => {
@@ -245,7 +254,7 @@ function assignShifts(users, employeesPerShift, maxShiftsPerEmployee){
                     schedule[day][shift].push(selectUser);
                     shiftCount[selectUser] += 1;
                     availableUsers.splice(selectUserIndex, 1);
-                    
+
                 }
             }
         }

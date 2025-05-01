@@ -1,25 +1,4 @@
 {
-  "algoWeights": {
-    "w_mon": 0,
-    "w_tue": 0,
-    "w_wed": 0,
-    "w_thu": 0,
-    "w_fri": 0,
-    "w_sat": 0,
-    "w_sun": 0,
-    "w_morning": 0,
-    "w_evening": 0,
-    "w_night": 0
-  },
-  "workerCount": {
-    "Monday": 0,
-    "Tuesday": 0,
-    "Wednesday": 0,
-    "Thursday": 0,
-    "Friday": 0,
-    "Saturday": 0,
-    "Sunday": 0
-  },
   "users": [
     {
       "user": "admin",
@@ -54,7 +33,26 @@
           "1"
         ]
       },
-      "score": {}
+      "score": {
+        "days": [
+          0.5,
+          -0.5,
+          -0.5,
+          -0.5,
+          0.5,
+          2.3000000000000007,
+          2.3000000000000007
+        ],
+        "shifts": [
+          16,
+          16,
+          12,
+          10,
+          8,
+          6,
+          1
+        ]
+      }
     },
     {
       "user": "Ella",

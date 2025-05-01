@@ -1,5 +1,5 @@
 export {ValidationError, NoResourceError, processReq};
-import {selectUserEntries, getDB, validateLogin, getCurrentUser, updateDatabase} from "./app.js";
+import {selectUserEntries, getDB, getVars, validateLogin, getCurrentUser, updateDatabase} from "./app.js";
 import {extractJSON, fileResponse, htmlResponse, extractForm, jsonResponse, errorResponse, reportError, startServer, fs} from "./server.js";
 
 const ValidationError = "Validation Error";
@@ -78,6 +78,14 @@ function processReq(req, res){
           let db = getDB();
           if (db)
             jsonResponse(res, db);
+          else
+            reportError(res, new Error(NoResourceError));
+          break;
+        }
+        case "variables": {
+          let vars = getVars();
+          if (vars)
+              jsonResponse(res, vars);
           else
             reportError(res, new Error(NoResourceError));
           break;

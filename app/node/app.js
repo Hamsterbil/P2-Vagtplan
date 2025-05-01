@@ -1,10 +1,12 @@
-export {selectUserEntries, getDB, getCurrentUser, validateLogin, updateDatabase};
+export {selectUserEntries, getDB, getVars, getCurrentUser, validateLogin, updateDatabase};
 import { ValidationError } from "./router.js";
 import fs from 'fs';
 import bcrypt from 'bcrypt';
 
 let sampleData = 'node/db.json';
+let variablesData = 'node/variables.json';
 let DB = JSON.parse(fs.readFileSync(sampleData, 'utf-8'));
+let scheduleVariables = JSON.parse(fs.readFileSync(variablesData, 'utf-8'));
 
 //remove potentially dangerous/undesired characters 
 function sanitize(str, isArray = false){
@@ -88,6 +90,10 @@ function getDB() {
   return DB;
 }
 
+function getVars() {
+  return scheduleVariables;
+}
+
 function getCurrentUser(req) {
   const cookies = req.headers.cookie;
   const match = cookies.match(/currentUser=([^;]+)/);
@@ -121,9 +127,11 @@ function updateDatabase(data, entry) {
         break;
       }
       case "user score": {
+        console.log("Updating user score...", user, data);
         user = user.score;
-        user.days = data.days;
-        user.shifts = data.shifts;
+
+        user.days = data.dayScores;
+        user.shifts = data.shiftScores;
 
         break;
       }

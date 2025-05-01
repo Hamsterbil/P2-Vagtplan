@@ -1,47 +1,43 @@
 // Using IIFE to keep some client functions out of access and only return functions allowed to be used by users. Security
-
 var client = (function() {
-/* *******************************************************
-* Helper functions to communicate with server
-* ********************************************************* */
+return {
 
 //Tries to parse a http body as json document. 
 //But first ensure taht the response code is OK (200) and
 //the content type is actually a json document; else rejects the promise
-function jsonParse(response) {
-  if (response.ok) 
-     if (response.headers.get("Content-Type") === "application/json") 
-       return response.json();
-     else
-      throw new Error("Wrong Content Type. Expected application/json, got " + response.headers.get("Content-Type"));   
-  else
-    return response.text()
-      .then(text => { throw new Error(response.status + ": " + text); });
-}
+  jsonParse: function(response) {
+    if (response.ok) 
+      if (response.headers.get("Content-Type") === "application/json") 
+        return response.json();
+      else
+        throw new Error("Wrong Content Type. Expected application/json, got " + response.headers.get("Content-Type"));   
+    else
+      return response.text()
+        .then(text => { throw new Error(response.status + ": " + text); });
+  },
 
 //GET a json document at URL
-function jsonFetch(url) {
-  return fetch(url).then(jsonParse);
-}
+  jsonFetch: function(url) {
+    return fetch(url).then(client.jsonParse);
+  },
 
 //POST a json document in data to URL
 //Sets content type appropriately first. 
-function jsonPost(url = '', data={}) {
-  const options={
-      method: 'POST', // *GET, POST, PUT, DELETE, etc.
-      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-      headers: {
-        'Content-Type': 'application/json'
-      },
-    body: JSON.stringify(data) // body data type must match "Content-Type" header
-    };
-  return fetch(url, options).then(jsonParse);
-}
+  jsonPost: function(url = '', data={}) {
+    const options={
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
+      };
+    return fetch(url, options).then(client.jsonParse);
+  },
 
-return {
   logout: async function() {
     try {
-      const response = await jsonPost("/logout");
+      const response = await client.jsonPost("/logout");
 
       if (response.success)
         window.location.href = '/';
@@ -57,7 +53,7 @@ return {
       const username = document.getElementById('username').value;
       const password = document.getElementById('password').value;
       try {
-        const response = await jsonPost("/login", { username, password });
+        const response = await client.jsonPost("/login", { username, password });
 
         if (response.success) {
           // sessionStorage.setItem('currentUser', username);
@@ -72,7 +68,7 @@ return {
   },
 
   preferenceForm: async function() {
-    let user = await jsonFetch("/user")
+    let user = await client.jsonFetch("/user")
       .catch(err => {
         console.error("Failed to fetch user preferences:", err)
     });
@@ -133,7 +129,7 @@ return {
 
         const data = { username, weekdays, weekends, preferred, notPreferred, shifts };
         const entry = "user preferences";
-        const response = await jsonPost("/database/preferences", { data, entry });
+        const response = await client.jsonPost("/database/preferences", { data, entry });
 
         if (response.success) {
           alert("Preferences saved successfully!");
@@ -142,7 +138,9 @@ return {
         alert("Error saving preferences: " + err.message);
         console.error(err);
       }
-    })
+      
+      window.preferenceSubmit();
+    });
   }
 }
 })();
