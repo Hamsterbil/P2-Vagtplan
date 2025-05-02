@@ -26,7 +26,7 @@ function sanitize(str, isArray = false){
 }
 
 // Just for creating the initial hashed password for the database
-async function generateHash(pass) {
+async function hashDealer(pass) {
   const saltRounds = 10;
 
   try {
@@ -113,7 +113,7 @@ function updateDatabase(data, entry) {
 
     switch (entry) {
       case "user password": {
-        user.password = generateHash(sanitize(data.plainPassword));
+        user.password = hashDealer(sanitize(data.plainPassword));
         break;
       }
       case "user preferences": {
