@@ -41,18 +41,20 @@ function preferenceSubmit(){
             // console.log("Available Users:", userNames);
 
             // Return them as an object for further use
-            return { currentUser, currentWeights };
+            return { currentUser, currentWeights, employees };
         } catch (error) {
             console.error("Error fetching user or weights:", error);
         }
     }
-        fetchUserAndWeights().then(({ currentUser, currentWeights }) => {
+        fetchUserAndWeights().then(({ currentUser, currentWeights, employees }) => {
         console.log("User:", currentUser);
         console.log("Weights:", currentWeights);
 
         // Example: Use the data in another function
         const dayScores = calculateDay(currentUser, currentWeights);
         const shiftScores = calculateShift(currentUser, currentWeights);
+        // const dayScores = employees.map(currentUser => calculateDay(currentUser, currentWeights));
+        // const shiftScores = employees.map(currentUser => calculateShift(currentUser, currentWeights));
         console.log("Day Scores:", dayScores);
         console.log("Shift Scores:", shiftScores);
 
@@ -117,10 +119,10 @@ function calculateDay(user, weights){
     const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     let bonus = 0.5;
     let normalizeWeekday = user.preferences.weekdays / 10;
-    console.log(normalizeWeekday);
+    // console.log(normalizeWeekday);
     let normalizeWeekend = user.preferences.weekends / 10;
-    console.log(normalizeWeekend);
-
+    // console.log(normalizeWeekend);
+    
     //  find preference for hver dag og brug den til shifts;
     let dayScore  = []
     for (let i = 0; i < weekdays.length; i++) {
@@ -187,7 +189,7 @@ function calculateShift(user, weights){
 
 // }
 
-//FIX THIS:
+
 function randomUser(probabilities, randomValue) {
     let sum = 0;
     for (let i = 0; i < probabilities.length; i++){
@@ -205,35 +207,48 @@ function normalize(probabilities) {
     return probabilities.map(p => p / total);
 }
 
-function assignShifts(users, employeesPerShift, maxShiftsPerEmployee){
+function assignShifts(users, employeesPerShift, maxMinutesPerEmployee){
     const schedule = {};
-    let shiftCount = {};
+    let minuteCount = {};
 
     //Set shift count for all users to 0
     for(let employee of users){
-        shiftCount[employee.user] = 0;
+        minuteCount[employee.user] = 0;
     }
     const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     const shifts = ["Shift1", "Shift2", "Shift3", "Shift4", "Shift5", "Shift6", "Shift7"];
+    const shiftTime = {
+        "Shift1": 444,
+        "Shift2": 480,
+        "Shift3": 444,
+        "Shift4": 480,
+        "Shift5": 480,
+        "Shift6": 480,
+        "Shift7": 480
+    }
 
     for (let day of days){
         // Initialize the schedule for each day
         schedule[day] = {};
         for (let shift of shifts){
+            // Initialize the schedule for each shift on the day
             schedule[day][shift] = [];
 
+            // Get the scores for the current day and shift for all users
             let dayScore = users.map(user => user.score.days[day]);
             let shiftScore = users.map(user => user.score.shifts[shift]);
 
+            // Calculate softmax for day and shift scores
             let dayProbability = softmax(dayScore);
             let shiftProbability = softmax(shiftScore);
 
             // Combine the day and shift probabilities
-            let combinedProbabilities = dayProbability.map((prob, index) => (prob + shiftProbability[index])/2);
+            let combinedProbabilities = dayProbability.map((prob, index) => (prob + shiftProbability[index]) / 2);
 
             // Normalize the combined probabilities
             let normalizedProbabilities = normalize(combinedProbabilities);
 
+            // Get the available users for the current day and shift
             let availableUsers = users.map(employee => employee.user);
 
             for (let i = 0; i < employeesPerShift; i++){
@@ -250,9 +265,9 @@ function assignShifts(users, employeesPerShift, maxShiftsPerEmployee){
                 let selectUserIndex = randomUser(currentProbs, Math.random());
                 let selectUser = availableUsers[selectUserIndex];
 
-                if (shiftCount[selectUser] < maxShiftsPerEmployee) {
+                if (minuteCount[selectUser] + shiftTime[shift] <= maxMinutesPerEmployee) {
                     schedule[day][shift].push(selectUser);
-                    shiftCount[selectUser] += 1;
+                    minuteCount[selectUser] += shiftTime[shift];
                     availableUsers.splice(selectUserIndex, 1);
 
                 }
@@ -260,4 +275,31 @@ function assignShifts(users, employeesPerShift, maxShiftsPerEmployee){
         }
     }
     return schedule;
+}
+
+function outputSchedule(schedule){
+    const shiftDetails = {
+        "shift 1": {dayTime: "morning", start: "07:00", minutes: 444},
+        "shift 2": {dayTime: "morning", start: "07:00", minutes: 480},
+        "shift 3": {dayTime: "morning", start: "8:00", minutes: 444},
+        "shift 4": {dayTime: "morning", start: "8:00", minutes: 480},
+        "shift 5": {dayTime: "evening", start: "11:00", minutes: 480},
+        "shift 6": {dayTime: "evening", start: "15:00", minutes: 480},
+        "shift 7": {dayTime: "night", start: "23:00", minutes: 480}
+    }
+    let output = []
+
+    for (let day in schedule){
+        for (let shift in schedule[day]){
+            for (let employee of schedule[day][shift]){
+                output.push({
+                    shift: shift,
+                    start: shiftDetails[shift].start,
+                    minutes: shiftDetails[shift].minutes,
+                    user: employee
+                })
+            }
+        }
+    }
+    return output;
 }
