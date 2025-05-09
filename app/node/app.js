@@ -1,5 +1,6 @@
 export {selectUserEntries, getDB, getVars, getCurrentUser, validateLogin, updateDatabase};
 import { ValidationError } from "./router.js";
+// import { calculateDay, calculateShift } from './PublicResources/js/scheduler.js';
 import fs from 'fs';
 import bcrypt from 'bcrypt';
 
@@ -44,6 +45,46 @@ async function hashDealer(pass) {
 //     console.error(err.message);
 //   }
 // })();
+function fillDB() {
+  const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  const weights = scheduleVariables.algoWeights;
+  DB.users.forEach(user => {
+    if (user.type === "employee") {
+      user.preferences = { weekdays: "", weekends: "", preferred: [], notPreferred: [], shiftPreference: [] };
+      user.preferences.weekdays = Math.floor(Math.random() * 10) + 1;
+      user.preferences.weekends = Math.floor(Math.random() * 10) + 1;
+
+      let weekArr = weekdays.map(elem => elem);
+
+      for (let i = 0; i < 3; i++) {
+        let rand = Math.max(0, Math.floor(Math.random() * 7) - i);
+        user.preferences.preferred[i] = weekArr[rand];
+        weekArr.splice(rand, 1);
+      }
+
+      for (let i = 0; i < 3; i++) {
+        let rand = Math.max(0, Math.floor(Math.random() * 4) - i);
+        user.preferences.notPreferred[i] = weekArr[rand];
+        weekArr.splice(rand, 1);
+      }
+
+      for (let i = 0; i < 7; i++) {
+        user.preferences.shiftPreference[i] = Math.floor(Math.random() * 10) + 1;
+      }
+
+      if (!user.score) {
+        user.score = { days: [], shifts: [] };
+      }
+
+      // Calculate and update scores
+      user.score.days = calculateDay(user, weights);
+      user.score.shifts = calculateShift(user, weights);
+    }
+  });
+  console.log("Writing");
+  fs.writeFileSync(sampleData, JSON.stringify(DB, null, 2), 'utf-8');
+}
+// fillDB();
 
 function validateUserName(username) {
   let minNameLength = 1;
