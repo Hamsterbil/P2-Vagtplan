@@ -76,7 +76,7 @@
           <div class="collapse navbar-collapse" id="navbarContent">
             <div class="ms-auto d-flex align-items-center flex-wrap">
               <span class="navbar-text me-2 small" id="currentUser">User</span>
-              <button type="button" class="btn btn-sm btn-outline-secondary me-2" id="settingsBtn">Settings</button>
+              <button type="button" class="btn btn-sm btn-outline-secondary me-2" id="settingsBtn" onclick="window.location.href='preferences.html'">Preferences</button>
               <button class="btn btn-sm btn-danger" onclick="client.logout()">Logout</button>
             </div>
           </div>
@@ -171,119 +171,98 @@
     </script>
 
     <script>
-      function jsonParse(response) {
-  if (response.ok) 
-     if (response.headers.get("Content-Type") === "application/json") 
-       return response.json();
-     else
-      throw new Error("Wrong Content Type. Expected application/json, got " + response.headers.get("Content-Type"));   
-  else
-    return response.text()
-      .then(text => { throw new Error(response.status + ": " + text); });
-}
-        function jsonFetch(url) {
-  return fetch(url).then(jsonParse);
-}
+
+client.initializeEmployee();
       // Keep track of app's data and settings
-      let shiftData = {};
-      let stagedShiftData = null;
-      let currentUser = jsonFetch("/user").then((data) => {
-        if (data && data.user) {
-          return data;
-        } else {
-          console.error("User data not found.");
-          return null;
-        }
-      });
-      let currentSpecialization =
-        localStorage.getItem(`userSpec_${currentUser}`) || "";
-      let isAdmin = currentUser.user === "admin";
-      let viewMode = isAdmin
-        ? "all"
-        : localStorage.getItem(`viewMode_${currentUser}`) || "all";
-      let daySettings = {};
-      let calendarInstance = null;
-      let adminSettingsModalInstance = null;
+      // let shiftData = {};
+      // let stagedShiftData = null;
+      // let currentUser = jsonFetch("/user");
+      // let isAdmin = false;
+      // let viewMode = isAdmin
+      //   ? "all"
+      //   : localStorage.getItem(`viewMode_${currentUser}`) || "all";
+      // let daySettings = {};
+      // let calendarInstance = null;
+      // let adminSettingsModalInstance = null;
 
-      // Fixed values used throughout the app
-      const DAYS_OF_WEEK = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
-      const ROLES = ["runner", "er", "fire"];
-      const shiftKeyToTimeMap = {
-        morning: { index: 1, start: "06:00:00", end: "10:00:00" },
-        noon: { index: 2, start: "10:00:00", end: "14:00:00" },
-        afternoon: { index: 3, start: "14:00:00", end: "18:00:00" },
-        evening: { index: 4, start: "18:00:00", end: "22:00:00" },
-        night: { index: 5, start: "22:00:00", end: "06:00:00", nextDay: true },
-      };
-      const shiftIndexToTimeMap = {
-        1: shiftKeyToTimeMap["morning"],
-        2: shiftKeyToTimeMap["noon"],
-        3: shiftKeyToTimeMap["afternoon"],
-        4: shiftKeyToTimeMap["evening"],
-        5: shiftKeyToTimeMap["night"],
-      };
+      // // Fixed values used throughout the app
+      // const DAYS_OF_WEEK = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+      // const ROLES = ["runner", "er", "fire"];
+      // const shiftKeyToTimeMap = {
+      //   morning: { index: 1, start: "06:00:00", end: "10:00:00" },
+      //   noon: { index: 2, start: "10:00:00", end: "14:00:00" },
+      //   afternoon: { index: 3, start: "14:00:00", end: "18:00:00" },
+      //   evening: { index: 4, start: "18:00:00", end: "22:00:00" },
+      //   night: { index: 5, start: "22:00:00", end: "06:00:00", nextDay: true },
+      // };
+      // const shiftIndexToTimeMap = {
+      //   1: shiftKeyToTimeMap["morning"],
+      //   2: shiftKeyToTimeMap["noon"],
+      //   3: shiftKeyToTimeMap["afternoon"],
+      //   4: shiftKeyToTimeMap["evening"],
+      //   5: shiftKeyToTimeMap["night"],
+      // };
 
-      // Initialize the application
-      function initializeApp() {
-        // Load saved data, configure UI based on user type (admin/regular)
-        shiftData = JSON.parse(localStorage.getItem("shiftData")) || {};
-        daySettings =
-          JSON.parse(localStorage.getItem("daySettings")) ||
-          getDefaultDaySettings();
-        document.getElementById("currentUser").textContent = currentUser;
-        document.getElementById("displayUser").textContent = currentUser;
-        const adminPanel = document.getElementById("adminControlsPanel");
-        const toggleBtn = document.getElementById("viewToggleBtn");
-        if (isAdmin) {
-          adminPanel.classList.remove("d-none");
-          adminPanel.classList.add("d-block");
-          toggleBtn.classList.add("d-none");
-          generateAdminSettingsSliders(); // Generate sliders for modal
-        } else {
-          adminPanel.classList.add("d-none");
-          toggleBtn.classList.remove("d-none");
-          toggleBtn.classList.add("d-inline-block");
-          toggleBtn.textContent =
-            viewMode === "mine" ? "Show All Shifts" : "Show My Shifts Only";
-        }
-        const adminModalEl = document.getElementById("adminDaySettingsModal");
-        if (adminModalEl) {
-          adminSettingsModalInstance = new bootstrap.Modal(adminModalEl);
-        }
-        initializeCalendar();
-        updateShiftCount();
-        setupEventListeners();
-      }
-      function initializeCalendar() {
+      // // Initialize the application
+      // function initializeApp() {
+      //   // Load saved data, configure UI based on user type (admin/regular)
+      //   shiftData = JSON.parse(localStorage.getItem("shiftData")) || {};
+      //   daySettings =
+      //     JSON.parse(localStorage.getItem("daySettings")) ||
+      //     getDefaultDaySettings();
+      //   document.getElementById("currentUser").textContent = currentUser;
+      //   document.getElementById("displayUser").textContent = currentUser;
+      //   const adminPanel = document.getElementById("adminControlsPanel");
+      //   const toggleBtn = document.getElementById("viewToggleBtn");
+      //   if (isAdmin) {
+      //     adminPanel.classList.remove("d-none");
+      //     adminPanel.classList.add("d-block");
+      //     toggleBtn.classList.add("d-none");
+      //     generateAdminSettingsSliders(); // Generate sliders for modal
+      //   } else {
+      //     adminPanel.classList.add("d-none");
+      //     toggleBtn.classList.remove("d-none");
+      //     toggleBtn.classList.add("d-inline-block");
+      //     toggleBtn.textContent =
+      //       viewMode === "mine" ? "Show All Shifts" : "Show My Shifts Only";
+      //   }
+      //   const adminModalEl = document.getElementById("adminDaySettingsModal");
+      //   if (adminModalEl) {
+      //     adminSettingsModalInstance = new bootstrap.Modal(adminModalEl);
+      //   }
+        // initializeCalendar();
+        // updateShiftCount();
+        // setupEventListeners();
+      // }
+      // async function initializeCalendar() {
+      //   fetch('../schedule.json')
+      //   .then(response => response.json())
+      //   .then(data => {
+      //     // Transform JSON data into FullCalendar events
+      //     const events = data.map(event => {
+      //       const startDateTime = new Date(`${event.date}T${event.start}`);
+      //       const endDateTime = new Date(startDateTime.getTime() + event.minutes * 60000); // Add minutes to start time
 
-        fetch('../schedule.json')
-        .then(response => response.json())
-        .then(data => {
-          // Transform JSON data into FullCalendar events
-          const events = data.map(event => {
-            const startDateTime = new Date(`${event.date}T${event.start}`);
-            const endDateTime = new Date(startDateTime.getTime() + event.minutes * 60000); // Add minutes to start time
+      //       return {
+      //         title: `${event.user} (${event.shift})`,
+      //         start: startDateTime.toISOString(),
+      //         end: endDateTime.toISOString(),
+      //         allDay: false
+      //       };
+      //     });
+      //     console.log(events); // Debugging: Check the transformed events
 
-            return {
-              title: `${event.user} (${event.shift})`,
-              start: startDateTime.toISOString(),
-              end: endDateTime.toISOString(),
-              allDay: false
-            };
-          });
-          console.log(events); // Debugging: Check the transformed events
+      //     // Initialize FullCalendar
+      //     const calendar = new FullCalendar.Calendar(calendarEl, {
+      //       initialView: 'timeGridWeek', // Use a time grid to show event durations
+      //       events: events
+      //     });
 
-          // Initialize FullCalendar
-          const calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'timeGridWeek', // Use a time grid to show event durations
-            events: events
-          });
-
-          calendar.render();
-        })
-        .catch(error => console.error('Error loading JSON:', error));
+      //     calendar.render();
+      //   })
+      //   .catch(error => console.error('Error loading JSON:', error));
       
-        const calendarEl = document.getElementById("calendar");
+      //   const calendarEl = document.getElementById("calendar");
         // calendarInstance = new FullCalendar.Calendar(calendarEl, {
         //   initialView: "timeGridWeek",
         //   headerToolbar: {
@@ -299,15 +278,8 @@
         // });
         // calendarInstance.render();
         // displayLiveSchedule();
-      }
+      // }
 
-      function getUserEvents(user) {
-
-      }
-
-      function getAllEvents() {
-        
-      }
 
       // function getDefaultDaySettings() {
       //   /* ... same ... */ const defaults = {};
@@ -409,18 +381,18 @@
       //     showError("Err preview.");
       //   }
       // }
-      function displayLiveSchedule() {
-        /* ... same (uses setOption) ... */ if (!calendarInstance) return;
-        console.log("Display LIVE");
-        try {
-          const ev = generateEventsFromData(shiftData);
-          calendarInstance.setOption("events", ev);
-          console.log("Set live.");
-        } catch (e) {
-          console.error("Err display live:", e);
-          showError("Err schedule.");
-        }
-      }
+      // function displayLiveSchedule() {
+      //   /* ... same (uses setOption) ... */ if (!calendarInstance) return;
+      //   console.log("Display LIVE");
+      //   try {
+      //     const ev = generateEventsFromData(shiftData);
+      //     calendarInstance.setOption("events", ev);
+      //     console.log("Set live.");
+      //   } catch (e) {
+      //     console.error("Err display live:", e);
+      //     showError("Err schedule.");
+      //   }
+      // }
 
       // Admin-specific features
       // function processUploadedSchedule(file) {
@@ -506,186 +478,186 @@
       //   showError("Published!", true);
       //   updateShiftCount();
       // }
-      function cancelSchedulePreview() {
-        /* ... same ... */ console.log("Cancel click.");
-        stagedShiftData = null;
-        displayLiveSchedule();
-        document.getElementById("confirmSection").classList.add("d-none");
-        document.getElementById("adminInstruction").classList.remove("d-none");
-        document.getElementById("jsonUpload").value = "";
-        showError("Preview cancelled.");
-      }
-      function saveAdminDaySettings() {
-        /* ... same ... */ console.log("Saving day settings...");
-        const newSettings = getDefaultDaySettings();
-        let error = false;
-        try {
-          DAYS_OF_WEEK.forEach((day) => {
-            ROLES.forEach((role) => {
-              const slider = document.getElementById(`settings-${day}-${role}`);
-              if (slider) {
-                newSettings[day][role] = parseInt(slider.value, 10);
-              } else {
-                console.error(`Slider not found: settings-${day}-${role}`);
-                error = true;
-              }
-            });
-          });
-          if (error) throw new Error("Slider read error.");
-          daySettings = newSettings;
-          localStorage.setItem("daySettings", JSON.stringify(daySettings));
-          console.log("Saved settings:", daySettings);
-          showError("Daily settings saved!", true);
-          if (adminSettingsModalInstance) adminSettingsModalInstance.hide();
-        } catch (e) {
-          console.error("Err save settings:", e);
-          showError(`Err save settings: ${e.message}`);
-        }
-      }
+      // function cancelSchedulePreview() {
+      //   /* ... same ... */ console.log("Cancel click.");
+      //   stagedShiftData = null;
+      //   displayLiveSchedule();
+      //   document.getElementById("confirmSection").classList.add("d-none");
+      //   document.getElementById("adminInstruction").classList.remove("d-none");
+      //   document.getElementById("jsonUpload").value = "";
+      //   showError("Preview cancelled.");
+      // }
+      // function saveAdminDaySettings() {
+      //   /* ... same ... */ console.log("Saving day settings...");
+      //   const newSettings = getDefaultDaySettings();
+      //   let error = false;
+      //   try {
+      //     DAYS_OF_WEEK.forEach((day) => {
+      //       ROLES.forEach((role) => {
+      //         const slider = document.getElementById(`settings-${day}-${role}`);
+      //         if (slider) {
+      //           newSettings[day][role] = parseInt(slider.value, 10);
+      //         } else {
+      //           console.error(`Slider not found: settings-${day}-${role}`);
+      //           error = true;
+      //         }
+      //       });
+      //     });
+      //     if (error) throw new Error("Slider read error.");
+      //     daySettings = newSettings;
+      //     localStorage.setItem("daySettings", JSON.stringify(daySettings));
+      //     console.log("Saved settings:", daySettings);
+      //     showError("Daily settings saved!", true);
+      //     if (adminSettingsModalInstance) adminSettingsModalInstance.hide();
+      //   } catch (e) {
+      //     console.error("Err save settings:", e);
+      //     showError(`Err save settings: ${e.message}`);
+      //   }
+      // }
 
-      // Handling calendar clicks
-      function handleDateClick(info) {
-        /* ... same (preview check) ... */ if (
-          stagedShiftData !== null &&
-          isAdmin
-        ) {
-          console.log("Preview: Date click ignored.");
-          showError("Viewing preview.");
-          return;
-        }
-        if (!isAdmin) {
-          showError("Shifts assigned automatically.");
-          return;
-        }
-        console.log("Admin clicked empty slot:", info.dateStr);
-        showError("Add via click disabled.");
-      }
-      function handleEventClick(info) {
-        /* ... same (preview check, admin removal) ... */ if (
-          stagedShiftData !== null &&
-          isAdmin
-        ) {
-          console.log("Preview: Event click ignored.");
-          showError("Viewing preview.");
-          return;
-        }
-        if (!isAdmin) {
-          showError("Cannot modify shifts.");
-          return;
-        }
-        const event = info.event;
-        const shiftId = event.id;
-        console.log("Admin click LIVE:", shiftId);
-        if (!shiftId || !shiftData[shiftId]) {
-          console.error("Cannot find ID:", shiftId);
-          showError("Cannot find shift.");
-          return;
-        }
-        if (confirm(`Remove shift ${shiftId} (${event.title}) from LIVE?`)) {
-          console.log("Deleting LIVE:", shiftId);
-          try {
-            delete shiftData[shiftId];
-            saveShifts();
-            event.remove();
-            updateShiftCount();
-            showError("Removed.", true);
-          } catch (e) {
-            console.error("Error removing:", e);
-            showError(`Error remove: ${e.message}`);
-          }
-        } else {
-          console.log("Cancel remove.");
-        }
-      }
+      // // Handling calendar clicks
+      // function handleDateClick(info) {
+      //   /* ... same (preview check) ... */ if (
+      //     stagedShiftData !== null &&
+      //     isAdmin
+      //   ) {
+      //     console.log("Preview: Date click ignored.");
+      //     showError("Viewing preview.");
+      //     return;
+      //   }
+      //   if (!isAdmin) {
+      //     showError("Shifts assigned automatically.");
+      //     return;
+      //   }
+      //   console.log("Admin clicked empty slot:", info.dateStr);
+      //   showError("Add via click disabled.");
+      // }
+      // function handleEventClick(info) {
+      //   /* ... same (preview check, admin removal) ... */ if (
+      //     stagedShiftData !== null &&
+      //     isAdmin
+      //   ) {
+      //     console.log("Preview: Event click ignored.");
+      //     showError("Viewing preview.");
+      //     return;
+      //   }
+      //   if (!isAdmin) {
+      //     showError("Cannot modify shifts.");
+      //     return;
+      //   }
+      //   const event = info.event;
+      //   const shiftId = event.id;
+      //   console.log("Admin click LIVE:", shiftId);
+      //   if (!shiftId || !shiftData[shiftId]) {
+      //     console.error("Cannot find ID:", shiftId);
+      //     showError("Cannot find shift.");
+      //     return;
+      //   }
+      //   if (confirm(`Remove shift ${shiftId} (${event.title}) from LIVE?`)) {
+      //     console.log("Deleting LIVE:", shiftId);
+      //     try {
+      //       delete shiftData[shiftId];
+      //       saveShifts();
+      //       event.remove();
+      //       updateShiftCount();
+      //       showError("Removed.", true);
+      //     } catch (e) {
+      //       console.error("Error removing:", e);
+      //       showError(`Error remove: ${e.message}`);
+      //     }
+      //   } else {
+      //     console.log("Cancel remove.");
+      //   }
+      // }
 
-      // Helper functions used elsewhere
-      function saveShifts() {
-        localStorage.setItem("shiftData", JSON.stringify(shiftData));
-      }
-      function updateShiftCount() {
-        let count = 0;
-        for (const id in shiftData) {
-          if (shiftData[id]?.some((u) => u.user === currentUser)) {
-            count++;
-          }
-        }
-        document.getElementById(
-          "shiftCount"
-        ).textContent = `${count} shifts assigned`;
-      }
+      // // Helper functions used elsewhere
+      // function saveShifts() {
+      //   localStorage.setItem("shiftData", JSON.stringify(shiftData));
+      // }
+      // function updateShiftCount() {
+      //   let count = 0;
+      //   for (const id in shiftData) {
+      //     if (shiftData[id]?.some((u) => u.user === currentUser)) {
+      //       count++;
+      //     }
+      //   }
+      //   document.getElementById(
+      //     "shiftCount"
+      //   ).textContent = `${count} shifts assigned`;
+      // }
 
-      // Connect buttons and inputs to functions
-      function setupEventListeners() {
-        // Settings Button
-        const settingsBtn = document.getElementById("settingsBtn");
-        if (settingsBtn) {
-          settingsBtn.addEventListener("click", () => {
-            if (isAdmin) {
-              console.log("Admin settings click.");
-              generateAdminSettingsSliders();
-              if (adminSettingsModalInstance) adminSettingsModalInstance.show();
-            } else {
-              console.log("Non-admin settings click -> redirect.");
-              // Note: Currently redirects to Preferences.html in the same directory
-              // If path changes in future, update this to reflect new location
-              window.location.href = "/html/preferences.html";
-            }
-          });
-        }
+      // // Connect buttons and inputs to functions
+      // function setupEventListeners() {
+      //   // Settings Button
+      //   const settingsBtn = document.getElementById("settingsBtn");
+      //   if (settingsBtn) {
+      //     settingsBtn.addEventListener("click", () => {
+      //       if (isAdmin) {
+      //         console.log("Admin settings click.");
+      //         generateAdminSettingsSliders();
+      //         if (adminSettingsModalInstance) adminSettingsModalInstance.show();
+      //       } else {
+      //         console.log("Non-admin settings click -> redirect.");
+      //         // Note: Currently redirects to Preferences.html in the same directory
+      //         // If path changes in future, update this to reflect new location
+      //         window.location.href = "/html/preferences.html";
+      //       }
+      //     });
+      //   }
 
-        // Admin schedule management buttons
-        if (isAdmin) {
-          const loadBtn = document.getElementById("loadScheduleBtn");
-          const fileInput = document.getElementById("jsonUpload");
-          const confirmBtn = document.getElementById("confirmScheduleBtn");
-          const cancelBtn = document.getElementById("cancelPreviewBtn");
-          const generateBtn = document.getElementById("generateScheduleBtn"); // Get generate button
+      //   // Admin schedule management buttons
+      //   if (isAdmin) {
+      //     const loadBtn = document.getElementById("loadScheduleBtn");
+      //     const fileInput = document.getElementById("jsonUpload");
+      //     const confirmBtn = document.getElementById("confirmScheduleBtn");
+      //     const cancelBtn = document.getElementById("cancelPreviewBtn");
+      //     const generateBtn = document.getElementById("generateScheduleBtn"); // Get generate button
 
-          if (loadBtn && fileInput && confirmBtn && cancelBtn && generateBtn) {
-            // Check generateBtn too
-            console.log("Admin controls listeners setup...");
-            loadBtn.addEventListener("click", () => {
-              const file = fileInput.files[0];
-              if (file) {
-                processUploadedSchedule(file);
-              } else {
-                showError("Select JSON.");
-              }
-            });
-            confirmBtn.addEventListener("click", confirmAndPublishSchedule);
-            cancelBtn.addEventListener("click", cancelSchedulePreview);
-            // Add listener for Generate button
-            generateBtn.addEventListener("click", () => {
-              console.log("calling algorithm"); // Placeholder action
-              // Future: Replace console.log with actual function call
-              showError(
-                "Generate schedule process initiated (placeholder).",
-                true
-              ); // Optional feedback
-            });
-          } else {
-            console.error("Admin control buttons/inputs not found.");
-          }
-        } else {
-          // Non-Admin: View Toggle listener
-          const toggleBtn = document.getElementById("viewToggleBtn");
-          if (toggleBtn) {
-            toggleBtn.addEventListener("click", () => {
-              viewMode = viewMode === "all" ? "mine" : "all";
-              toggleBtn.textContent =
-                viewMode === "mine" ? "Show All Shifts" : "Show My Shifts Only";
-              localStorage.setItem("viewMode_" + currentUser, viewMode);
-              console.log(`View mode: ${viewMode}`);
-              displayLiveSchedule();
-            });
-          } else {
-            console.error("View toggle button not found.");
-          }
-        }
-      }
+      //     if (loadBtn && fileInput && confirmBtn && cancelBtn && generateBtn) {
+      //       // Check generateBtn too
+      //       console.log("Admin controls listeners setup...");
+      //       loadBtn.addEventListener("click", () => {
+      //         const file = fileInput.files[0];
+      //         if (file) {
+      //           processUploadedSchedule(file);
+      //         } else {
+      //           showError("Select JSON.");
+      //         }
+      //       });
+      //       confirmBtn.addEventListener("click", confirmAndPublishSchedule);
+      //       cancelBtn.addEventListener("click", cancelSchedulePreview);
+      //       // Add listener for Generate button
+      //       generateBtn.addEventListener("click", () => {
+      //         console.log("calling algorithm"); // Placeholder action
+      //         // Future: Replace console.log with actual function call
+      //         showError(
+      //           "Generate schedule process initiated (placeholder).",
+      //           true
+      //         ); // Optional feedback
+      //       });
+      //     } else {
+      //       console.error("Admin control buttons/inputs not found.");
+      //     }
+      //   } else {
+      //     // Non-Admin: View Toggle listener
+      //     const toggleBtn = document.getElementById("viewToggleBtn");
+      //     if (toggleBtn) {
+      //       toggleBtn.addEventListener("click", () => {
+      //         viewMode = viewMode === "all" ? "mine" : "all";
+      //         toggleBtn.textContent =
+      //           viewMode === "mine" ? "Show All Shifts" : "Show My Shifts Only";
+      //         localStorage.setItem("viewMode_" + currentUser, viewMode);
+      //         console.log(`View mode: ${viewMode}`);
+      //         displayLiveSchedule();
+      //       });
+      //     } else {
+      //       console.error("View toggle button not found.");
+      //     }
+      //   }
+      // }
 
-      // Kick things off once the page is ready
-      document.addEventListener("DOMContentLoaded", initializeApp);
+      // // Kick things off once the page is ready
+      // document.addEventListener("DOMContentLoaded", initializeApp);
     </script>
   </body>
 </html>

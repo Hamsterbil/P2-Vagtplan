@@ -1,12 +1,17 @@
-export {selectUserEntries, getDB, getVars, getCurrentUser, validateLogin, updateDatabase};
+export {selectUserEntries, getDB, getVars, getSchedule, getCurrentUser, validateLogin, updateDatabase};
 import { ValidationError } from "./router.js";
 import fs from 'fs';
 import bcrypt from 'bcrypt';
 
-let sampleData = 'node/db.json';
-let variablesData = 'node/variables.json';
+let sampleData = 'node/json/db.json';
+let variablesData = 'node/json/variables.json';
+let scheduleData = 'node/json/schedule.json';
 let DB = JSON.parse(fs.readFileSync(sampleData, 'utf-8'));
 let scheduleVariables = JSON.parse(fs.readFileSync(variablesData, 'utf-8'));
+let schedule = JSON.parse(fs.readFileSync(scheduleData, 'utf-8'));
+
+// var AsyncLock = require('async-lock');
+// var lock = new AsyncLock();
 
 //remove potentially dangerous/undesired characters 
 function sanitize(str, isArray = false){
@@ -44,6 +49,37 @@ async function hashDealer(pass) {
 //     console.error(err.message);
 //   }
 // })();
+
+function fillDB() {
+  const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  DB.users.forEach(user => {
+    if (user.type === "employee") {
+      user.preferences = { weekdays: "", weekends: "", preferred: [], notPreferred: [], shiftPreference: [] };
+      user.preferences.weekdays = Math.floor(Math.random() * 10) + 1;
+      user.preferences.weekends = Math.floor(Math.random() * 10) + 1;
+
+      let weekArr = weekdays.map(elem => elem);
+
+      for (let i = 0; i < 3; i++) {
+        let rand = Math.max(0, Math.floor(Math.random() * 7) - i);
+        user.preferences.preferred[i] = weekArr[rand];
+        weekArr.splice(rand, 1);
+      }
+
+      for (let i = 0; i < 3; i++) {
+        let rand = Math.max(0, Math.floor(Math.random() * 4) - i);
+        user.preferences.notPreferred[i] = weekArr[rand];
+        weekArr.splice(rand, 1);
+      }
+
+      for (let i = 0; i < 7; i++) {
+        user.preferences.shiftPreference[i] = Math.floor(Math.random() * 10) + 1;
+      }
+    }
+  });
+  console.log("Writing");
+  fs.writeFileSync(sampleData, JSON.stringify(DB, null, 2), 'utf-8');
+}
 
 function validateUserName(username) {
   let minNameLength = 1;
@@ -92,6 +128,10 @@ function getDB() {
 
 function getVars() {
   return scheduleVariables;
+}
+
+function getSchedule() {
+  return schedule;
 }
 
 function getCurrentUser(req) {
