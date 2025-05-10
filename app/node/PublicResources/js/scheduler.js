@@ -119,7 +119,7 @@ async function generate(){
         }
     });
     console.log("Generate schedule");
-    const schedule = assignShifts(users, 7, 2220);
+    const schedule = assignShifts(users, 5, 2220);
     const formattedSchedule = outputSchedule(schedule, "2025-05-05");
     console.log(formattedSchedule);
 }
@@ -259,7 +259,7 @@ function assignShifts(users, employeesPerShift, maxMinutesPerEmployee){
             let normalizedProbabilities = normalize(combinedProbabilities);
 
             // Get the available employees for the current day and shift
-            let availableUsers = employees.map(employee => employee.user);
+            let availableUsers = employees.map(employee => employee.user).filter(user => minuteCount[user] < maxMinutesPerEmployee);
             // console.log(availableUsers);
             let attempts = 0;
             let maxAttempts = availableUsers.length * 2;
@@ -268,10 +268,17 @@ function assignShifts(users, employeesPerShift, maxMinutesPerEmployee){
                 if (availableUsers.length === 0)
                     break;
 
+                // Adjust probabilities based on minute count
+                let adjustedProbabilities = employees.map((employee, index) => {
+                    let minutes = minuteCount[employee.user];
+                    let penalty = 1 / Math.pow(1 + minutes, 5);
+                    return normalizedProbabilities[index] * penalty
+                });
+                
                 // Get probabilities for available employees
                 let currentProbs = availableUsers.map(user => {
                     let index = employees.findIndex(u => u.user === user);
-                    return normalizedProbabilities[index];
+                    return adjustedProbabilities[index];
                 });
 
                 currentProbs = normalize(currentProbs);
@@ -288,9 +295,6 @@ function assignShifts(users, employeesPerShift, maxMinutesPerEmployee){
                 assignedUsers[day].push(selectUser);
                 availableUsers.splice(selectUserIndex, 1);
                 attempts = 0;
-                // if (minuteCount[selectUser] + shiftTime[shift] <= maxMinutesPerEmployee) {
-
-                // }
             }
         }
     }
