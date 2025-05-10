@@ -1,5 +1,5 @@
 export {ValidationError, NoResourceError, processReq};
-import {selectUserEntries, getDB, getVars, validateLogin, getCurrentUser, updateDatabase} from "./app.js";
+import {selectUserEntries, getDB, getVars, getSchedule, validateLogin, getCurrentUser, updateDatabase} from "./app.js";
 import {extractJSON, fileResponse, htmlResponse, extractForm, jsonResponse, errorResponse, reportError, startServer, fs} from "./server.js";
 
 const ValidationError = "Validation Error";
@@ -71,21 +71,36 @@ function processReq(req, res){
           break;
         }
         case "database": {
-          if (currentUser.type !== "admin") {
-            reportError(res, new Error("Access denied. Only admins can access the database."));
-            return;
+          try {
+            checkAccess(currentUser, res);
+            let db = getDB();
+            if (db)
+              jsonResponse(res, db);
+            else
+              throw new Error(NoResourceError);
+          } catch (error) {
+            reportError(res, error);
           }
-          let db = getDB();
-          if (db)
-            jsonResponse(res, db);
-          else
-            reportError(res, new Error(NoResourceError));
           break;
         }
         case "variables": {
-          let vars = getVars();
-          if (vars)
-              jsonResponse(res, vars);
+          try {
+            checkAccess(currentUser, res);
+            let vars = getVars();
+            if (vars)
+                jsonResponse(res, vars);
+            else
+              throw new Error(NoResourceError);
+            }
+          catch (error) {
+            reportError(res, error);
+          }          
+          break;
+        }
+        case "schedule": {
+          let schedule = getSchedule();
+          if (schedule)
+            jsonResponse(res, schedule);
           else
             reportError(res, new Error(NoResourceError));
           break;
@@ -133,10 +148,6 @@ function handleLogout(res) {
   jsonResponse(res, { success: true, message: "Logout successful" });
 }
 
-function handleRegister(req, res) {
-
-}
-
 function handleUpdateDatabase(req, res) {
   extractJSON(req)
   .then(({ data, entry }) => {
@@ -147,4 +158,11 @@ function handleUpdateDatabase(req, res) {
   .catch((err) => {
     reportError(res, err);
   })
+}
+
+function checkAccess(currentUser, res) {
+  if (currentUser.type !== "admin") {
+    reportError(res, new Error("Access denied. Only admins can access this resource."));
+    return false;
+  }
 }

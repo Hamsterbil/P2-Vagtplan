@@ -1,0 +1,1884 @@
+{
+  "users": [
+    {
+      "user": "admin",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "admin"
+    },
+    {
+      "user": "Anton",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 7,
+        "weekends": 6,
+        "preferred": [
+          "Tuesday",
+          "Monday",
+          "Sunday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Thursday",
+          "Wednesday"
+        ],
+        "shiftPreference": [
+          5,
+          5,
+          2,
+          5,
+          5,
+          10,
+          1
+        ]
+      },
+      "score": {
+        "days": [
+          0.5,
+          -0.5,
+          -0.5,
+          -0.5,
+          0.5,
+          2.3000000000000007,
+          2.3000000000000007
+        ],
+        "shifts": [
+          16,
+          16,
+          12,
+          10,
+          8,
+          6,
+          1
+        ]
+      }
+    },
+    {
+      "user": "Ella",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 2,
+        "weekends": 4,
+        "preferred": [
+          "Friday",
+          "Wednesday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Thursday",
+          "Sunday",
+          "Saturday"
+        ],
+        "shiftPreference": [
+          6,
+          5,
+          1,
+          5,
+          4,
+          7,
+          1
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Sebastian",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 8,
+        "weekends": 5,
+        "preferred": [
+          "Sunday",
+          "Monday",
+          "Tuesday"
+        ],
+        "notPreferred": [
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "shiftPreference": [
+          2,
+          10,
+          9,
+          9,
+          4,
+          10,
+          9
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Asta",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 3,
+        "weekends": 7,
+        "preferred": [
+          "Tuesday",
+          "Wednesday",
+          "Sunday"
+        ],
+        "notPreferred": [
+          "Monday",
+          "Thursday",
+          "Saturday"
+        ],
+        "shiftPreference": [
+          4,
+          8,
+          10,
+          8,
+          10,
+          10,
+          8
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Mathilde",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 7,
+        "weekends": 5,
+        "preferred": [
+          "Tuesday",
+          "Thursday",
+          "Wednesday"
+        ],
+        "notPreferred": [
+          "Friday",
+          "Sunday",
+          "Monday"
+        ],
+        "shiftPreference": [
+          6,
+          6,
+          10,
+          1,
+          9,
+          2,
+          10
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Lærke",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 9,
+        "weekends": 7,
+        "preferred": [
+          "Thursday",
+          "Friday",
+          "Wednesday"
+        ],
+        "notPreferred": [
+          "Tuesday",
+          "Sunday",
+          "Monday"
+        ],
+        "shiftPreference": [
+          1,
+          10,
+          2,
+          3,
+          7,
+          5,
+          3
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Cecilie",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 3,
+        "weekends": 7,
+        "preferred": [
+          "Sunday",
+          "Monday",
+          "Tuesday"
+        ],
+        "notPreferred": [
+          "Friday",
+          "Thursday",
+          "Saturday"
+        ],
+        "shiftPreference": [
+          7,
+          6,
+          10,
+          7,
+          6,
+          2,
+          10
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Magnus",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 7,
+        "weekends": 10,
+        "preferred": [
+          "Sunday",
+          "Wednesday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Friday",
+          "Tuesday",
+          "Thursday"
+        ],
+        "shiftPreference": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          2,
+          6
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Sofia",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 5,
+        "weekends": 1,
+        "preferred": [
+          "Monday",
+          "Sunday",
+          "Tuesday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Friday",
+          "Wednesday"
+        ],
+        "shiftPreference": [
+          3,
+          5,
+          5,
+          8,
+          1,
+          5,
+          2
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Mille",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 7,
+        "weekends": 5,
+        "preferred": [
+          "Friday",
+          "Wednesday",
+          "Thursday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Monday",
+          "Tuesday"
+        ],
+        "shiftPreference": [
+          8,
+          9,
+          10,
+          3,
+          8,
+          3,
+          4
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Freja",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 2,
+        "weekends": 7,
+        "preferred": [
+          "Friday",
+          "Thursday",
+          "Saturday"
+        ],
+        "notPreferred": [
+          "Sunday",
+          "Tuesday",
+          "Monday"
+        ],
+        "shiftPreference": [
+          6,
+          6,
+          3,
+          10,
+          10,
+          4,
+          10
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Nora",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 10,
+        "weekends": 1,
+        "preferred": [
+          "Thursday",
+          "Sunday",
+          "Friday"
+        ],
+        "notPreferred": [
+          "Tuesday",
+          "Monday",
+          "Wednesday"
+        ],
+        "shiftPreference": [
+          10,
+          7,
+          8,
+          6,
+          3,
+          10,
+          8
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Victor",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 5,
+        "weekends": 10,
+        "preferred": [
+          "Wednesday",
+          "Friday",
+          "Tuesday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Sunday",
+          "Monday"
+        ],
+        "shiftPreference": [
+          8,
+          1,
+          4,
+          7,
+          8,
+          8,
+          1
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Liv",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 3,
+        "weekends": 5,
+        "preferred": [
+          "Tuesday",
+          "Monday",
+          "Thursday"
+        ],
+        "notPreferred": [
+          "Friday",
+          "Wednesday",
+          "Saturday"
+        ],
+        "shiftPreference": [
+          9,
+          1,
+          9,
+          6,
+          5,
+          2,
+          2
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Jakob",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 10,
+        "weekends": 10,
+        "preferred": [
+          "Sunday",
+          "Wednesday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Tuesday",
+          "Thursday",
+          "Saturday"
+        ],
+        "shiftPreference": [
+          10,
+          8,
+          6,
+          3,
+          9,
+          10,
+          7
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Frederikke",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 7,
+        "weekends": 10,
+        "preferred": [
+          "Saturday",
+          "Thursday",
+          "Tuesday"
+        ],
+        "notPreferred": [
+          "Sunday",
+          "Wednesday",
+          "Monday"
+        ],
+        "shiftPreference": [
+          10,
+          1,
+          2,
+          10,
+          10,
+          2,
+          3
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Filip",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 7,
+        "weekends": 1,
+        "preferred": [
+          "Monday",
+          "Tuesday",
+          "Wednesday"
+        ],
+        "notPreferred": [
+          "Thursday",
+          "Saturday",
+          "Friday"
+        ],
+        "shiftPreference": [
+          8,
+          4,
+          4,
+          3,
+          1,
+          2,
+          3
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Alma",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 6,
+        "weekends": 10,
+        "preferred": [
+          "Wednesday",
+          "Tuesday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Thursday",
+          "Sunday",
+          "Friday"
+        ],
+        "shiftPreference": [
+          7,
+          4,
+          2,
+          1,
+          3,
+          6,
+          10
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Oscar",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 7,
+        "weekends": 7,
+        "preferred": [
+          "Wednesday",
+          "Monday",
+          "Tuesday"
+        ],
+        "notPreferred": [
+          "Thursday",
+          "Sunday",
+          "Saturday"
+        ],
+        "shiftPreference": [
+          9,
+          7,
+          1,
+          7,
+          5,
+          10,
+          2
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Marius",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 9,
+        "weekends": 5,
+        "preferred": [
+          "Sunday",
+          "Thursday",
+          "Wednesday"
+        ],
+        "notPreferred": [
+          "Friday",
+          "Saturday",
+          "Monday"
+        ],
+        "shiftPreference": [
+          6,
+          7,
+          1,
+          1,
+          8,
+          3,
+          10
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Selma",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 1,
+        "weekends": 1,
+        "preferred": [
+          "Monday",
+          "Thursday",
+          "Sunday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Wednesday",
+          "Tuesday"
+        ],
+        "shiftPreference": [
+          7,
+          2,
+          3,
+          5,
+          6,
+          1,
+          6
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Elias",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 5,
+        "weekends": 10,
+        "preferred": [
+          "Wednesday",
+          "Friday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Tuesday",
+          "Thursday"
+        ],
+        "shiftPreference": [
+          7,
+          3,
+          1,
+          1,
+          4,
+          4,
+          2
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Victoria",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 6,
+        "weekends": 4,
+        "preferred": [
+          "Wednesday",
+          "Monday",
+          "Friday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Thursday",
+          "Sunday"
+        ],
+        "shiftPreference": [
+          2,
+          4,
+          1,
+          3,
+          1,
+          8,
+          4
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Leon",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 8,
+        "weekends": 10,
+        "preferred": [
+          "Friday",
+          "Tuesday",
+          "Sunday"
+        ],
+        "notPreferred": [
+          "Wednesday",
+          "Thursday",
+          "Saturday"
+        ],
+        "shiftPreference": [
+          2,
+          9,
+          4,
+          2,
+          8,
+          3,
+          7
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Alexander",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 4,
+        "weekends": 4,
+        "preferred": [
+          "Tuesday",
+          "Wednesday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "shiftPreference": [
+          10,
+          8,
+          2,
+          5,
+          2,
+          5,
+          6
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Valdemar",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 5,
+        "weekends": 1,
+        "preferred": [
+          "Monday",
+          "Thursday",
+          "Tuesday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Wednesday",
+          "Friday"
+        ],
+        "shiftPreference": [
+          4,
+          1,
+          9,
+          5,
+          1,
+          8,
+          9
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Theodor",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 10,
+        "weekends": 7,
+        "preferred": [
+          "Tuesday",
+          "Friday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Sunday",
+          "Wednesday",
+          "Thursday"
+        ],
+        "shiftPreference": [
+          8,
+          7,
+          9,
+          4,
+          5,
+          8,
+          5
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Philip",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 1,
+        "weekends": 10,
+        "preferred": [
+          "Tuesday",
+          "Monday",
+          "Thursday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Wednesday",
+          "Friday"
+        ],
+        "shiftPreference": [
+          1,
+          7,
+          10,
+          9,
+          3,
+          5,
+          1
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Ida",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 7,
+        "weekends": 2,
+        "preferred": [
+          "Tuesday",
+          "Monday",
+          "Wednesday"
+        ],
+        "notPreferred": [
+          "Thursday",
+          "Saturday",
+          "Friday"
+        ],
+        "shiftPreference": [
+          7,
+          2,
+          5,
+          7,
+          6,
+          2,
+          6
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Asger",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 10,
+        "weekends": 2,
+        "preferred": [
+          "Tuesday",
+          "Thursday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Sunday",
+          "Saturday",
+          "Wednesday"
+        ],
+        "shiftPreference": [
+          2,
+          6,
+          9,
+          4,
+          5,
+          7,
+          2
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Oliver",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 3,
+        "weekends": 6,
+        "preferred": [
+          "Monday",
+          "Sunday",
+          "Thursday"
+        ],
+        "notPreferred": [
+          "Tuesday",
+          "Wednesday",
+          "Friday"
+        ],
+        "shiftPreference": [
+          4,
+          8,
+          6,
+          10,
+          10,
+          6,
+          2
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Emma",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 4,
+        "weekends": 7,
+        "preferred": [
+          "Tuesday",
+          "Monday",
+          "Saturday"
+        ],
+        "notPreferred": [
+          "Thursday",
+          "Wednesday",
+          "Friday"
+        ],
+        "shiftPreference": [
+          2,
+          5,
+          4,
+          2,
+          4,
+          7,
+          10
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Julian",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 8,
+        "weekends": 1,
+        "preferred": [
+          "Monday",
+          "Friday",
+          "Wednesday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Thursday",
+          "Tuesday"
+        ],
+        "shiftPreference": [
+          3,
+          6,
+          8,
+          1,
+          7,
+          4,
+          7
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Nellie",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 5,
+        "weekends": 8,
+        "preferred": [
+          "Wednesday",
+          "Tuesday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Sunday",
+          "Thursday",
+          "Friday"
+        ],
+        "shiftPreference": [
+          7,
+          9,
+          10,
+          9,
+          10,
+          9,
+          10
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Clara",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 7,
+        "weekends": 2,
+        "preferred": [
+          "Friday",
+          "Thursday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Tuesday",
+          "Wednesday",
+          "Saturday"
+        ],
+        "shiftPreference": [
+          4,
+          10,
+          10,
+          6,
+          5,
+          10,
+          7
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Maja",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 4,
+        "weekends": 8,
+        "preferred": [
+          "Monday",
+          "Sunday",
+          "Wednesday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Tuesday",
+          "Thursday"
+        ],
+        "shiftPreference": [
+          6,
+          9,
+          6,
+          5,
+          6,
+          6,
+          3
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Nikolaj",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 3,
+        "weekends": 6,
+        "preferred": [
+          "Wednesday",
+          "Friday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Thursday",
+          "Sunday"
+        ],
+        "shiftPreference": [
+          4,
+          7,
+          10,
+          8,
+          5,
+          5,
+          3
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Carla",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 2,
+        "weekends": 5,
+        "preferred": [
+          "Wednesday",
+          "Sunday",
+          "Thursday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Tuesday",
+          "Monday"
+        ],
+        "shiftPreference": [
+          4,
+          4,
+          10,
+          1,
+          5,
+          3,
+          4
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Carl",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 2,
+        "weekends": 7,
+        "preferred": [
+          "Wednesday",
+          "Monday",
+          "Sunday"
+        ],
+        "notPreferred": [
+          "Thursday",
+          "Friday",
+          "Tuesday"
+        ],
+        "shiftPreference": [
+          1,
+          7,
+          8,
+          9,
+          10,
+          3,
+          2
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Laura",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 3,
+        "weekends": 7,
+        "preferred": [
+          "Saturday",
+          "Tuesday",
+          "Thursday"
+        ],
+        "notPreferred": [
+          "Friday",
+          "Monday",
+          "Sunday"
+        ],
+        "shiftPreference": [
+          7,
+          7,
+          8,
+          2,
+          1,
+          10,
+          5
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Bastian",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 5,
+        "weekends": 5,
+        "preferred": [
+          "Tuesday",
+          "Wednesday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Friday",
+          "Saturday",
+          "Thursday"
+        ],
+        "shiftPreference": [
+          9,
+          5,
+          9,
+          2,
+          10,
+          8,
+          7
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Felix",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 9,
+        "weekends": 6,
+        "preferred": [
+          "Wednesday",
+          "Monday",
+          "Sunday"
+        ],
+        "notPreferred": [
+          "Friday",
+          "Thursday",
+          "Tuesday"
+        ],
+        "shiftPreference": [
+          3,
+          1,
+          9,
+          2,
+          9,
+          3,
+          10
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Aksel",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 9,
+        "weekends": 6,
+        "preferred": [
+          "Thursday",
+          "Monday",
+          "Wednesday"
+        ],
+        "notPreferred": [
+          "Sunday",
+          "Saturday",
+          "Tuesday"
+        ],
+        "shiftPreference": [
+          3,
+          6,
+          1,
+          4,
+          6,
+          7,
+          5
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Liam",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 3,
+        "weekends": 8,
+        "preferred": [
+          "Sunday",
+          "Monday",
+          "Friday"
+        ],
+        "notPreferred": [
+          "Thursday",
+          "Tuesday",
+          "Saturday"
+        ],
+        "shiftPreference": [
+          7,
+          4,
+          4,
+          2,
+          8,
+          7,
+          3
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Olivia",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 6,
+        "weekends": 2,
+        "preferred": [
+          "Sunday",
+          "Monday",
+          "Tuesday"
+        ],
+        "notPreferred": [
+          "Thursday",
+          "Wednesday",
+          "Friday"
+        ],
+        "shiftPreference": [
+          7,
+          2,
+          1,
+          1,
+          8,
+          4,
+          9
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Agnes",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 3,
+        "weekends": 3,
+        "preferred": [
+          "Thursday",
+          "Saturday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Tuesday",
+          "Friday",
+          "Sunday"
+        ],
+        "shiftPreference": [
+          1,
+          2,
+          9,
+          5,
+          7,
+          4,
+          1
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Mille",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 6,
+        "weekends": 7,
+        "preferred": [
+          "Wednesday",
+          "Tuesday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Friday",
+          "Thursday",
+          "Saturday"
+        ],
+        "shiftPreference": [
+          5,
+          6,
+          1,
+          8,
+          4,
+          8,
+          3
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Vera",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 9,
+        "weekends": 7,
+        "preferred": [
+          "Friday",
+          "Thursday",
+          "Saturday"
+        ],
+        "notPreferred": [
+          "Tuesday",
+          "Monday",
+          "Wednesday"
+        ],
+        "shiftPreference": [
+          9,
+          10,
+          1,
+          9,
+          7,
+          8,
+          3
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Signe",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 8,
+        "weekends": 9,
+        "preferred": [
+          "Sunday",
+          "Tuesday",
+          "Thursday"
+        ],
+        "notPreferred": [
+          "Monday",
+          "Wednesday",
+          "Friday"
+        ],
+        "shiftPreference": [
+          8,
+          4,
+          8,
+          6,
+          9,
+          2,
+          6
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Josefine",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 9,
+        "weekends": 3,
+        "preferred": [
+          "Tuesday",
+          "Wednesday",
+          "Friday"
+        ],
+        "notPreferred": [
+          "Thursday",
+          "Monday",
+          "Saturday"
+        ],
+        "shiftPreference": [
+          1,
+          7,
+          1,
+          8,
+          5,
+          8,
+          3
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Astrid",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 9,
+        "weekends": 6,
+        "preferred": [
+          "Tuesday",
+          "Monday",
+          "Friday"
+        ],
+        "notPreferred": [
+          "Thursday",
+          "Wednesday",
+          "Saturday"
+        ],
+        "shiftPreference": [
+          10,
+          10,
+          7,
+          6,
+          10,
+          7,
+          1
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Noah",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 3,
+        "weekends": 10,
+        "preferred": [
+          "Wednesday",
+          "Thursday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Sunday",
+          "Tuesday"
+        ],
+        "shiftPreference": [
+          7,
+          7,
+          7,
+          7,
+          3,
+          5,
+          2
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Anna",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 4,
+        "weekends": 4,
+        "preferred": [
+          "Saturday",
+          "Sunday",
+          "Friday"
+        ],
+        "notPreferred": [
+          "Wednesday",
+          "Thursday",
+          "Monday"
+        ],
+        "shiftPreference": [
+          8,
+          8,
+          5,
+          10,
+          7,
+          6,
+          4
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Amalie",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 9,
+        "weekends": 7,
+        "preferred": [
+          "Wednesday",
+          "Friday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Tuesday",
+          "Sunday"
+        ],
+        "shiftPreference": [
+          7,
+          6,
+          9,
+          2,
+          4,
+          5,
+          3
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Mathias",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 7,
+        "weekends": 1,
+        "preferred": [
+          "Monday",
+          "Friday",
+          "Tuesday"
+        ],
+        "notPreferred": [
+          "Thursday",
+          "Wednesday",
+          "Saturday"
+        ],
+        "shiftPreference": [
+          6,
+          7,
+          5,
+          1,
+          8,
+          10,
+          4
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Sophie",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 5,
+        "weekends": 2,
+        "preferred": [
+          "Sunday",
+          "Monday",
+          "Thursday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Wednesday",
+          "Tuesday"
+        ],
+        "shiftPreference": [
+          10,
+          8,
+          4,
+          6,
+          4,
+          1,
+          5
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Lucas",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 4,
+        "weekends": 4,
+        "preferred": [
+          "Friday",
+          "Wednesday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Thursday",
+          "Sunday"
+        ],
+        "shiftPreference": [
+          9,
+          6,
+          9,
+          2,
+          3,
+          1,
+          4
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Malik",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 4,
+        "weekends": 8,
+        "preferred": [
+          "Thursday",
+          "Monday",
+          "Tuesday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Friday",
+          "Wednesday"
+        ],
+        "shiftPreference": [
+          10,
+          1,
+          1,
+          5,
+          9,
+          2,
+          5
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Luna",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 2,
+        "weekends": 9,
+        "preferred": [
+          "Tuesday",
+          "Friday",
+          "Thursday"
+        ],
+        "notPreferred": [
+          "Wednesday",
+          "Sunday",
+          "Saturday"
+        ],
+        "shiftPreference": [
+          10,
+          5,
+          1,
+          5,
+          2,
+          6,
+          2
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Luca",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 1,
+        "weekends": 10,
+        "preferred": [
+          "Wednesday",
+          "Tuesday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "shiftPreference": [
+          6,
+          6,
+          2,
+          10,
+          9,
+          5,
+          4
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "William",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 8,
+        "weekends": 9,
+        "preferred": [
+          "Friday",
+          "Thursday",
+          "Sunday"
+        ],
+        "notPreferred": [
+          "Tuesday",
+          "Saturday",
+          "Monday"
+        ],
+        "shiftPreference": [
+          1,
+          6,
+          9,
+          2,
+          6,
+          10,
+          1
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Mikkel",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 8,
+        "weekends": 8,
+        "preferred": [
+          "Sunday",
+          "Wednesday",
+          "Thursday"
+        ],
+        "notPreferred": [
+          "Saturday",
+          "Monday",
+          "Tuesday"
+        ],
+        "shiftPreference": [
+          8,
+          3,
+          7,
+          6,
+          3,
+          7,
+          1
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Albert",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 2,
+        "weekends": 2,
+        "preferred": [
+          "Wednesday",
+          "Thursday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "shiftPreference": [
+          10,
+          7,
+          2,
+          2,
+          7,
+          10,
+          8
+        ]
+      },
+      "score": {}
+    },
+    {
+      "user": "Emil",
+      "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+      "type": "employee",
+      "preferences": {
+        "weekdays": 7,
+        "weekends": 8,
+        "preferred": [
+          "Thursday",
+          "Sunday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Friday",
+          "Saturday",
+          "Tuesday"
+        ],
+        "shiftPreference": [
+          4,
+          3,
+          6,
+          5,
+          8,
+          5,
+          8
+        ]
+      },
+      "score": {}
+    }
+  ]
+}

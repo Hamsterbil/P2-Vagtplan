@@ -1,10 +1,18 @@
-// Using IIFE to keep some client functions out of access and only return functions allowed to be used by users. Security
+// Using IIFE to encapsulate the client code and avoid polluting the global namespace
 var client = (function() {
+  
+  async function findUser() {
+    const response = await client.jsonFetch("/user").catch(err => {
+      console.error("Failed to fetch user data:", err);
+    });
+    return response;
+  }
+
 return {
 
-//Tries to parse a http body as json document. 
-//But first ensure taht the response code is OK (200) and
-//the content type is actually a json document; else rejects the promise
+  //Tries to parse a http body as json document. 
+  //But first ensure taht the response code is OK (200) and
+  //the content type is actually a json document; else rejects the promise
   jsonParse: function(response) {
     if (response.ok) 
       if (response.headers.get("Content-Type") === "application/json") 
@@ -16,13 +24,13 @@ return {
         .then(text => { throw new Error(response.status + ": " + text); });
   },
 
-//GET a json document at URL
+  //GET a json document at URL
   jsonFetch: function(url) {
     return fetch(url).then(client.jsonParse);
   },
 
-//POST a json document in data to URL
-//Sets content type appropriately first. 
+  //POST a json document in data to URL
+  //Sets content type appropriately first. 
   jsonPost: function(url = '', data={}) {
     const options={
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -68,10 +76,7 @@ return {
   },
 
   preferenceForm: async function() {
-    let user = await client.jsonFetch("/user")
-      .catch(err => {
-        console.error("Failed to fetch user preferences:", err)
-    });
+    let user = await findUser()
     if (!user) return;
 
     const { user: username, preferences } = user;
@@ -141,6 +146,74 @@ return {
       
       window.preferenceSubmit();
     });
+  },
+
+  initializeEmployee: async function() {
+    let user = await findUser()
+    if (!user) return;
+
+    const schedule = await client.jsonFetch("/schedule").catch(err => {
+      console.error("Failed to fetch events:", err);
+    });
+
+    const allEvents = schedule.map(event => {
+      const startDateTime = new Date(`${event.date}T${event.start}`);
+      const endDateTime = new Date(startDateTime.getTime() + event.minutes * 60000); // Add minutes to start time
+
+      // https://fullcalendar.io/docs/event-object
+      return {
+        title: `${event.user} (${event.shift})`,
+        start: startDateTime,
+        end: endDateTime,
+        backgroundColor: event.user === user.user ? 'red' : 'blue',
+        borderColor: event.user === user.user ? 'red' : 'blue'
+      };
+    }) || [];
+    console.log(allEvents);
+    const userEvents = allEvents.filter(event => event.title.includes(user.user));
+    const upcomingEvents = userEvents.filter(event => new Date(event.start) > new Date());
+
+    const calendarEl = document.getElementById('calendar');
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'timeGridWeek',
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+      },
+      events: allEvents,
+      
+      // https://fullcalendar.io/docs/timegrid-view
+      editable: false,
+      selectable: false,
+      allDaySlot: false,
+      scrollTime: '07:00:00',
+      nowIndicator: true,
+      handleWindowResize: true
+    });
+    calendar.render();
+
+    document.getElementById('currentUser').innerHTML = user.user;
+    document.getElementById('displayUser').innerHTML = user.user;
+    document.getElementById('shiftCount').innerHTML = `${upcomingEvents.length} upcoming shifts`;
+    document.getElementById('viewToggleBtn').classList.add("d-inline-block");
+
+    let isShowingAll = true;
+    document.getElementById('viewToggleBtn').addEventListener('click', function() {
+      isShowingAll = isShowingAll ? false : true;
+      calendar.getEvents().forEach(event => {
+        if (isShowingAll && !event.title.includes(user.user)) {
+          event.setProp('display', 'none');
+        } else {
+          event.setProp('display', '');
+        }
+      });
+      this.innerHTML = isShowingAll ? "Show all shifts" : "Show my shifts only";
+    });
+  },
+  
+  initializeAdmin: async function() {
+  
   }
 }
 })();
