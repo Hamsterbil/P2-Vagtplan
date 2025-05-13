@@ -1,0 +1,499 @@
+{
+    "users": [
+      {
+        "user": "admin",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "admin"
+      },
+      {
+        "user": "Anton",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {
+          "weekdays": "5",
+          "weekends": "9",
+          "preferred": [
+            "Monday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "notPreferred": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ],
+          "shiftPreference": [
+            "8",
+            "8",
+            "6",
+            "5",
+            "4",
+            "3",
+            "1"
+          ]
+        },
+        "score": {
+          "days": [
+            0.5,
+            -0.5,
+            -0.5,
+            -0.5,
+            0.5,
+            2.3000000000000007,
+            2.3000000000000007
+          ],
+          "shifts": [
+            16,
+            16,
+            12,
+            10,
+            8,
+            6,
+            1
+          ]
+        }
+      },
+      {
+        "user": "Ella",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Sebastian",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Asta",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Mathilde",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Lærke",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Cecilie",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Magnus",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Sofia",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Mille",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Freja",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Nora",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Victor",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Liv",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Jakob",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Frederikke",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Filip",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Alma",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Oscar",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Marius",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Selma",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Elias",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Victoria",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Leon",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Alexander",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Valdemar",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Theodor",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Philip",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Ida",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Asger",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Oliver",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Emma",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Julian",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Nellie",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Clara",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Maja",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Nikolaj",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Carla",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Carl",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Laura",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Bastian",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Felix",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Aksel",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Liam",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Olivia",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Agnes",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Mille",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Vera",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Signe",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Josefine",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Astrid",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Noah",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Anna",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Amalie",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Mathias",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Sophie",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Lucas",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Malik",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Luna",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Luca",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "William",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Mikkel",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Albert",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      },
+      {
+        "user": "Emil",
+        "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
+        "type": "employee",
+        "preferences": {},
+        "score": {}
+      }
+    ]
+  }

@@ -8,6 +8,57 @@ var client = (function() {
     return response;
   }
 
+  async function getEvents(user = "") {
+    const schedule = await client.jsonFetch("/schedule").catch(err => {
+      console.error("Failed to fetch events:", err);
+    });
+
+    const allEvents = schedule.map(event => {
+      const startDateTime = new Date(`${event.date}T${event.start}`);
+      const endDateTime = new Date(startDateTime.getTime() + event.minutes * 60000); // Add minutes to start time
+      const isUserEvent = event.user === user;
+
+      // https://fullcalendar.io/docs/event-object
+      return {
+        title: `${isUserEvent ? event.shift : event.user}`,
+        start: startDateTime,
+        end: endDateTime,
+        //Softer colors for user events
+        backgroundColor: isUserEvent ? 'rgb(80, 188, 255)' : 'rgb(60, 72, 135)',
+        borderColor: isUserEvent ? 'rgb(80, 188, 255)' : 'rgb(60, 72, 135)',
+        isUserEvent
+      };
+    }) || [];
+
+    const userEvents = allEvents.filter(event => event.isUserEvent);
+    return { allEvents, userEvents };
+  }
+
+  function setSchedule(events, user) {
+    const isAdmin = user.type === "admin";
+
+    const calendarEl = document.getElementById('calendar');
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: user ? 'timeGridWeek' : 'timeGriDay',
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+      },
+      events: events,
+      editable: isAdmin,
+      selectable: isAdmin,
+      allDaySlot: false,
+      scrollTime: '07:00:00',
+      nowIndicator: true,
+      handleWindowResize: true,
+      select: function() {
+        console.log(events);
+      }
+    });
+    calendar.render();
+  }
+
 return {
 
   //Tries to parse a http body as json document. 
@@ -65,7 +116,7 @@ return {
 
         if (response.success) {
           // sessionStorage.setItem('currentUser', username);
-          window.location.href = '/html/planner.html';
+          window.location.href = '/html/index.html';
         }
       } catch (err) {
         document.getElementById('errorMessage').textContent = "Invalid username or password";
@@ -133,8 +184,7 @@ return {
           throw new Error("You cannot select the same day as preferred and not preferred.");
 
         const data = { username, weekdays, weekends, preferred, notPreferred, shifts };
-        const entry = "user preferences";
-        const response = await client.jsonPost("/database/preferences", { data, entry });
+        const response = await client.jsonPost("/database/preferences", { data, entry: "user preferences" });
 
         if (response.success) {
           alert("Preferences saved successfully!");
@@ -144,7 +194,7 @@ return {
         console.error(err);
       }
       
-      window.preferenceSubmit();
+      scheduler.preferenceSubmit();
     });
   },
 
@@ -152,68 +202,117 @@ return {
     let user = await findUser()
     if (!user) return;
 
-    const schedule = await client.jsonFetch("/schedule").catch(err => {
-      console.error("Failed to fetch events:", err);
-    });
-
-    const allEvents = schedule.map(event => {
-      const startDateTime = new Date(`${event.date}T${event.start}`);
-      const endDateTime = new Date(startDateTime.getTime() + event.minutes * 60000); // Add minutes to start time
-
-      // https://fullcalendar.io/docs/event-object
-      return {
-        title: `${event.user} (${event.shift})`,
-        start: startDateTime,
-        end: endDateTime,
-        backgroundColor: event.user === user.user ? 'red' : 'blue',
-        borderColor: event.user === user.user ? 'red' : 'blue'
-      };
-    }) || [];
-    console.log(allEvents);
-    const userEvents = allEvents.filter(event => event.title.includes(user.user));
+    const { allEvents, userEvents } = await getEvents(user.user);
     const upcomingEvents = userEvents.filter(event => new Date(event.start) > new Date());
-
-    const calendarEl = document.getElementById('calendar');
-    const calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'timeGridWeek',
-      headerToolbar: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay'
-      },
-      events: allEvents,
-      
-      // https://fullcalendar.io/docs/timegrid-view
-      editable: false,
-      selectable: false,
-      allDaySlot: false,
-      scrollTime: '07:00:00',
-      nowIndicator: true,
-      handleWindowResize: true
-    });
-    calendar.render();
 
     document.getElementById('currentUser').innerHTML = user.user;
     document.getElementById('displayUser').innerHTML = user.user;
     document.getElementById('shiftCount').innerHTML = `${upcomingEvents.length} upcoming shifts`;
     document.getElementById('viewToggleBtn').classList.add("d-inline-block");
 
-    let isShowingAll = true;
+    setSchedule(userEvents, user);
+
+    let isShowingAll = false;
     document.getElementById('viewToggleBtn').addEventListener('click', function() {
       isShowingAll = isShowingAll ? false : true;
-      calendar.getEvents().forEach(event => {
-        if (isShowingAll && !event.title.includes(user.user)) {
-          event.setProp('display', 'none');
-        } else {
-          event.setProp('display', '');
-        }
-      });
+      const eventsToShow = isShowingAll ? allEvents : userEvents;
+      setSchedule(eventsToShow, user);
       this.innerHTML = isShowingAll ? "Show all shifts" : "Show my shifts only";
     });
   },
   
   initializeAdmin: async function() {
-  
+    let user = await findUser()
+    if (user.type !== "admin") return;
+
+    document.getElementById('currentUser').innerHTML = user.user;
+
+    const settingValue = await client.jsonFetch("/variables").catch(err => {
+      console.error("Failed to fetch setting value:", err);
+    });
+
+    const DAYS_OF_WEEK = [ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" ];
+    const container = document.getElementById("daySettingsContainer");
+    let html = "";
+    DAYS_OF_WEEK.forEach((day) => {
+      const value = settingValue.workerCount[day] || 0;
+      html += `<div class="mb-4 border-bottom pb-2"><h5 class="text-capitalize">${day}</h5>`;
+        const sliderId = `settings-${day}`;
+        html += `
+          <div class="slider-container mb-2">
+            <label for="${sliderId}" class="form-label text-capitalize"></label>
+            <input type="range" class="form-range" min="0" max="10" step="1" id="${sliderId}" value="${value}">
+            <span class="slider-value">${value}</span>
+          </div>`;
+      html += `</div>`;
+    });
+    container.innerHTML = html;
+
+    const sliders = container.querySelectorAll(".form-range");
+    sliders.forEach((slider) => {
+      slider.oninput = function() {
+        const value = this.value;
+        const sliderValue = this.nextElementSibling;
+        sliderValue.innerHTML = value;
+      }
+    });
+
+    document.getElementById("saveDaySettingsBtn").addEventListener("click", () => {
+      const settings = {};
+      DAYS_OF_WEEK.forEach((day) => {
+        const value = document.getElementById(`settings-${day}`).value;
+        settings[day] = parseInt(value, 10);
+      });
+      const data = { username: user.user, workerCount: settings };
+      
+      client.jsonPost("/database", { data, entry: "worker count" })
+      .then(response => {
+        if (response.success) {
+          alert("Settings saved successfully!");
+        } else {
+          alert("Error saving settings: " + response.message);
+        }
+      })
+      .catch(err => {
+        console.error(err);
+        alert("Error saving settings: " + err.message);
+      });
+    });
+
+    const { allEvents } = await getEvents();
+    setSchedule(allEvents, user);
+
+    // const loadBtn = document.getElementById("loadScheduleBtn");
+    // const fileInput = document.getElementById("jsonUpload");
+    // const confirmBtn = document.getElementById("confirmScheduleBtn");
+    // const cancelBtn = document.getElementById("cancelPreviewBtn");
+    // const generateBtn = document.getElementById("generateScheduleBtn"); // Get generate button
+
+    // if (loadBtn && fileInput && confirmBtn && cancelBtn && generateBtn) {
+    //   // Check generateBtn too
+    //   console.log("Admin controls listeners setup...");
+    //   loadBtn.addEventListener("click", () => {
+    //     const file = fileInput.files[0];
+    //     if (file) {
+    //       processUploadedSchedule(file);
+    //     } else {
+    //       showError("Select JSON.");
+    //     }
+    //   });
+    //   confirmBtn.addEventListener("click", confirmAndPublishSchedule);
+    //   cancelBtn.addEventListener("click", cancelSchedulePreview);
+    //   // Add listener for Generate button
+    //   generateBtn.addEventListener("click", () => {
+    //     console.log("calling algorithm"); // Placeholder action
+    //     // Future: Replace console.log with actual function call
+    //     showError(
+    //       "Generate schedule process initiated (placeholder).",
+    //       true
+    //     ); // Optional feedback
+    //   });
+    // } else {
+    //   console.error("Admin control buttons/inputs not found.");
+    // }
   }
 }
 })();

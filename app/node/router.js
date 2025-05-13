@@ -72,7 +72,7 @@ function processReq(req, res){
         }
         case "database": {
           try {
-            checkAccess(currentUser, res);
+            // checkAccess(currentUser, res);
             let db = getDB();
             if (db)
               jsonResponse(res, db);
@@ -85,10 +85,10 @@ function processReq(req, res){
         }
         case "variables": {
           try {
-            checkAccess(currentUser, res);
+            // checkAccess(currentUser, res);
             let vars = getVars();
             if (vars)
-                jsonResponse(res, vars);
+              jsonResponse(res, vars);
             else
               throw new Error(NoResourceError);
             }
@@ -116,7 +116,16 @@ function processReq(req, res){
         }
         default: { //for anything else we assume it is a file to be served
           console.log("Serving file: " + pathElements[1]);
-          fileResponse(res, req.url);
+          if (req.url === "/html/index.html") {
+            if (currentUser.type === "admin") {
+              fileResponse(res, "/html/indexAdmin.html");
+            }
+            else {
+              fileResponse(res, req.url);
+            }
+          } else {
+            fileResponse(res, req.url);
+          }
         }
       }
       break;

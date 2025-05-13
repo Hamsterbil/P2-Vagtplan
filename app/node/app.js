@@ -50,45 +50,7 @@ async function hashDealer(pass) {
 //     console.error(err.message);
 //   }
 // })();
-function fillDB() {
-  const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-  const weights = scheduleVariables.algoWeights;
-  DB.users.forEach(user => {
-    if (user.type === "employee") {
-      user.preferences = { weekdays: "", weekends: "", preferred: [], notPreferred: [], shiftPreference: [] };
-      user.preferences.weekdays = Math.floor(Math.random() * 10) + 1;
-      user.preferences.weekends = Math.floor(Math.random() * 10) + 1;
 
-      let weekArr = weekdays.map(elem => elem);
-
-      for (let i = 0; i < 3; i++) {
-        let rand = Math.max(0, Math.floor(Math.random() * 7) - i);
-        user.preferences.preferred[i] = weekArr[rand];
-        weekArr.splice(rand, 1);
-      }
-
-      for (let i = 0; i < 3; i++) {
-        let rand = Math.max(0, Math.floor(Math.random() * 4) - i);
-        user.preferences.notPreferred[i] = weekArr[rand];
-        weekArr.splice(rand, 1);
-      }
-
-      for (let i = 0; i < 7; i++) {
-        user.preferences.shiftPreference[i] = Math.floor(Math.random() * 10) + 1;
-      }
-
-      if (!user.score) {
-        user.score = { days: [], shifts: [] };
-      }
-
-      // Calculate and update scores
-      user.score.days = calculateDay(user, weights);
-      user.score.shifts = calculateShift(user, weights);
-    }
-  });
-  console.log("Writing");
-  fs.writeFileSync(sampleData, JSON.stringify(DB, null, 2), 'utf-8');
-}
 // fillDB();
 
 function fillDB() {
@@ -192,9 +154,11 @@ function updateDatabase(data, entry) {
       if (!user) throw new Error("User not found");
     }
 
+    let filePath;
     switch (entry) {
       case "user password": {
         user.password = hashDealer(sanitize(data.plainPassword));
+        filePath = sampleData;
         break;
       }
       case "user preferences": {
@@ -204,24 +168,29 @@ function updateDatabase(data, entry) {
         user.preferred = sanitize(data.preferred, true);
         user.notPreferred = sanitize(data.notPreferred, true);
         user.shiftPreference = sanitize(data.shifts, true);
-            
+        filePath = sampleData;
         break;
       }
       case "user score": {
-        console.log("Updating user score...", user, data);
         user = user.score;
-
         user.days = data.dayScores;
         user.shifts = data.shiftScores;
-
+        filePath = sampleData;
         break;
       }
       case "weights": {
-        DB.algoWeights = data.weights;
+        scheduleVariables.algoWeights = data.weights;
+        filePath = variablesData;
         break;
       }
       case "worker count": {
-        DB.workerCount = data.count;
+        scheduleVariables.workerCount = data.workerCount;
+        filePath = variablesData;
+        break;
+      }
+      case "schedule": {
+        schedule = data.formattedSchedule;
+        filePath = scheduleData;
         break;
       }
       default: {
@@ -230,6 +199,8 @@ function updateDatabase(data, entry) {
     }
 
     fs.writeFileSync(sampleData, JSON.stringify(DB, null, 2), 'utf-8');
+    fs.writeFileSync(variablesData, JSON.stringify(scheduleVariables, null, 2), 'utf-8');
+    fs.writeFileSync(scheduleData, JSON.stringify(schedule, null, 2), 'utf-8');
     return true;
   } catch (err) {
     console.error(err);
