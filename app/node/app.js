@@ -1,6 +1,6 @@
 export {selectUserEntries, getDB, getVars, getSchedule, getCurrentUser, validateLogin, updateDatabase};
 import { ValidationError } from "./router.js";
-// import { calculateDay, calculateShift } from './PublicResources/js/scheduler.js';
+// import { scheduler } from './PublicResources/js/scheduler.js';
 import fs from 'fs';
 import bcrypt from 'bcrypt';
 
@@ -13,6 +13,7 @@ let schedule = JSON.parse(fs.readFileSync(scheduleData, 'utf-8'));
 
 // var AsyncLock = require('async-lock');
 // var lock = new AsyncLock();
+
 
 //remove potentially dangerous/undesired characters 
 function sanitize(str, isArray = false){
@@ -53,6 +54,8 @@ async function hashDealer(pass) {
 
 // fillDB();
 
+
+
 function fillDB() {
   const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   DB.users.forEach(user => {
@@ -78,6 +81,10 @@ function fillDB() {
       for (let i = 0; i < 7; i++) {
         user.preferences.shiftPreference[i] = Math.floor(Math.random() * 10) + 1;
       }
+      user.score = { days: [], shifts: [] };
+      let weights = scheduleVariables.algoWeights;
+      user.score.days = scheduler.calculateDay(user, weights);
+      user.score.shifts = scheduler.calculateShift(user, weights);
     }
   });
   console.log("Writing");

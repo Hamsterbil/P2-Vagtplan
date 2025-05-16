@@ -1,4 +1,4 @@
-// export {calculateDay, calculateShift}
+// export {scheduler}
 
 // Using IIFE to encapsulate the client code and avoid polluting the global namespace
 var scheduler = (function() {
@@ -56,8 +56,8 @@ return {
             console.log("Weights:", currentWeights);
     
             // Example: Use the data in another function
-            const dayScores = calculateDay(currentUser, currentWeights);
-            const shiftScores = calculateShift(currentUser, currentWeights);
+            const dayScores = this.calculateDay(currentUser, currentWeights);
+            const shiftScores = this.calculateShift(currentUser, currentWeights);
             // const dayScores = employees.map(currentUser => calculateDay(currentUser, currentWeights));
             // const shiftScores = employees.map(currentUser => calculateShift(currentUser, currentWeights));
             console.log("Day Scores:", dayScores);
@@ -126,8 +126,10 @@ return {
             }
         });
         console.log("Generate schedule");
-        const employeesPerShift = 5;
-        const startDate = "2025-05-05";
+        const employeesPerShift = 3;
+        //Start from first of current month
+        const startDate = new Date();
+        startDate.setDate(1);
         const weeksAmount = 4;
         const schedule = this.assignShifts(users, employeesPerShift, 2220, weeksAmount, startDate);
         const formattedSchedule = this.outputSchedule(schedule, startDate);
@@ -149,7 +151,7 @@ return {
 
     calculateDay: function(user, weights) {
         const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-        let bonus = 0.5;
+        let bonus = 2;
         let normalizeWeekday = user.preferences.weekdays / 10;
         let normalizeWeekend = user.preferences.weekends / 10;
         
@@ -162,10 +164,10 @@ return {
 
             if(!isWeekend){
                 weightDay += weights[day] * (weights[day] * normalizeWeekday);
-                weightDay -= weights[day] * (weights[day] * (1 - normalizeWeekday));
+                // weightDay -= weights[day] * (weights[day] * (1 - normalizeWeekday));
             }else{
                 weightDay += weights[day] * (weights[day] * normalizeWeekend);
-                weightDay -= weights[day] * (weights[day] * (1 - normalizeWeekend));
+                // weightDay -= weights[day] * (weights[day] * (1 - normalizeWeekend));
             }
 
             if (user.preferences.preferred.includes(day)) {
@@ -292,6 +294,7 @@ return {
                         let adjustedProbabilities = employees.map((employee, index) => {
                             let minutes = minuteCount[employee.user];
                             let penalty = 1 / Math.pow(1 + minutes, 5);
+                            
                             return normalizedProbabilities[index] * penalty
                         });
                         
@@ -333,8 +336,8 @@ return {
         const shiftDetails = {
             "Shift1": {dayTime: "Morning", start: "07:00", minutes: 444},
             "Shift2": {dayTime: "Morning", start: "07:00", minutes: 480},
-            "Shift3": {dayTime: "Morning", start: "8:00", minutes: 444},
-            "Shift4": {dayTime: "Morning", start: "8:00", minutes: 480},
+            "Shift3": {dayTime: "Morning", start: "08:00", minutes: 444},
+            "Shift4": {dayTime: "Morning", start: "08:00", minutes: 480},
             "Shift5": {dayTime: "Evening", start: "11:00", minutes: 480},
             "Shift6": {dayTime: "Evening", start: "15:00", minutes: 480},
             "Shift7": {dayTime: "Night", start: "23:00", minutes: 480}

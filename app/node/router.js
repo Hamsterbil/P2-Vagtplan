@@ -64,7 +64,7 @@ function processReq(req, res){
       switch(pathElements[1]) {     
         case "": { // "/"
           if (currentUser) {
-            fileResponse(res, "/html/planner.html");
+            fileResponse(res, "/html/index.html");
           } else {
             fileResponse(res, "/html/login.html");
           }

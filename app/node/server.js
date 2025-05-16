@@ -55,6 +55,7 @@ function fileResponse(res, filename) {
   // Strip query parameters from the filename
   const cleanFilename = filename.split('?')[0]; // Remove anything after '?'
   const sPath = securePath(cleanFilename); // Secure the path
+
   console.log("Reading: " + sPath);
 
   fs.readFile(sPath, (err, data) => {

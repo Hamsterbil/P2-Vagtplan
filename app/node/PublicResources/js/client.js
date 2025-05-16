@@ -30,6 +30,8 @@ var client = (function() {
       };
     }) || [];
 
+    console.log(schedule);
+
     const userEvents = allEvents.filter(event => event.isUserEvent);
     return { allEvents, userEvents };
   }
@@ -39,13 +41,14 @@ var client = (function() {
 
     const calendarEl = document.getElementById('calendar');
     const calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: user ? 'timeGridWeek' : 'timeGriDay',
+      initialView: 'timeGridDay',
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay'
       },
       events: events,
+      firstDay: 1,
       editable: isAdmin,
       selectable: isAdmin,
       allDaySlot: false,
@@ -217,7 +220,7 @@ return {
       isShowingAll = isShowingAll ? false : true;
       const eventsToShow = isShowingAll ? allEvents : userEvents;
       setSchedule(eventsToShow, user);
-      this.innerHTML = isShowingAll ? "Show all shifts" : "Show my shifts only";
+      this.innerHTML = isShowingAll ? "Show my shifts only" : "Show all shifts";
     });
   },
   
