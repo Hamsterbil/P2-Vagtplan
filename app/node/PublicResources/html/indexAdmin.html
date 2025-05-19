@@ -91,29 +91,6 @@
         </div>
       </nav>
 
-      <div id="adminControlsPanel" class="card mb-3">
-        <h5 class="card-header bg-info-subtle">Admin Controls</h5>
-        <div class="card-body">
-          <div class="mt-2">
-            <button id="generateScheduleBtn" class="btn btn-info btn-sm" onclick="scheduler.generate();">
-                Generate and view schedule
-            </button>
-            <button id="saveScheduleBtn" class="btn btn-info btn-sm" onclick="client.saveSchedule();">
-                Save Schedule
-            </button>
-            <p class="form-text mt-1 mb-0">
-                Click to trigger automatic schedule generation algorithm.
-            </p>
-            <div class="input-group mt-2">
-                <select id="userSelect" class="form-select form-select-sm" aria-label="Select User">
-                  <option value="" selected>All users</option>
-                </select>
-                <button id="highlightUserBtn" class="btn btn-secondary btn-sm">Highlight</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div id="errorMessage" class="alert alert-danger mt-2 d-none" role="alert"></div>
       <div id="calendar" class="bg-white p-3 rounded border"></div>
     </div>
