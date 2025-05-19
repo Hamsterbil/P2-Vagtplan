@@ -38,6 +38,7 @@ var client = (function() {
 
   function setSchedule(events, user) {
     const isAdmin = user.type === "admin";
+    const customButtons = isAdmin ? 'generateSchedule saveSchedule ' : '';
 
     const calendarEl = document.getElementById('calendar');
     const calendar = new FullCalendar.Calendar(calendarEl, {
@@ -45,7 +46,7 @@ var client = (function() {
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        right: customButtons + 'dayGridMonth,timeGridWeek,timeGridDay'
       },
       events: events,
       firstDay: 1,
@@ -55,9 +56,59 @@ var client = (function() {
       scrollTime: '07:00:00',
       nowIndicator: true,
       handleWindowResize: true,
-      select: function() {
-        console.log(events);
-      }
+      weekNumberCalculation: 'ISO',
+      weekNumbers: true,
+      navLinks: true,
+      dayMaxEvents: true,
+      eventMouseover: function(info) {
+        const tooltip = document.createElement('div');
+        tooltip.innerHTML = `<strong>${info.event.title}</strong><br>${info.event.start.toLocaleString()} - ${info.event.end.toLocaleString()}`;
+        tooltip.className = 'tooltip';
+        document.body.appendChild(tooltip);
+        tooltip.style.position = 'absolute';
+        tooltip.style.left = `${info.jsEvent.pageX}px`;
+        tooltip.style.top = `${info.jsEvent.pageY}px`;
+      },
+      eventMouseout: function(info) {
+        const tooltips = document.querySelectorAll('.tooltip');
+        tooltips.forEach(tooltip => {
+          tooltip.remove();
+        });
+      },
+      aspectRatio: 2,
+      //Create custom "Save button" for admin to save the schedule
+      customButtons: {
+        saveSchedule: {
+          text: 'Save Schedule',
+          click: function() {
+            const events = calendar.getEvents().map(event => ({
+              user: event.title,
+              date: event.start.toISOString().split('T')[0],
+              start: event.start.toTimeString().split(' ')[0],
+              end: event.end.toTimeString().split(' ')[0],
+              minutes: (event.end - event.start) / 60000,
+            }));
+            client.jsonPost("/database", { data: events, entry: "schedule" })
+              .then(response => {
+                if (response.success) {
+                  alert("Schedule saved successfully!");
+                } else {
+                  alert("Error saving schedule: " + response.message);
+                }
+              })
+              .catch(err => {
+                console.error(err);
+                alert("Error saving schedule: " + err.message);
+              });
+          }
+        },
+        generateSchedule: {
+          text: 'Generate Schedule',
+          click: function() {
+            
+          }
+        }
+      },  
     });
     calendar.render();
   }
@@ -285,37 +336,9 @@ return {
     const { allEvents } = await getEvents();
     setSchedule(allEvents, user);
 
-    // const loadBtn = document.getElementById("loadScheduleBtn");
-    // const fileInput = document.getElementById("jsonUpload");
-    // const confirmBtn = document.getElementById("confirmScheduleBtn");
-    // const cancelBtn = document.getElementById("cancelPreviewBtn");
-    // const generateBtn = document.getElementById("generateScheduleBtn"); // Get generate button
+    const saveBtnElem = document.getElementById("saveScheduleBtn");
+    //After admin has set the schedule, save it to the database
 
-    // if (loadBtn && fileInput && confirmBtn && cancelBtn && generateBtn) {
-    //   // Check generateBtn too
-    //   console.log("Admin controls listeners setup...");
-    //   loadBtn.addEventListener("click", () => {
-    //     const file = fileInput.files[0];
-    //     if (file) {
-    //       processUploadedSchedule(file);
-    //     } else {
-    //       showError("Select JSON.");
-    //     }
-    //   });
-    //   confirmBtn.addEventListener("click", confirmAndPublishSchedule);
-    //   cancelBtn.addEventListener("click", cancelSchedulePreview);
-    //   // Add listener for Generate button
-    //   generateBtn.addEventListener("click", () => {
-    //     console.log("calling algorithm"); // Placeholder action
-    //     // Future: Replace console.log with actual function call
-    //     showError(
-    //       "Generate schedule process initiated (placeholder).",
-    //       true
-    //     ); // Optional feedback
-    //   });
-    // } else {
-    //   console.error("Admin control buttons/inputs not found.");
-    // }
   }
 }
 })();
