@@ -81,31 +81,14 @@ var client = (function() {
         saveSchedule: {
           text: 'Save Schedule',
           click: function() {
-            const events = calendar.getEvents().map(event => ({
-              user: event.title,
-              date: event.start.toISOString().split('T')[0],
-              start: event.start.toTimeString().split(' ')[0],
-              end: event.end.toTimeString().split(' ')[0],
-              minutes: (event.end - event.start) / 60000,
-            }));
-            client.jsonPost("/database", { data: events, entry: "schedule" })
-              .then(response => {
-                if (response.success) {
-                  alert("Schedule saved successfully!");
-                } else {
-                  alert("Error saving schedule: " + response.message);
-                }
-              })
-              .catch(err => {
-                console.error(err);
-                alert("Error saving schedule: " + err.message);
-              });
+            const events = calendar.getEvents();
+            saveSchedule(events);
           }
         },
         generateSchedule: {
           text: 'Generate Schedule',
           click: function() {
-            
+            scheduler.generate()
           }
         }
       },  

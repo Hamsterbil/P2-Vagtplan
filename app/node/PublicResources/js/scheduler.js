@@ -294,8 +294,9 @@ return {
                         let adjustedProbabilities = employees.map((employee, index) => {
                             let minutes = minuteCount[employee.user];
                             let penalty = 1 / Math.pow(1 + minutes, 5);
+                            let preferenceMultiplier = employee.preferences.preferred.includes(day) ? 5 : 1;
                             
-                            return normalizedProbabilities[index] * penalty
+                            return normalizedProbabilities[index] * penalty * preferenceMultiplier;
                         });
                         
                         // Get probabilities for available employees

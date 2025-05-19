@@ -59,8 +59,8 @@ function softmax(array) {
   return exp.map(expValue => expValue / sum);
 }
 
-calculateUserScoreDay();
-function calculateUserScoreDay() {
+testUserScore();
+function testUserScore() {
   let averageDay = 0;
   let averageShift = 0;
   const userScores = DB.users.map(user => {
