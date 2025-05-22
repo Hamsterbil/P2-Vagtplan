@@ -14,6 +14,17 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        #photo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
         .login-container {
             background: white;
@@ -21,6 +32,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             width: 350px;
+            opacity: 95%;
         }
         h1 {
             color: #333;
@@ -66,8 +78,9 @@
     </style>
     <script src="../js/client.js"></script>
 </head>
-<body onload="loginForm()">
-    <div class="login-container">
+<body onload="client.loginForm()">
+    <img id="photo">
+    <div class="login-container opacity-50">
         <h1>Login</h1>
         <form id="loginForm">
             <div class="input-group">
@@ -81,6 +94,28 @@
             <div id="errorMessage" style="display: none; color: red; margin-top: 20px;"></div>
             <button type="submit">Login</button>
         </form>
-    </div>
+    </div>    
+    <script>
+        // Background image
+        const API_KEY = 'LLZgoqkPXHEgRkD5k5fiAI5ZH1HITjFJ9ttNMyMdjXZJz2Ax4dIqWRcF';
+        const searchQuery = 'animals'; // Example search query, you can change it to whatever you like
+        const photoElement = document.getElementById('photo');
+
+        fetch(`https://api.pexels.com/v1/search?query=${searchQuery}&per_page=20`, {
+            headers: { Authorization: API_KEY }
+        })
+        .then(response => response.json())
+        .then(data => {
+            const totalPhotos = data.photos.length;
+            const randomIndex = Math.floor(Math.random() * totalPhotos);
+            const randomPhoto = data.photos[randomIndex];
+
+            photoElement.src = randomPhoto.src.original; // You can change the size according to your preference (small, medium, large, original)
+            photoElement.alt = randomPhoto.url; // Optionally set alt text to the photo's URL
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+    </script>
 </body>
 </html>
