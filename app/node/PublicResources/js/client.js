@@ -85,17 +85,25 @@ var client = (function() {
         generateSchedule: {
           text: 'Generate Schedule',
           click: function() {
+            alert("Generating new schedule. This may take a while.");
             scheduler.generate().then(newEvents => {
               const currentDate = new Date();
-              const filteredEvents = newEvents.filter(event => new Date(event.start) > currentDate);
-              calendar.getEvents().forEach(event => {
-                if (new Date(event.start) > currentDate) {
-                  event.remove();
-                }
-              });
+              const onlyFuture = false;
+              const filteredEvents = onlyFuture ? newEvents.filter(event => new Date(event.start) > currentDate) : newEvents;
+              if (onlyFuture) {
+                calendar.getEvents().forEach(event => {
+                  if (new Date(event.start) > currentDate) {
+                    event.remove();
+                  }
+                });
+              }
+              else {
+                calendar.removeAllEvents();
+              }
               filteredEvents.forEach(event => {
                 calendar.addEvent(event);
               });
+        
               calendar.render();
               alert("New Schedule generated");
             });

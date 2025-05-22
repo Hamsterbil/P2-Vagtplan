@@ -12,12 +12,12 @@
     "Night": 1.5
   },
   "workerCount": {
-    "Monday": 3,
-    "Tuesday": 3,
-    "Wednesday": 3,
-    "Thursday": 3,
-    "Friday": 3,
-    "Saturday": 3,
-    "Sunday": 3
+    "Monday": 4,
+    "Tuesday": 4,
+    "Wednesday": 4,
+    "Thursday": 4,
+    "Friday": 4,
+    "Saturday": 4,
+    "Sunday": 4
   }
 }

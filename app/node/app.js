@@ -59,15 +59,15 @@ function softmax(array) {
   return exp.map(expValue => expValue / sum);
 }
 
-testUserScore();
+// testUserScore();
 function testUserScore() {
   let averageDay = 0;
   let averageShift = 0;
   const userScores = DB.users.map(user => {
     if (user.type === "employee") {
-      const totalShifts = schedule.filter(shift => shift.user === user.user);
+      const totalShifts = schedule.filter(shift => shift.title === user.user);
       const preferredDays = totalShifts.filter(shift => {
-        const shiftDate = new Date(shift.date);
+        const shiftDate = new Date(shift.start);
         const day = shiftDate.toLocaleString('en-UK', { weekday: 'long' });
         return user.preferences.preferred.includes(day);
       });
@@ -75,19 +75,13 @@ function testUserScore() {
       averageDay += preferredPercentDay;
 
       let normalizedShifts = softmax(user.score.shifts);
-      normalizedShifts = [
-        normalizedShifts.slice(0, 4).reduce((a, b) => a + b, 0), // morning
-        normalizedShifts.slice(4, 6).reduce((a, b) => a + b, 0), // evening
-        normalizedShifts[6] // night
-      ];
-
       let morningCount = 0;
       let eveningCount = 0;
       let nightCount = 0;
       totalShifts.forEach(shift => {
-        if (shift.shift === "Morning") morningCount++;
-        else if (shift.shift === "Evening") eveningCount++;
-        else if (shift.shift === "Night") nightCount++;
+        if (shift.extendedProps.shift === "Morning") morningCount++;
+        else if (shift.extendedProps.shift === "Evening") eveningCount++;
+        else if (shift.extendedProps.shift === "Night") nightCount++;
       });
       const totalCount = totalShifts.length;
       const distribution = [morningCount / totalCount, eveningCount / totalCount, nightCount / totalCount];
