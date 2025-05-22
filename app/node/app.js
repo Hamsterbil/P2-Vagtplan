@@ -68,7 +68,7 @@ function testUserScore() {
       const totalShifts = schedule.filter(shift => shift.user === user.user);
       const preferredDays = totalShifts.filter(shift => {
         const shiftDate = new Date(shift.date);
-        const day = shiftDate.toLocaleString('en-US', { weekday: 'long' });
+        const day = shiftDate.toLocaleString('en-UK', { weekday: 'long' });
         return user.preferences.preferred.includes(day);
       });
       const preferredPercentDay = (preferredDays.length / totalShifts.length) * 100;
@@ -133,7 +133,7 @@ function fillDB() {
         weekArr.splice(rand, 1);
       }
 
-      for (let i = 0; i < 7; i++) {
+      for (let i = 0; i < 3; i++) {
         user.preferences.shiftPreference[i] = Math.floor(Math.random() * 10) + 1;
       }
       user.score = { days: [], shifts: [] };
@@ -252,7 +252,7 @@ function updateDatabase(data, entry) {
         break;
       }
       case "schedule": {
-        schedule = data.formattedSchedule;
+        schedule = data.events;
         filePath = scheduleData;
         break;
       }

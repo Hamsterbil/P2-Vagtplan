@@ -10,46 +10,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 10,
-        "weekends": 5,
+        "weekdays": 2,
+        "weekends": 10,
         "preferred": [
-          "Tuesday",
-          "Wednesday",
-          "Thursday"
+          "Thursday",
+          "Monday",
+          "Sunday"
         ],
         "notPreferred": [
-          "Monday",
-          "Sunday",
-          "Saturday"
+          "Saturday",
+          "Wednesday",
+          "Tuesday"
         ],
         "shiftPreference": [
+          3,
           10,
-          8,
-          7,
-          8,
-          1,
-          7,
-          9
+          8
         ]
       },
       "score": {
         "days": [
+          2.2,
+          -1.8,
+          -1.8,
+          2.2,
+          0.2,
           -1,
-          3,
-          3,
-          3,
-          1,
-          -1.5,
-          -1.5
+          3
         ],
         "shifts": [
+          3,
           10,
-          8,
-          7,
-          8,
-          1,
-          7,
-          13.5
+          8
         ]
       }
     },
@@ -58,46 +50,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 6,
-        "weekends": 10,
+        "weekdays": 3,
+        "weekends": 4,
         "preferred": [
-          "Friday",
-          "Tuesday",
-          "Monday"
+          "Wednesday",
+          "Sunday",
+          "Tuesday"
         ],
         "notPreferred": [
           "Thursday",
-          "Wednesday",
-          "Sunday"
+          "Monday",
+          "Friday"
         ],
         "shiftPreference": [
-          1,
-          3,
-          1,
-          3,
           4,
-          10,
-          1
+          6,
+          9
         ]
       },
       "score": {
         "days": [
-          2.6,
-          2.6,
-          -1.4,
-          -1.4,
-          2.6,
-          1,
-          -1
+          -1.7,
+          2.3,
+          2.3,
+          -1.7,
+          -1.7,
+          0.4,
+          2.4
         ],
         "shifts": [
-          1,
-          3,
-          1,
-          3,
           4,
-          10,
-          1.5
+          6,
+          9
         ]
       }
     },
@@ -106,46 +90,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 8,
-        "weekends": 5,
+        "weekdays": 1,
+        "weekends": 4,
         "preferred": [
-          "Wednesday",
+          "Thursday",
           "Tuesday",
           "Monday"
         ],
         "notPreferred": [
-          "Saturday",
-          "Thursday",
+          "Sunday",
+          "Wednesday",
           "Friday"
         ],
         "shiftPreference": [
-          7,
-          3,
-          10,
-          9,
-          2,
-          5,
-          3
+          8,
+          1,
+          9
         ]
       },
       "score": {
         "days": [
-          2.8,
-          2.8,
-          2.8,
-          -1.2,
-          -1.2,
-          -1.5,
-          0.5
+          2.1,
+          2.1,
+          -1.9,
+          2.1,
+          -1.9,
+          0.4,
+          -1.6
         ],
         "shifts": [
-          7,
-          3,
-          10,
-          9,
-          2,
-          5,
-          4.5
+          8,
+          1,
+          9
         ]
       }
     },
@@ -154,46 +130,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 6,
+        "weekdays": 7,
         "weekends": 1,
         "preferred": [
           "Friday",
-          "Monday",
-          "Wednesday"
+          "Tuesday",
+          "Monday"
         ],
         "notPreferred": [
           "Thursday",
-          "Tuesday",
-          "Sunday"
+          "Sunday",
+          "Wednesday"
         ],
         "shiftPreference": [
-          10,
-          4,
-          1,
-          4,
+          5,
           2,
-          1,
-          4
+          1
         ]
       },
       "score": {
         "days": [
-          2.6,
-          -1.4,
-          2.6,
-          -1.4,
-          2.6,
+          2.7,
+          2.7,
+          -1.3,
+          -1.3,
+          2.7,
           0.1,
           -1.9
         ],
         "shifts": [
-          10,
-          4,
-          1,
-          4,
+          5,
           2,
-          1,
-          6
+          1
         ]
       }
     },
@@ -202,46 +170,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 7,
+        "weekdays": 2,
         "weekends": 6,
         "preferred": [
           "Monday",
-          "Thursday",
-          "Tuesday"
+          "Saturday",
+          "Friday"
         ],
         "notPreferred": [
-          "Wednesday",
-          "Friday",
-          "Saturday"
+          "Thursday",
+          "Tuesday",
+          "Sunday"
         ],
         "shiftPreference": [
           7,
-          10,
-          2,
-          7,
-          7,
-          7,
-          9
+          4,
+          2
         ]
       },
       "score": {
         "days": [
-          2.7,
-          2.7,
-          -1.3,
-          2.7,
-          -1.3,
-          -1.4,
-          0.6
+          2.2,
+          -1.8,
+          0.2,
+          -1.8,
+          2.2,
+          2.6,
+          -1.4
         ],
         "shifts": [
           7,
-          10,
-          2,
-          7,
-          7,
-          7,
-          13.5
+          4,
+          2
         ]
       }
     },
@@ -253,43 +213,35 @@
         "weekdays": 9,
         "weekends": 8,
         "preferred": [
-          "Tuesday",
-          "Monday",
+          "Saturday",
+          "Friday",
           "Thursday"
         ],
         "notPreferred": [
+          "Wednesday",
           "Sunday",
-          "Saturday",
-          "Friday"
+          "Monday"
         ],
         "shiftPreference": [
-          1,
-          10,
-          1,
+          4,
           8,
-          6,
-          10,
-          10
+          7
         ]
       },
       "score": {
         "days": [
-          2.9,
-          2.9,
-          0.9,
-          2.9,
           -1.1,
-          -1.2,
+          0.9,
+          -1.1,
+          2.9,
+          2.9,
+          2.8,
           -1.2
         ],
         "shifts": [
-          1,
-          10,
-          1,
+          4,
           8,
-          6,
-          10,
-          15
+          7
         ]
       }
     },
@@ -298,46 +250,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 6,
-        "weekends": 5,
+        "weekdays": 10,
+        "weekends": 1,
         "preferred": [
-          "Sunday",
-          "Thursday",
+          "Wednesday",
+          "Tuesday",
           "Monday"
         ],
         "notPreferred": [
           "Friday",
-          "Tuesday",
-          "Wednesday"
+          "Thursday",
+          "Saturday"
         ],
         "shiftPreference": [
-          10,
-          10,
-          1,
-          2,
+          7,
           8,
-          4,
-          7
+          6
         ]
       },
       "score": {
         "days": [
-          2.6,
-          -1.4,
-          -1.4,
-          2.6,
-          -1.4,
-          0.5,
-          2.5
+          3,
+          3,
+          3,
+          -1,
+          -1,
+          -1.9,
+          0.1
         ],
         "shifts": [
-          10,
-          10,
-          1,
-          2,
+          7,
           8,
-          4,
-          10.5
+          6
         ]
       }
     },
@@ -346,46 +290,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 7,
-        "weekends": 7,
+        "weekdays": 9,
+        "weekends": 4,
         "preferred": [
-          "Wednesday",
+          "Saturday",
           "Sunday",
-          "Saturday"
+          "Thursday"
         ],
         "notPreferred": [
-          "Thursday",
-          "Tuesday",
-          "Monday"
+          "Friday",
+          "Monday",
+          "Tuesday"
         ],
         "shiftPreference": [
-          6,
-          10,
-          4,
-          2,
-          2,
-          10,
-          5
+          1,
+          9,
+          7
         ]
       },
       "score": {
         "days": [
-          -1.3,
-          -1.3,
-          2.7,
-          -1.3,
-          0.7,
-          2.7,
-          2.7
+          -1.1,
+          -1.1,
+          0.9,
+          2.9,
+          -1.1,
+          2.4,
+          2.4
         ],
         "shifts": [
-          6,
-          10,
-          4,
-          2,
-          2,
-          10,
-          7.5
+          1,
+          9,
+          7
         ]
       }
     },
@@ -394,46 +330,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 9,
-        "weekends": 3,
+        "weekdays": 10,
+        "weekends": 5,
         "preferred": [
-          "Sunday",
           "Monday",
-          "Friday"
+          "Wednesday",
+          "Sunday"
         ],
         "notPreferred": [
-          "Thursday",
+          "Saturday",
           "Tuesday",
-          "Saturday"
+          "Friday"
         ],
         "shiftPreference": [
-          6,
-          4,
-          10,
+          8,
           7,
-          6,
-          6,
-          3
+          5
         ]
       },
       "score": {
         "days": [
-          2.9,
-          -1.1,
-          0.9,
-          -1.1,
-          2.9,
-          -1.7,
-          2.3
+          3,
+          -1,
+          3,
+          1,
+          -1,
+          -1.5,
+          2.5
         ],
         "shifts": [
-          6,
-          4,
-          10,
+          8,
           7,
-          6,
-          6,
-          4.5
+          5
         ]
       }
     },
@@ -442,46 +370,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 6,
-        "weekends": 4,
+        "weekdays": 7,
+        "weekends": 6,
         "preferred": [
-          "Sunday",
+          "Monday",
           "Tuesday",
-          "Saturday"
+          "Wednesday"
         ],
         "notPreferred": [
-          "Thursday",
-          "Wednesday",
+          "Saturday",
+          "Sunday",
           "Friday"
         ],
         "shiftPreference": [
-          9,
-          4,
-          9,
           8,
-          3,
-          9,
-          8
+          8,
+          7
         ]
       },
       "score": {
         "days": [
-          0.6,
-          2.6,
+          2.7,
+          2.7,
+          2.7,
+          0.7,
+          -1.3,
           -1.4,
-          -1.4,
-          -1.4,
-          2.4,
-          2.4
+          -1.4
         ],
         "shifts": [
-          9,
-          4,
-          9,
           8,
-          3,
-          9,
-          12
+          8,
+          7
         ]
       }
     },
@@ -490,46 +410,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 1,
-        "weekends": 10,
+        "weekdays": 3,
+        "weekends": 3,
         "preferred": [
-          "Tuesday",
-          "Monday",
-          "Wednesday"
+          "Friday",
+          "Thursday",
+          "Sunday"
         ],
         "notPreferred": [
-          "Sunday",
-          "Saturday",
-          "Friday"
+          "Monday",
+          "Tuesday",
+          "Wednesday"
         ],
         "shiftPreference": [
-          6,
           2,
-          10,
-          1,
           6,
-          10,
           9
         ]
       },
       "score": {
         "days": [
-          2.1,
-          2.1,
-          2.1,
-          0.1,
-          -1.9,
-          -1,
-          -1
+          -1.7,
+          -1.7,
+          -1.7,
+          2.3,
+          2.3,
+          0.3,
+          2.3
         ],
         "shifts": [
-          6,
           2,
-          10,
-          1,
           6,
-          10,
-          13.5
+          9
         ]
       }
     },
@@ -538,46 +450,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 3,
-        "weekends": 10,
+        "weekdays": 4,
+        "weekends": 5,
         "preferred": [
           "Saturday",
-          "Monday",
-          "Sunday"
+          "Thursday",
+          "Monday"
         ],
         "notPreferred": [
           "Wednesday",
-          "Tuesday",
-          "Thursday"
+          "Friday",
+          "Tuesday"
         ],
         "shiftPreference": [
-          10,
-          5,
-          9,
-          9,
+          7,
           6,
-          5,
-          3
+          8
         ]
       },
       "score": {
         "days": [
-          2.3,
-          -1.7,
-          -1.7,
-          -1.7,
-          0.3,
-          3,
-          3
+          2.4,
+          -1.6,
+          -1.6,
+          2.4,
+          -1.6,
+          2.5,
+          0.5
         ],
         "shifts": [
-          10,
-          5,
-          9,
-          9,
+          7,
           6,
-          5,
-          4.5
+          8
         ]
       }
     },
@@ -586,46 +490,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 7,
-        "weekends": 1,
+        "weekdays": 1,
+        "weekends": 3,
         "preferred": [
-          "Tuesday",
-          "Monday",
-          "Wednesday"
-        ],
-        "notPreferred": [
           "Friday",
           "Thursday",
-          "Saturday"
+          "Monday"
+        ],
+        "notPreferred": [
+          "Sunday",
+          "Wednesday",
+          "Tuesday"
         ],
         "shiftPreference": [
-          5,
-          6,
-          4,
-          4,
+          9,
           1,
-          5,
-          10
+          5
         ]
       },
       "score": {
         "days": [
-          2.7,
-          2.7,
-          2.7,
-          -1.3,
-          -1.3,
+          2.1,
           -1.9,
-          0.1
+          -1.9,
+          2.1,
+          2.1,
+          0.3,
+          -1.7
         ],
         "shifts": [
-          5,
-          6,
-          4,
-          4,
+          9,
           1,
-          5,
-          15
+          5
         ]
       }
     },
@@ -634,46 +530,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 10,
+        "weekdays": 5,
         "weekends": 9,
         "preferred": [
-          "Tuesday",
           "Friday",
-          "Saturday"
+          "Thursday",
+          "Monday"
         ],
         "notPreferred": [
-          "Thursday",
-          "Monday",
-          "Wednesday"
+          "Sunday",
+          "Wednesday",
+          "Tuesday"
         ],
         "shiftPreference": [
-          8,
-          8,
           1,
-          5,
-          5,
-          3,
-          6
+          8,
+          2
         ]
       },
       "score": {
         "days": [
-          -1,
-          3,
-          -1,
-          -1,
-          3,
-          2.9,
-          0.9
+          2.5,
+          -1.5,
+          -1.5,
+          2.5,
+          2.5,
+          0.9,
+          -1.1
         ],
         "shifts": [
-          8,
-          8,
           1,
-          5,
-          5,
-          3,
-          9
+          8,
+          2
         ]
       }
     },
@@ -682,46 +570,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 7,
-        "weekends": 8,
+        "weekdays": 3,
+        "weekends": 3,
         "preferred": [
-          "Saturday",
-          "Monday",
-          "Wednesday"
+          "Friday",
+          "Thursday",
+          "Tuesday"
         ],
         "notPreferred": [
-          "Sunday",
-          "Thursday",
-          "Friday"
+          "Monday",
+          "Wednesday",
+          "Saturday"
         ],
         "shiftPreference": [
-          1,
           8,
-          3,
-          8,
-          5,
-          7,
-          10
+          2,
+          4
         ]
       },
       "score": {
         "days": [
-          2.7,
-          0.7,
-          2.7,
-          -1.3,
-          -1.3,
-          2.8,
-          -1.2
+          -1.7,
+          2.3,
+          -1.7,
+          2.3,
+          2.3,
+          -1.7,
+          0.3
         ],
         "shifts": [
-          1,
           8,
-          3,
-          8,
-          5,
-          7,
-          15
+          2,
+          4
         ]
       }
     },
@@ -730,46 +610,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 7,
-        "weekends": 10,
+        "weekdays": 5,
+        "weekends": 2,
         "preferred": [
-          "Sunday",
-          "Friday",
-          "Monday"
-        ],
-        "notPreferred": [
-          "Tuesday",
           "Wednesday",
+          "Friday",
           "Thursday"
         ],
+        "notPreferred": [
+          "Monday",
+          "Tuesday",
+          "Saturday"
+        ],
         "shiftPreference": [
-          10,
-          8,
+          7,
           9,
-          2,
-          6,
-          10,
-          1
+          6
         ]
       },
       "score": {
         "days": [
-          2.7,
-          -1.3,
-          -1.3,
-          -1.3,
-          2.7,
-          1,
-          3
+          -1.5,
+          -1.5,
+          2.5,
+          2.5,
+          2.5,
+          -1.8,
+          0.2
         ],
         "shifts": [
-          10,
-          8,
+          7,
           9,
-          2,
-          6,
-          10,
-          1.5
+          6
         ]
       }
     },
@@ -778,46 +650,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 5,
-        "weekends": 5,
+        "weekdays": 9,
+        "weekends": 1,
         "preferred": [
-          "Friday",
           "Monday",
-          "Sunday"
+          "Sunday",
+          "Saturday"
         ],
         "notPreferred": [
-          "Saturday",
-          "Tuesday",
-          "Wednesday"
+          "Wednesday",
+          "Friday",
+          "Tuesday"
         ],
         "shiftPreference": [
-          3,
-          8,
-          5,
-          3,
-          2,
+          6,
           2,
           1
         ]
       },
       "score": {
         "days": [
-          2.5,
-          -1.5,
-          -1.5,
-          0.5,
-          2.5,
-          -1.5,
-          2.5
+          2.9,
+          -1.1,
+          -1.1,
+          0.9,
+          -1.1,
+          2.1,
+          2.1
         ],
         "shifts": [
-          3,
-          8,
-          5,
-          3,
+          6,
           2,
-          2,
-          1.5
+          1
         ]
       }
     },
@@ -826,46 +690,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 4,
-        "weekends": 2,
+        "weekdays": 5,
+        "weekends": 6,
         "preferred": [
-          "Friday",
-          "Monday",
-          "Sunday"
+          "Sunday",
+          "Thursday",
+          "Monday"
         ],
         "notPreferred": [
-          "Thursday",
-          "Tuesday",
-          "Saturday"
+          "Friday",
+          "Wednesday",
+          "Tuesday"
         ],
         "shiftPreference": [
-          7,
-          4,
-          6,
           10,
-          2,
-          2,
-          8
+          10,
+          9
         ]
       },
       "score": {
         "days": [
-          2.4,
-          -1.6,
-          0.4,
-          -1.6,
-          2.4,
-          -1.8,
-          2.2
+          2.5,
+          -1.5,
+          -1.5,
+          2.5,
+          -1.5,
+          0.6,
+          2.6
         ],
         "shifts": [
-          7,
-          4,
-          6,
           10,
-          2,
-          2,
-          12
+          10,
+          9
         ]
       }
     },
@@ -874,45 +730,37 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 8,
-        "weekends": 3,
+        "weekdays": 4,
+        "weekends": 5,
         "preferred": [
-          "Monday",
-          "Friday",
+          "Sunday",
+          "Wednesday",
           "Tuesday"
         ],
         "notPreferred": [
           "Saturday",
-          "Wednesday",
+          "Monday",
           "Thursday"
         ],
         "shiftPreference": [
-          7,
-          7,
+          9,
           4,
-          7,
-          6,
-          1,
-          6
+          9
         ]
       },
       "score": {
         "days": [
-          2.8,
-          2.8,
-          -1.2,
-          -1.2,
-          2.8,
-          -1.7,
-          0.3
+          -1.6,
+          2.4,
+          2.4,
+          -1.6,
+          0.4,
+          -1.5,
+          2.5
         ],
         "shifts": [
-          7,
-          7,
+          9,
           4,
-          7,
-          6,
-          1,
           9
         ]
       }
@@ -922,46 +770,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 2,
-        "weekends": 4,
+        "weekdays": 9,
+        "weekends": 3,
         "preferred": [
-          "Saturday",
           "Tuesday",
-          "Wednesday"
+          "Monday",
+          "Friday"
         ],
         "notPreferred": [
-          "Thursday",
-          "Sunday",
-          "Monday"
+          "Saturday",
+          "Wednesday",
+          "Sunday"
         ],
         "shiftPreference": [
-          1,
-          8,
+          2,
           6,
-          8,
-          1,
-          1,
-          6
+          1
         ]
       },
       "score": {
         "days": [
-          -1.8,
-          2.2,
-          2.2,
-          -1.8,
-          0.2,
-          2.4,
-          -1.6
+          2.9,
+          2.9,
+          -1.1,
+          0.9,
+          2.9,
+          -1.7,
+          -1.7
         ],
         "shifts": [
-          1,
-          8,
+          2,
           6,
-          8,
-          1,
-          1,
-          9
+          1
         ]
       }
     },
@@ -970,46 +810,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 10,
-        "weekends": 6,
+        "weekdays": 1,
+        "weekends": 5,
         "preferred": [
-          "Monday",
+          "Tuesday",
           "Saturday",
-          "Tuesday"
+          "Friday"
         ],
         "notPreferred": [
-          "Thursday",
-          "Wednesday",
-          "Friday"
+          "Sunday",
+          "Monday",
+          "Wednesday"
         ],
         "shiftPreference": [
           10,
-          1,
           2,
-          4,
-          5,
-          10,
-          7
+          8
         ]
       },
       "score": {
         "days": [
-          3,
-          3,
-          -1,
-          -1,
-          -1,
-          2.6,
-          0.6
+          -1.9,
+          2.1,
+          -1.9,
+          0.1,
+          2.1,
+          2.5,
+          -1.5
         ],
         "shifts": [
           10,
-          1,
           2,
-          4,
-          5,
-          10,
-          10.5
+          8
         ]
       }
     },
@@ -1018,46 +850,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 3,
-        "weekends": 1,
+        "weekdays": 5,
+        "weekends": 7,
         "preferred": [
           "Sunday",
-          "Friday",
-          "Monday"
+          "Tuesday",
+          "Saturday"
         ],
         "notPreferred": [
           "Thursday",
-          "Tuesday",
-          "Wednesday"
+          "Friday",
+          "Monday"
         ],
         "shiftPreference": [
-          8,
-          4,
-          4,
           3,
-          5,
-          3,
-          8
+          1,
+          3
         ]
       },
       "score": {
         "days": [
-          2.3,
-          -1.7,
-          -1.7,
-          -1.7,
-          2.3,
-          0.1,
-          2.1
+          -1.5,
+          2.5,
+          0.5,
+          -1.5,
+          -1.5,
+          2.7,
+          2.7
         ],
         "shifts": [
-          8,
-          4,
-          4,
           3,
-          5,
-          3,
-          12
+          1,
+          3
         ]
       }
     },
@@ -1066,46 +890,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 7,
-        "weekends": 7,
+        "weekdays": 4,
+        "weekends": 4,
         "preferred": [
+          "Tuesday",
           "Wednesday",
+          "Friday"
+        ],
+        "notPreferred": [
+          "Thursday",
           "Monday",
           "Sunday"
         ],
-        "notPreferred": [
-          "Saturday",
-          "Tuesday",
-          "Thursday"
-        ],
         "shiftPreference": [
-          3,
-          6,
-          1,
-          4,
-          4,
-          10,
-          4
+          9,
+          5,
+          9
         ]
       },
       "score": {
         "days": [
-          2.7,
-          -1.3,
-          2.7,
-          -1.3,
-          0.7,
-          -1.3,
-          2.7
+          -1.6,
+          2.4,
+          2.4,
+          -1.6,
+          2.4,
+          0.4,
+          -1.6
         ],
         "shifts": [
-          3,
-          6,
-          1,
-          4,
-          4,
-          10,
-          6
+          9,
+          5,
+          9
         ]
       }
     },
@@ -1114,46 +930,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 9,
-        "weekends": 4,
+        "weekdays": 4,
+        "weekends": 8,
         "preferred": [
           "Tuesday",
+          "Thursday",
+          "Monday"
+        ],
+        "notPreferred": [
+          "Friday",
           "Sunday",
           "Wednesday"
         ],
-        "notPreferred": [
-          "Thursday",
-          "Friday",
-          "Monday"
-        ],
         "shiftPreference": [
-          8,
-          10,
-          5,
-          2,
-          4,
+          9,
           7,
-          8
+          4
         ]
       },
       "score": {
         "days": [
-          -1.1,
-          2.9,
-          2.9,
-          -1.1,
-          -1.1,
-          0.4,
-          2.4
+          2.4,
+          2.4,
+          -1.6,
+          2.4,
+          -1.6,
+          0.8,
+          -1.2
         ],
         "shifts": [
-          8,
-          10,
-          5,
-          2,
-          4,
+          9,
           7,
-          12
+          4
         ]
       }
     },
@@ -1162,46 +970,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 4,
-        "weekends": 6,
+        "weekdays": 3,
+        "weekends": 10,
         "preferred": [
           "Wednesday",
-          "Thursday",
-          "Monday"
+          "Saturday",
+          "Friday"
         ],
         "notPreferred": [
+          "Monday",
           "Sunday",
-          "Friday",
           "Tuesday"
         ],
         "shiftPreference": [
-          2,
-          7,
-          1,
-          8,
-          3,
           4,
-          2
+          4,
+          9
         ]
       },
       "score": {
         "days": [
-          2.4,
-          -1.6,
-          2.4,
-          2.4,
-          -1.6,
-          0.6,
-          -1.4
+          -1.7,
+          -1.7,
+          2.3,
+          0.3,
+          2.3,
+          3,
+          -1
         ],
         "shifts": [
-          2,
-          7,
-          1,
-          8,
-          3,
           4,
-          3
+          4,
+          9
         ]
       }
     },
@@ -1210,46 +1010,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 1,
+        "weekdays": 4,
         "weekends": 2,
         "preferred": [
-          "Saturday",
-          "Monday",
-          "Tuesday"
+          "Wednesday",
+          "Tuesday",
+          "Saturday"
         ],
         "notPreferred": [
-          "Thursday",
-          "Wednesday",
-          "Friday"
+          "Monday",
+          "Sunday",
+          "Thursday"
         ],
         "shiftPreference": [
           2,
-          5,
-          9,
-          5,
-          4,
-          7,
-          1
+          2,
+          7
         ]
       },
       "score": {
         "days": [
-          2.1,
-          2.1,
-          -1.9,
-          -1.9,
-          -1.9,
+          -1.6,
+          2.4,
+          2.4,
+          -1.6,
+          0.4,
           2.2,
-          0.2
+          -1.8
         ],
         "shifts": [
           2,
-          5,
-          9,
-          5,
-          4,
-          7,
-          1.5
+          2,
+          7
         ]
       }
     },
@@ -1258,46 +1050,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 1,
-        "weekends": 10,
+        "weekdays": 4,
+        "weekends": 6,
         "preferred": [
           "Wednesday",
-          "Thursday",
-          "Sunday"
+          "Tuesday",
+          "Thursday"
         ],
         "notPreferred": [
-          "Friday",
+          "Sunday",
           "Monday",
-          "Tuesday"
+          "Friday"
         ],
         "shiftPreference": [
-          5,
+          7,
           4,
-          6,
-          4,
-          9,
-          6,
-          5
+          7
         ]
       },
       "score": {
         "days": [
-          -1.9,
-          -1.9,
-          2.1,
-          2.1,
-          -1.9,
-          1,
-          3
+          -1.6,
+          2.4,
+          2.4,
+          2.4,
+          -1.6,
+          0.6,
+          -1.4
         ],
         "shifts": [
-          5,
+          7,
           4,
-          6,
-          4,
-          9,
-          6,
-          7.5
+          7
         ]
       }
     },
@@ -1306,46 +1090,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 2,
-        "weekends": 10,
+        "weekdays": 5,
+        "weekends": 5,
         "preferred": [
           "Thursday",
-          "Monday",
-          "Tuesday"
+          "Sunday",
+          "Monday"
         ],
         "notPreferred": [
+          "Saturday",
           "Friday",
-          "Wednesday",
-          "Saturday"
+          "Tuesday"
         ],
         "shiftPreference": [
-          3,
-          9,
-          2,
-          1,
-          9,
+          10,
           7,
-          5
+          8
         ]
       },
       "score": {
         "days": [
-          2.2,
-          2.2,
-          -1.8,
-          2.2,
-          -1.8,
-          -1,
-          1
+          2.5,
+          -1.5,
+          0.5,
+          2.5,
+          -1.5,
+          -1.5,
+          2.5
         ],
         "shifts": [
-          3,
-          9,
-          2,
-          1,
-          9,
+          10,
           7,
-          7.5
+          8
         ]
       }
     },
@@ -1354,46 +1130,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 4,
-        "weekends": 4,
+        "weekdays": 6,
+        "weekends": 8,
         "preferred": [
-          "Wednesday",
-          "Sunday",
-          "Saturday"
+          "Friday",
+          "Saturday",
+          "Monday"
         ],
         "notPreferred": [
-          "Thursday",
-          "Monday",
-          "Tuesday"
+          "Wednesday",
+          "Sunday",
+          "Thursday"
         ],
         "shiftPreference": [
-          8,
-          9,
-          1,
           9,
           10,
-          6,
-          8
+          7
         ]
       },
       "score": {
         "days": [
-          -1.6,
-          -1.6,
-          2.4,
-          -1.6,
-          0.4,
-          2.4,
-          2.4
+          2.6,
+          0.6,
+          -1.4,
+          -1.4,
+          2.6,
+          2.8,
+          -1.2
         ],
         "shifts": [
-          8,
-          9,
-          1,
           9,
           10,
-          6,
-          12
+          7
         ]
       }
     },
@@ -1402,46 +1170,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 7,
-        "weekends": 3,
+        "weekdays": 10,
+        "weekends": 5,
         "preferred": [
           "Thursday",
-          "Monday",
-          "Tuesday"
+          "Sunday",
+          "Saturday"
         ],
         "notPreferred": [
           "Friday",
-          "Wednesday",
-          "Saturday"
+          "Monday",
+          "Tuesday"
         ],
         "shiftPreference": [
-          8,
           4,
-          10,
-          4,
-          8,
-          1,
-          2
+          3,
+          7
         ]
       },
       "score": {
         "days": [
-          2.7,
-          2.7,
-          -1.3,
-          2.7,
-          -1.3,
-          -1.7,
-          0.3
+          -1,
+          -1,
+          1,
+          3,
+          -1,
+          2.5,
+          2.5
         ],
         "shifts": [
-          8,
           4,
-          10,
-          4,
-          8,
-          1,
-          3
+          3,
+          7
         ]
       }
     },
@@ -1450,46 +1210,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 1,
-        "weekends": 5,
+        "weekdays": 6,
+        "weekends": 2,
         "preferred": [
-          "Sunday",
-          "Saturday",
-          "Tuesday"
+          "Thursday",
+          "Tuesday",
+          "Sunday"
         ],
         "notPreferred": [
-          "Wednesday",
-          "Thursday",
-          "Friday"
+          "Saturday",
+          "Friday",
+          "Monday"
         ],
         "shiftPreference": [
-          7,
-          2,
-          3,
-          10,
-          10,
-          1,
-          10
+          6,
+          4,
+          5
         ]
       },
       "score": {
         "days": [
-          0.1,
-          2.1,
-          -1.9,
-          -1.9,
-          -1.9,
-          2.5,
-          2.5
+          -1.4,
+          2.6,
+          0.6,
+          2.6,
+          -1.4,
+          -1.8,
+          2.2
         ],
         "shifts": [
-          7,
-          2,
-          3,
-          10,
-          10,
-          1,
-          15
+          6,
+          4,
+          5
         ]
       }
     },
@@ -1498,46 +1250,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 2,
-        "weekends": 1,
+        "weekdays": 10,
+        "weekends": 5,
         "preferred": [
-          "Wednesday",
-          "Tuesday",
-          "Thursday"
+          "Sunday",
+          "Saturday",
+          "Wednesday"
         ],
         "notPreferred": [
-          "Friday",
-          "Monday",
-          "Saturday"
+          "Thursday",
+          "Tuesday",
+          "Friday"
         ],
         "shiftPreference": [
-          3,
-          10,
-          7,
-          4,
-          3,
-          9,
-          1
+          2,
+          6,
+          10
         ]
       },
       "score": {
         "days": [
-          -1.8,
-          2.2,
-          2.2,
-          2.2,
-          -1.8,
-          -1.9,
-          0.1
+          1,
+          -1,
+          3,
+          -1,
+          -1,
+          2.5,
+          2.5
         ],
         "shifts": [
-          3,
-          10,
-          7,
-          4,
-          3,
-          9,
-          1.5
+          2,
+          6,
+          10
         ]
       }
     },
@@ -1546,46 +1290,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 3,
-        "weekends": 1,
+        "weekdays": 2,
+        "weekends": 9,
         "preferred": [
-          "Monday",
           "Wednesday",
-          "Friday"
+          "Thursday",
+          "Monday"
         ],
         "notPreferred": [
-          "Tuesday",
           "Sunday",
-          "Thursday"
+          "Friday",
+          "Tuesday"
         ],
         "shiftPreference": [
-          9,
-          4,
-          9,
-          1,
-          10,
-          8,
-          10
+          3,
+          3,
+          8
         ]
       },
       "score": {
         "days": [
-          2.3,
-          -1.7,
-          2.3,
-          -1.7,
-          2.3,
-          0.1,
-          -1.9
+          2.2,
+          -1.8,
+          2.2,
+          2.2,
+          -1.8,
+          0.9,
+          -1.1
         ],
         "shifts": [
-          9,
-          4,
-          9,
-          1,
-          10,
-          8,
-          15
+          3,
+          3,
+          8
         ]
       }
     },
@@ -1594,46 +1330,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 1,
-        "weekends": 9,
+        "weekdays": 10,
+        "weekends": 8,
         "preferred": [
-          "Saturday",
           "Wednesday",
-          "Monday"
+          "Friday",
+          "Saturday"
         ],
         "notPreferred": [
-          "Sunday",
-          "Thursday",
-          "Tuesday"
+          "Tuesday",
+          "Monday",
+          "Thursday"
         ],
         "shiftPreference": [
           2,
-          4,
           1,
-          6,
-          5,
-          9,
-          4
+          10
         ]
       },
       "score": {
         "days": [
-          2.1,
-          -1.9,
-          2.1,
-          -1.9,
-          0.1,
-          2.9,
-          -1.1
+          -1,
+          -1,
+          3,
+          -1,
+          3,
+          2.8,
+          0.8
         ],
         "shifts": [
           2,
-          4,
           1,
-          6,
-          5,
-          9,
-          6
+          10
         ]
       }
     },
@@ -1642,46 +1370,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 8,
-        "weekends": 8,
+        "weekdays": 9,
+        "weekends": 4,
         "preferred": [
+          "Sunday",
           "Thursday",
-          "Wednesday",
-          "Monday"
+          "Wednesday"
         ],
         "notPreferred": [
-          "Friday",
+          "Monday",
           "Tuesday",
           "Saturday"
         ],
         "shiftPreference": [
-          3,
-          6,
-          2,
-          6,
-          4,
-          2,
-          4
+          8,
+          10,
+          3
         ]
       },
       "score": {
         "days": [
-          2.8,
-          -1.2,
-          2.8,
-          2.8,
-          -1.2,
-          -1.2,
-          0.8
+          -1.1,
+          -1.1,
+          2.9,
+          2.9,
+          0.9,
+          -1.6,
+          2.4
         ],
         "shifts": [
-          3,
-          6,
-          2,
-          6,
-          4,
-          2,
-          6
+          8,
+          10,
+          3
         ]
       }
     },
@@ -1690,46 +1410,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 3,
-        "weekends": 1,
+        "weekdays": 9,
+        "weekends": 8,
         "preferred": [
-          "Friday",
-          "Tuesday",
+          "Wednesday",
+          "Thursday",
           "Monday"
         ],
         "notPreferred": [
-          "Thursday",
-          "Saturday",
-          "Sunday"
+          "Tuesday",
+          "Sunday",
+          "Saturday"
         ],
         "shiftPreference": [
-          9,
-          1,
-          8,
-          10,
-          6,
-          5,
-          8
+          3,
+          4,
+          4
         ]
       },
       "score": {
         "days": [
-          2.3,
-          2.3,
-          0.3,
-          -1.7,
-          2.3,
-          -1.9,
-          -1.9
+          2.9,
+          -1.1,
+          2.9,
+          2.9,
+          0.9,
+          -1.2,
+          -1.2
         ],
         "shifts": [
-          9,
-          1,
-          8,
-          10,
-          6,
-          5,
-          12
+          3,
+          4,
+          4
         ]
       }
     },
@@ -1738,46 +1450,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 7,
-        "weekends": 6,
+        "weekdays": 10,
+        "weekends": 1,
         "preferred": [
+          "Thursday",
           "Friday",
-          "Saturday",
-          "Thursday"
+          "Monday"
         ],
         "notPreferred": [
-          "Monday",
+          "Wednesday",
           "Tuesday",
-          "Sunday"
+          "Saturday"
         ],
         "shiftPreference": [
+          8,
           2,
-          2,
-          2,
-          1,
-          10,
-          10,
-          1
+          8
         ]
       },
       "score": {
         "days": [
-          -1.3,
-          -1.3,
-          0.7,
-          2.7,
-          2.7,
-          2.6,
-          -1.4
+          3,
+          -1,
+          -1,
+          3,
+          3,
+          -1.9,
+          0.1
         ],
         "shifts": [
+          8,
           2,
-          2,
-          2,
-          1,
-          10,
-          10,
-          1.5
+          8
         ]
       }
     },
@@ -1786,46 +1490,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 10,
-        "weekends": 5,
+        "weekdays": 4,
+        "weekends": 1,
         "preferred": [
-          "Thursday",
+          "Friday",
           "Tuesday",
-          "Saturday"
+          "Sunday"
         ],
         "notPreferred": [
           "Monday",
-          "Sunday",
+          "Saturday",
           "Wednesday"
         ],
         "shiftPreference": [
-          10,
-          6,
-          1,
-          2,
-          1,
           5,
-          7
+          3,
+          5
         ]
       },
       "score": {
         "days": [
-          -1,
-          3,
-          -1,
-          3,
-          1,
-          2.5,
-          -1.5
+          -1.6,
+          2.4,
+          -1.6,
+          0.4,
+          2.4,
+          -1.9,
+          2.1
         ],
         "shifts": [
-          10,
-          6,
-          1,
-          2,
-          1,
           5,
-          10.5
+          3,
+          5
         ]
       }
     },
@@ -1834,46 +1530,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 5,
-        "weekends": 5,
+        "weekdays": 9,
+        "weekends": 4,
         "preferred": [
-          "Tuesday",
+          "Saturday",
           "Sunday",
           "Monday"
         ],
         "notPreferred": [
-          "Wednesday",
-          "Thursday",
-          "Saturday"
+          "Friday",
+          "Tuesday",
+          "Wednesday"
         ],
         "shiftPreference": [
-          9,
-          2,
-          5,
           3,
-          3,
-          2,
-          10
+          6,
+          8
         ]
       },
       "score": {
         "days": [
-          2.5,
-          2.5,
-          -1.5,
-          -1.5,
-          0.5,
-          -1.5,
-          2.5
+          2.9,
+          -1.1,
+          -1.1,
+          0.9,
+          -1.1,
+          2.4,
+          2.4
         ],
         "shifts": [
-          9,
-          2,
-          5,
           3,
-          3,
-          2,
-          15
+          6,
+          8
         ]
       }
     },
@@ -1882,45 +1570,37 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 7,
-        "weekends": 7,
+        "weekdays": 5,
+        "weekends": 6,
         "preferred": [
-          "Saturday",
-          "Thursday",
-          "Tuesday"
-        ],
-        "notPreferred": [
+          "Tuesday",
           "Monday",
-          "Friday",
           "Wednesday"
         ],
+        "notPreferred": [
+          "Friday",
+          "Saturday",
+          "Thursday"
+        ],
         "shiftPreference": [
-          10,
-          3,
-          5,
           4,
-          8,
-          6,
-          2
+          10,
+          3
         ]
       },
       "score": {
         "days": [
-          -1.3,
-          2.7,
-          -1.3,
-          2.7,
-          -1.3,
-          2.7,
-          0.7
+          2.5,
+          2.5,
+          2.5,
+          -1.5,
+          -1.5,
+          -1.4,
+          0.6
         ],
         "shifts": [
-          10,
-          3,
-          5,
           4,
-          8,
-          6,
+          10,
           3
         ]
       }
@@ -1930,46 +1610,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 8,
-        "weekends": 6,
+        "weekdays": 6,
+        "weekends": 7,
         "preferred": [
-          "Tuesday",
-          "Thursday",
-          "Monday"
+          "Wednesday",
+          "Monday",
+          "Sunday"
         ],
         "notPreferred": [
           "Saturday",
-          "Wednesday",
-          "Friday"
+          "Tuesday",
+          "Thursday"
         ],
         "shiftPreference": [
-          10,
-          4,
-          3,
+          7,
           6,
-          3,
-          2,
-          2
+          7
         ]
       },
       "score": {
         "days": [
-          2.8,
-          2.8,
-          -1.2,
-          2.8,
-          -1.2,
+          2.6,
           -1.4,
-          0.6
+          2.6,
+          -1.4,
+          0.6,
+          -1.3,
+          2.7
         ],
         "shifts": [
-          10,
-          4,
-          3,
+          7,
           6,
-          3,
-          2,
-          3
+          7
         ]
       }
     },
@@ -1978,46 +1650,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 9,
-        "weekends": 9,
+        "weekdays": 10,
+        "weekends": 3,
         "preferred": [
-          "Monday",
           "Friday",
+          "Sunday",
           "Tuesday"
         ],
         "notPreferred": [
           "Wednesday",
-          "Thursday",
-          "Saturday"
+          "Monday",
+          "Thursday"
         ],
         "shiftPreference": [
-          7,
-          4,
+          6,
           9,
-          1,
-          5,
-          8,
-          9
+          8
         ]
       },
       "score": {
         "days": [
-          2.9,
-          2.9,
-          -1.1,
-          -1.1,
-          2.9,
-          -1.1,
-          0.9
+          -1,
+          3,
+          -1,
+          -1,
+          3,
+          0.3,
+          2.3
         ],
         "shifts": [
-          7,
-          4,
+          6,
           9,
-          1,
-          5,
-          8,
-          13.5
+          8
         ]
       }
     },
@@ -2026,46 +1690,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 6,
-        "weekends": 6,
+        "weekdays": 4,
+        "weekends": 7,
         "preferred": [
-          "Sunday",
-          "Wednesday",
+          "Monday",
+          "Saturday",
           "Thursday"
         ],
         "notPreferred": [
-          "Saturday",
-          "Monday",
-          "Friday"
+          "Sunday",
+          "Wednesday",
+          "Tuesday"
         ],
         "shiftPreference": [
-          3,
-          9,
-          9,
-          7,
-          2,
-          3,
-          5
+          6,
+          4,
+          4
         ]
       },
       "score": {
         "days": [
-          -1.4,
-          0.6,
-          2.6,
-          2.6,
-          -1.4,
-          -1.4,
-          2.6
+          2.4,
+          -1.6,
+          -1.6,
+          2.4,
+          0.4,
+          2.7,
+          -1.3
         ],
         "shifts": [
-          3,
-          9,
-          9,
-          7,
-          2,
-          3,
-          7.5
+          6,
+          4,
+          4
         ]
       }
     },
@@ -2074,46 +1730,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 6,
-        "weekends": 4,
+        "weekdays": 3,
+        "weekends": 8,
         "preferred": [
-          "Thursday",
-          "Tuesday",
-          "Sunday"
-        ],
-        "notPreferred": [
           "Wednesday",
-          "Saturday",
+          "Sunday",
           "Monday"
         ],
+        "notPreferred": [
+          "Thursday",
+          "Friday",
+          "Tuesday"
+        ],
         "shiftPreference": [
-          3,
-          3,
+          5,
           7,
-          7,
-          8,
-          7,
-          4
+          9
         ]
       },
       "score": {
         "days": [
-          -1.4,
-          2.6,
-          -1.4,
-          2.6,
-          0.6,
-          -1.6,
-          2.4
+          2.3,
+          -1.7,
+          2.3,
+          -1.7,
+          -1.7,
+          0.8,
+          2.8
         ],
         "shifts": [
-          3,
-          3,
+          5,
           7,
-          7,
-          8,
-          7,
-          6
+          9
         ]
       }
     },
@@ -2122,46 +1770,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 5,
-        "weekends": 6,
+        "weekdays": 9,
+        "weekends": 2,
         "preferred": [
-          "Tuesday",
+          "Sunday",
           "Wednesday",
-          "Monday"
+          "Saturday"
         ],
         "notPreferred": [
-          "Saturday",
+          "Friday",
           "Thursday",
-          "Friday"
+          "Monday"
         ],
         "shiftPreference": [
-          1,
-          1,
-          3,
           7,
-          6,
-          3,
-          5
+          5,
+          1
         ]
       },
       "score": {
         "days": [
-          2.5,
-          2.5,
-          2.5,
-          -1.5,
-          -1.5,
-          -1.4,
-          0.6
+          -1.1,
+          0.9,
+          2.9,
+          -1.1,
+          -1.1,
+          2.2,
+          2.2
         ],
         "shifts": [
-          1,
-          1,
-          3,
           7,
-          6,
-          3,
-          7.5
+          5,
+          1
         ]
       }
     },
@@ -2170,46 +1810,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 7,
+        "weekdays": 5,
         "weekends": 1,
         "preferred": [
           "Wednesday",
           "Thursday",
-          "Tuesday"
+          "Friday"
         ],
         "notPreferred": [
+          "Saturday",
           "Monday",
-          "Friday",
-          "Saturday"
+          "Tuesday"
         ],
         "shiftPreference": [
-          5,
-          5,
           10,
-          4,
-          7,
-          8,
-          1
+          10,
+          9
         ]
       },
       "score": {
         "days": [
-          -1.3,
-          2.7,
-          2.7,
-          2.7,
-          -1.3,
+          -1.5,
+          -1.5,
+          2.5,
+          2.5,
+          2.5,
           -1.9,
           0.1
         ],
         "shifts": [
-          5,
-          5,
           10,
-          4,
-          7,
-          8,
-          1.5
+          10,
+          9
         ]
       }
     },
@@ -2218,46 +1850,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 9,
-        "weekends": 2,
+        "weekdays": 6,
+        "weekends": 5,
         "preferred": [
           "Thursday",
-          "Saturday",
-          "Wednesday"
+          "Friday",
+          "Sunday"
         ],
         "notPreferred": [
-          "Friday",
-          "Sunday",
-          "Tuesday"
+          "Monday",
+          "Tuesday",
+          "Saturday"
         ],
         "shiftPreference": [
-          1,
           2,
-          10,
           5,
-          1,
-          6,
-          6
+          2
         ]
       },
       "score": {
         "days": [
-          0.9,
-          -1.1,
-          2.9,
-          2.9,
-          -1.1,
-          2.2,
-          -1.8
+          -1.4,
+          -1.4,
+          0.6,
+          2.6,
+          2.6,
+          -1.5,
+          2.5
         ],
         "shifts": [
-          1,
           2,
-          10,
           5,
-          1,
-          6,
-          9
+          2
         ]
       }
     },
@@ -2266,46 +1890,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 2,
-        "weekends": 5,
+        "weekdays": 9,
+        "weekends": 8,
         "preferred": [
-          "Sunday",
-          "Thursday",
-          "Wednesday"
-        ],
-        "notPreferred": [
-          "Monday",
+          "Wednesday",
           "Tuesday",
           "Friday"
         ],
+        "notPreferred": [
+          "Sunday",
+          "Saturday",
+          "Monday"
+        ],
         "shiftPreference": [
-          2,
-          6,
-          2,
-          3,
           5,
-          2,
-          2
+          8,
+          10
         ]
       },
       "score": {
         "days": [
-          -1.8,
-          -1.8,
-          2.2,
-          2.2,
-          -1.8,
-          0.5,
-          2.5
+          -1.1,
+          2.9,
+          2.9,
+          0.9,
+          2.9,
+          -1.2,
+          -1.2
         ],
         "shifts": [
-          2,
-          6,
-          2,
-          3,
           5,
-          2,
-          3
+          8,
+          10
         ]
       }
     },
@@ -2314,46 +1930,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 3,
-        "weekends": 1,
+        "weekdays": 6,
+        "weekends": 5,
         "preferred": [
+          "Thursday",
           "Friday",
-          "Monday",
-          "Saturday"
+          "Tuesday"
         ],
         "notPreferred": [
-          "Thursday",
-          "Tuesday",
-          "Wednesday"
+          "Wednesday",
+          "Monday",
+          "Sunday"
         ],
         "shiftPreference": [
-          8,
-          2,
-          6,
           4,
-          2,
-          3,
-          1
+          6,
+          6
         ]
       },
       "score": {
         "days": [
-          2.3,
-          -1.7,
-          -1.7,
-          -1.7,
-          2.3,
-          2.1,
-          0.1
+          -1.4,
+          2.6,
+          -1.4,
+          2.6,
+          2.6,
+          0.5,
+          -1.5
         ],
         "shifts": [
-          8,
-          2,
-          6,
           4,
-          2,
-          3,
-          1.5
+          6,
+          6
         ]
       }
     },
@@ -2362,46 +1970,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 8,
-        "weekends": 2,
+        "weekdays": 9,
+        "weekends": 5,
         "preferred": [
-          "Thursday",
-          "Wednesday",
-          "Saturday"
+          "Saturday",
+          "Friday",
+          "Tuesday"
         ],
         "notPreferred": [
+          "Wednesday",
           "Sunday",
-          "Tuesday",
           "Monday"
         ],
         "shiftPreference": [
-          9,
-          2,
-          5,
-          7,
-          10,
-          2,
-          6
+          6,
+          4,
+          4
         ]
       },
       "score": {
         "days": [
-          -1.2,
-          -1.2,
-          2.8,
-          2.8,
-          0.8,
-          2.2,
-          -1.8
+          -1.1,
+          2.9,
+          -1.1,
+          0.9,
+          2.9,
+          2.5,
+          -1.5
         ],
         "shifts": [
-          9,
-          2,
-          5,
-          7,
-          10,
-          2,
-          9
+          6,
+          4,
+          4
         ]
       }
     },
@@ -2410,46 +2010,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 1,
-        "weekends": 5,
+        "weekdays": 2,
+        "weekends": 3,
         "preferred": [
+          "Wednesday",
           "Friday",
-          "Monday",
           "Saturday"
         ],
         "notPreferred": [
           "Tuesday",
-          "Thursday",
-          "Wednesday"
+          "Sunday",
+          "Monday"
         ],
         "shiftPreference": [
-          8,
-          2,
+          7,
           1,
-          1,
-          8,
-          3,
-          5
+          4
         ]
       },
       "score": {
         "days": [
-          2.1,
-          -1.9,
-          -1.9,
-          -1.9,
-          2.1,
-          2.5,
-          0.5
+          -1.8,
+          -1.8,
+          2.2,
+          0.2,
+          2.2,
+          2.3,
+          -1.7
         ],
         "shifts": [
-          8,
-          2,
+          7,
           1,
-          1,
-          8,
-          3,
-          7.5
+          4
         ]
       }
     },
@@ -2458,46 +2050,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 3,
-        "weekends": 6,
+        "weekdays": 4,
+        "weekends": 9,
         "preferred": [
-          "Sunday",
-          "Wednesday",
-          "Monday"
+          "Monday",
+          "Tuesday",
+          "Friday"
         ],
         "notPreferred": [
-          "Friday",
-          "Tuesday",
-          "Thursday"
+          "Wednesday",
+          "Thursday",
+          "Sunday"
         ],
         "shiftPreference": [
-          4,
-          10,
-          5,
-          4,
           3,
           2,
-          10
+          7
         ]
       },
       "score": {
         "days": [
-          2.3,
-          -1.7,
-          2.3,
-          -1.7,
-          -1.7,
-          0.6,
-          2.6
+          2.4,
+          2.4,
+          -1.6,
+          -1.6,
+          2.4,
+          0.9,
+          -1.1
         ],
         "shifts": [
-          4,
-          10,
-          5,
-          4,
           3,
           2,
-          15
+          7
         ]
       }
     },
@@ -2506,46 +2090,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 9,
-        "weekends": 10,
+        "weekdays": 4,
+        "weekends": 9,
         "preferred": [
+          "Saturday",
           "Monday",
-          "Sunday",
-          "Tuesday"
+          "Friday"
         ],
         "notPreferred": [
-          "Friday",
-          "Thursday",
-          "Wednesday"
+          "Tuesday",
+          "Wednesday",
+          "Thursday"
         ],
         "shiftPreference": [
+          10,
           2,
-          4,
-          4,
-          5,
-          4,
-          2,
-          8
+          4
         ]
       },
       "score": {
         "days": [
+          2.4,
+          -1.6,
+          -1.6,
+          -1.6,
+          2.4,
           2.9,
-          2.9,
-          -1.1,
-          -1.1,
-          -1.1,
-          1,
-          3
+          0.9
         ],
         "shifts": [
+          10,
           2,
-          4,
-          4,
-          5,
-          4,
-          2,
-          12
+          4
         ]
       }
     },
@@ -2554,46 +2130,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 1,
-        "weekends": 8,
+        "weekdays": 5,
+        "weekends": 10,
         "preferred": [
-          "Sunday",
-          "Monday",
-          "Tuesday"
+          "Wednesday",
+          "Tuesday",
+          "Monday"
         ],
         "notPreferred": [
+          "Sunday",
           "Thursday",
-          "Friday",
-          "Wednesday"
+          "Friday"
         ],
         "shiftPreference": [
-          8,
-          5,
-          9,
+          4,
           6,
-          10,
-          3,
           9
         ]
       },
       "score": {
         "days": [
-          2.1,
-          2.1,
-          -1.9,
-          -1.9,
-          -1.9,
-          0.8,
-          2.8
+          2.5,
+          2.5,
+          2.5,
+          -1.5,
+          -1.5,
+          1,
+          -1
         ],
         "shifts": [
-          8,
-          5,
-          9,
+          4,
           6,
-          10,
-          3,
-          13.5
+          9
         ]
       }
     },
@@ -2602,46 +2170,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 2,
-        "weekends": 3,
+        "weekdays": 3,
+        "weekends": 10,
         "preferred": [
-          "Monday",
-          "Tuesday",
-          "Sunday"
+          "Friday",
+          "Wednesday",
+          "Tuesday"
         ],
         "notPreferred": [
-          "Saturday",
-          "Wednesday",
-          "Thursday"
+          "Thursday",
+          "Monday",
+          "Saturday"
         ],
         "shiftPreference": [
-          8,
-          1,
-          10,
-          1,
+          9,
           6,
-          7,
           3
         ]
       },
       "score": {
         "days": [
-          2.2,
-          2.2,
-          -1.8,
-          -1.8,
-          0.2,
           -1.7,
-          2.3
+          2.3,
+          2.3,
+          -1.7,
+          2.3,
+          -1,
+          1
         ],
         "shifts": [
-          8,
-          1,
-          10,
-          1,
+          9,
           6,
-          7,
-          4.5
+          3
         ]
       }
     },
@@ -2650,46 +2210,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 9,
-        "weekends": 10,
+        "weekdays": 10,
+        "weekends": 2,
         "preferred": [
-          "Sunday",
+          "Saturday",
           "Monday",
-          "Saturday"
+          "Tuesday"
         ],
         "notPreferred": [
           "Thursday",
           "Wednesday",
-          "Tuesday"
+          "Sunday"
         ],
         "shiftPreference": [
-          3,
           7,
-          9,
-          7,
-          9,
-          1,
-          7
+          5,
+          2
         ]
       },
       "score": {
         "days": [
-          2.9,
-          -1.1,
-          -1.1,
-          -1.1,
-          0.9,
           3,
-          3
+          3,
+          -1,
+          -1,
+          1,
+          2.2,
+          -1.8
         ],
         "shifts": [
-          3,
           7,
-          9,
-          7,
-          9,
-          1,
-          10.5
+          5,
+          2
         ]
       }
     },
@@ -2698,46 +2250,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 3,
-        "weekends": 2,
+        "weekdays": 1,
+        "weekends": 10,
         "preferred": [
+          "Sunday",
           "Friday",
-          "Wednesday",
           "Monday"
         ],
         "notPreferred": [
+          "Saturday",
           "Tuesday",
-          "Sunday",
-          "Thursday"
+          "Wednesday"
         ],
         "shiftPreference": [
-          10,
-          2,
-          1,
-          10,
           3,
-          8,
-          3
+          7,
+          6
         ]
       },
       "score": {
         "days": [
-          2.3,
-          -1.7,
-          2.3,
-          -1.7,
-          2.3,
-          0.2,
-          -1.8
+          2.1,
+          -1.9,
+          -1.9,
+          0.1,
+          2.1,
+          -1,
+          3
         ],
         "shifts": [
-          10,
-          2,
-          1,
-          10,
           3,
-          8,
-          4.5
+          7,
+          6
         ]
       }
     },
@@ -2746,46 +2290,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 1,
-        "weekends": 4,
+        "weekdays": 10,
+        "weekends": 5,
         "preferred": [
           "Monday",
           "Sunday",
-          "Tuesday"
+          "Wednesday"
         ],
         "notPreferred": [
-          "Wednesday",
-          "Thursday",
-          "Friday"
+          "Saturday",
+          "Friday",
+          "Thursday"
         ],
         "shiftPreference": [
-          5,
-          7,
-          3,
-          8,
-          2,
-          3,
-          6
+          6,
+          9,
+          8
         ]
       },
       "score": {
         "days": [
-          2.1,
-          2.1,
-          -1.9,
-          -1.9,
-          -1.9,
-          0.4,
-          2.4
+          3,
+          1,
+          3,
+          -1,
+          -1,
+          -1.5,
+          2.5
         ],
         "shifts": [
-          5,
-          7,
-          3,
-          8,
-          2,
-          3,
-          9
+          6,
+          9,
+          8
         ]
       }
     },
@@ -2794,46 +2330,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 4,
-        "weekends": 7,
+        "weekdays": 1,
+        "weekends": 9,
         "preferred": [
-          "Monday",
-          "Tuesday",
-          "Thursday"
+          "Thursday",
+          "Friday",
+          "Monday"
         ],
         "notPreferred": [
-          "Friday",
-          "Sunday",
-          "Wednesday"
+          "Wednesday",
+          "Saturday",
+          "Tuesday"
         ],
         "shiftPreference": [
-          4,
-          6,
-          3,
-          5,
-          9,
           1,
-          1
+          6,
+          7
         ]
       },
       "score": {
         "days": [
-          2.4,
-          2.4,
-          -1.6,
-          2.4,
-          -1.6,
-          0.7,
-          -1.3
+          2.1,
+          -1.9,
+          -1.9,
+          2.1,
+          2.1,
+          -1.1,
+          0.9
         ],
         "shifts": [
-          4,
-          6,
-          3,
-          5,
-          9,
           1,
-          1.5
+          6,
+          7
         ]
       }
     },
@@ -2842,46 +2370,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 1,
-        "weekends": 9,
+        "weekdays": 4,
+        "weekends": 3,
         "preferred": [
-          "Sunday",
-          "Monday",
-          "Tuesday"
-        ],
-        "notPreferred": [
           "Friday",
-          "Wednesday",
+          "Thursday",
           "Saturday"
         ],
+        "notPreferred": [
+          "Sunday",
+          "Wednesday",
+          "Monday"
+        ],
         "shiftPreference": [
-          1,
-          3,
-          2,
           8,
-          3,
-          10,
-          10
+          4,
+          5
         ]
       },
       "score": {
         "days": [
-          2.1,
-          2.1,
-          -1.9,
-          0.1,
-          -1.9,
-          -1.1,
-          2.9
+          -1.6,
+          0.4,
+          -1.6,
+          2.4,
+          2.4,
+          2.3,
+          -1.7
         ],
         "shifts": [
-          1,
-          3,
-          2,
           8,
-          3,
-          10,
-          15
+          4,
+          5
         ]
       }
     },
@@ -2890,46 +2410,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 6,
-        "weekends": 10,
+        "weekdays": 5,
+        "weekends": 9,
         "preferred": [
-          "Saturday",
-          "Tuesday",
-          "Wednesday"
+          "Monday",
+          "Wednesday",
+          "Saturday"
         ],
         "notPreferred": [
-          "Friday",
-          "Thursday",
-          "Sunday"
+          "Sunday",
+          "Tuesday",
+          "Thursday"
         ],
         "shiftPreference": [
-          10,
-          1,
-          9,
-          7,
-          6,
-          7,
+          5,
+          4,
           8
         ]
       },
       "score": {
         "days": [
-          0.6,
-          2.6,
-          2.6,
-          -1.4,
-          -1.4,
-          3,
-          -1
+          2.5,
+          -1.5,
+          2.5,
+          -1.5,
+          0.5,
+          2.9,
+          -1.1
         ],
         "shifts": [
-          10,
-          1,
-          9,
-          7,
-          6,
-          7,
-          12
+          5,
+          4,
+          8
         ]
       }
     },
@@ -2938,46 +2450,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 2,
-        "weekends": 1,
+        "weekdays": 3,
+        "weekends": 8,
         "preferred": [
-          "Wednesday",
-          "Saturday",
-          "Tuesday"
+          "Tuesday",
+          "Sunday",
+          "Monday"
         ],
         "notPreferred": [
           "Friday",
-          "Monday",
+          "Wednesday",
           "Thursday"
         ],
         "shiftPreference": [
-          6,
-          7,
+          8,
           2,
-          7,
-          3,
-          2,
-          5
+          9
         ]
       },
       "score": {
         "days": [
-          -1.8,
-          2.2,
-          2.2,
-          -1.8,
-          -1.8,
-          2.1,
-          0.1
+          2.3,
+          2.3,
+          -1.7,
+          -1.7,
+          -1.7,
+          0.8,
+          2.8
         ],
         "shifts": [
-          6,
-          7,
+          8,
           2,
-          7,
-          3,
-          2,
-          7.5
+          9
         ]
       }
     },
@@ -2986,46 +2490,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 3,
-        "weekends": 4,
+        "weekdays": 6,
+        "weekends": 8,
         "preferred": [
-          "Tuesday",
-          "Wednesday",
-          "Saturday"
+          "Thursday",
+          "Saturday",
+          "Monday"
         ],
         "notPreferred": [
           "Friday",
-          "Monday",
-          "Thursday"
+          "Tuesday",
+          "Wednesday"
         ],
         "shiftPreference": [
-          1,
-          7,
           8,
-          10,
-          8,
-          7,
-          1
+          9,
+          10
         ]
       },
       "score": {
         "days": [
-          -1.7,
-          2.3,
-          2.3,
-          -1.7,
-          -1.7,
-          2.4,
-          0.4
+          2.6,
+          -1.4,
+          -1.4,
+          2.6,
+          -1.4,
+          2.8,
+          0.8
         ],
         "shifts": [
-          1,
-          7,
           8,
-          10,
-          8,
-          7,
-          1.5
+          9,
+          10
         ]
       }
     },
@@ -3034,46 +2530,38 @@
       "password": "$2b$10$eSoTWRmx.NMKB5Febrf.EO4rZupq1AiaUUFcWpPkyZ.lydBLaPDDW",
       "type": "employee",
       "preferences": {
-        "weekdays": 2,
-        "weekends": 7,
+        "weekdays": 1,
+        "weekends": 4,
         "preferred": [
-          "Thursday",
           "Saturday",
-          "Friday"
+          "Wednesday",
+          "Monday"
         ],
         "notPreferred": [
-          "Monday",
-          "Sunday",
-          "Tuesday"
+          "Thursday",
+          "Tuesday",
+          "Friday"
         ],
         "shiftPreference": [
-          7,
-          3,
-          9,
-          4,
           6,
-          1,
-          6
+          7,
+          8
         ]
       },
       "score": {
         "days": [
-          -1.8,
-          -1.8,
-          0.2,
-          2.2,
-          2.2,
-          2.7,
-          -1.3
+          2.1,
+          -1.9,
+          2.1,
+          -1.9,
+          -1.9,
+          2.4,
+          0.4
         ],
         "shifts": [
-          7,
-          3,
-          9,
-          4,
           6,
-          1,
-          9
+          7,
+          8
         ]
       }
     }

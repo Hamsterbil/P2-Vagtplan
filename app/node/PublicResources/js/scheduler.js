@@ -125,7 +125,6 @@ return {
                 user.score.shifts = this.calculateShift(user, weights);
             }
         });
-        console.log("Generate schedule");
         const employeesPerShift = 3;
         //Start from first of current month
         const startDate = new Date();
@@ -134,13 +133,10 @@ return {
         const schedule = this.assignShifts(users, employeesPerShift, 2220, weeksAmount, startDate);
         const formattedSchedule = this.outputSchedule(schedule, startDate);
         console.log(formattedSchedule);
-    
-        
-        const data = { formattedSchedule };
-        client.jsonPost("/database", { data, entry: "schedule" })
-        .then(response => {
-            console.log("Schedule saved successfully:", response);
-        });
+
+        return formattedSchedule;
+
+
     },
 
     softmax: function(array) {
@@ -296,7 +292,7 @@ return {
                             let penalty = 1 / Math.pow(1 + minutes, 5);
                             let preferenceMultiplier = employee.preferences.preferred.includes(day) ? 5 : 1;
                             
-                            return normalizedProbabilities[index] * penalty * preferenceMultiplier;
+                            return normalizedProbabilities[index] * penalty + preferenceMultiplier;
                         });
                         
                         // Get probabilities for available employees
@@ -354,13 +350,15 @@ return {
     
             for (let shift in schedule[weekday]){
                 for (let employee of schedule[weekday][shift]){
+                    const startDateTime = new Date(`${dateFormatted}T${shiftDetails[shift].start}`);
+                    const endDateTime = new Date(startDateTime.getTime() + shiftDetails[shift].minutes * 60000);
                     output.push({
-                        // week: weekday.split('-')[0],
-                        date: dateFormatted,
+                        title: employee,
+                        start: startDateTime,
+                        end: endDateTime,
+                        backgroundColor: 'rgb(60, 72, 135)',
+                        borderColor: 'rgb(60, 72, 135)',
                         shift: shiftDetails[shift].dayTime,
-                        start: shiftDetails[shift].start,
-                        minutes: shiftDetails[shift].minutes,
-                        user: employee
                     })
                 }
             }

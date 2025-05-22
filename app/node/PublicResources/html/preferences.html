@@ -46,12 +46,6 @@
             margin-right: 8px;
             transform: scale(1.3); /* Make checkboxes slightly larger */
         }
-        /* Grid layout for shift rating items */
-        .shift-rating {
-            display: grid;
-            grid-template-columns: 1fr; /* Default to 1 column on small screens */
-            gap: 15px;
-        }
         /* Make shift rating 2 columns on medium screens and up */
         @media (min-width: 768px) {
              .shift-rating {
@@ -76,7 +70,6 @@
               width: 100px; /* Fixed width for the select dropdown */
               flex-shrink: 0; /* Prevent select from shrinking */
         }
-        /* --- End dynamic content styles --- */
     </style>
 </head>
 <body>
@@ -126,28 +119,16 @@
 
                 <div class="form-section">
                     <h5 class="mb-3">Shift Time Preferences</h5>
-                    <p class="text-muted">Rate each shift (1 = Would rather not, 10 = Preferred)</p>
+                    <p class="text-muted">Rate each shift type (1 = Would rather not, 10 = Preferred)</p>
                     <div class="shift-rating" id="shiftRatingContainer">
                         <div class="shift-rating-item">
-                            <label for="shift1" class="shift-label">07:00 to 14:24</label>
+                            <label for="shift1" class="shift-label">Morning</label>
                         </div>
                         <div class="shift-rating-item">
-                            <label for="shift2" class="shift-label">07:00 to 15:00</label>
+                            <label for="shift2" class="shift-label">Evening</label>
                         </div>
                         <div class="shift-rating-item">
-                            <label for="shift3" class="shift-label">08:00 to 15:24</label>
-                        </div>
-                        <div class="shift-rating-item">
-                            <label for="shift4" class="shift-label">08:00 to 16:00</label>
-                        </div>
-                        <div class="shift-rating-item">
-                            <label for="shift5" class="shift-label">11:00 to 19:00</label>
-                        </div>
-                        <div class="shift-rating-item">
-                            <label for="shift6" class="shift-label">15:00 to 23:00</label>
-                        </div>
-                        <div class="shift-rating-item">
-                            <label for="shift7" class="shift-label">23:00 to 07:00</label>
+                            <label for="shift3" class="shift-label">Night</label>
                         </div>
                     </div>
                 </div>
@@ -198,7 +179,10 @@
                         <input class="form-check-input" type="checkbox" id="not${days[i]}" name="notPreferredDays" value="${days[i]}">
                         <label class="form-check-label" for="not${days[i]}">${days[i]}</label>
                     </div>`;
-
+                preferredCheckboxes.innerHTML += preferredHTML;
+                notPreferredCheckboxes.innerHTML += notPreferredHTML;
+            }
+            for (let i = 0; i < 3; i++) {
                 const shiftSelectHTML = 
                     `<select class="form-select" id="shift${i+1}" name="shift" required>
                         <option value="" disabled selected>Select</option>
@@ -214,9 +198,7 @@
                         <option value="10">10</option>
                     </select>`;
 
-                preferredCheckboxes.innerHTML += preferredHTML;
-                notPreferredCheckboxes.innerHTML += notPreferredHTML;
-                shiftRatingContainers[i].innerHTML += shiftSelectHTML;
+                shiftRatingContainers[i].innerHTML += shiftSelectHTML
             }
 
             client.preferenceForm();

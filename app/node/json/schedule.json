@@ -1,5294 +1,3772 @@
 [
   {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Nora"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Elias"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Bastian"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Cecilie"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Aksel"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Philip"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Julian"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Josefine"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Mathias"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Nikolaj"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Clara"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Anton"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Asger"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Lucas"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Oliver"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Filip"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Mille"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Luca"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Mathilde"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Liv"
-  },
-  {
-    "date": [
-      "2025-05-01"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Lærke"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Emil"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Frederikke"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Signe"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Leon"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Noah"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Nellie"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Sofia"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Magnus"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Felix"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Albert"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Astrid"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Ida"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Sophie"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Amalie"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Ella"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Selma"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Laura"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Agnes"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Carla"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Carl"
-  },
-  {
-    "date": [
-      "2025-05-02"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Victor"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Anna"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "William"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Mikkel"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Jakob"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Theodor"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Alma"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Olivia"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Valdemar"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Vera"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Maja"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Oscar"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Sebastian"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Marius"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Luna"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Victoria"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Liam"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Freja"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Malik"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Emma"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Alexander"
-  },
-  {
-    "date": [
-      "2025-05-03"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Asta"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Mathilde"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Mille"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Mathias"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Aksel"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Magnus"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Cecilie"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Sofia"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Freja"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Nellie"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Frederikke"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Albert"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Maja"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Oliver"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Theodor"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Ida"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Nora"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Selma"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Anna"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Anton"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Amalie"
-  },
-  {
-    "date": [
-      "2025-05-04"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Carl"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "William"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Bastian"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Felix"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Olivia"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Leon"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Lærke"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Sophie"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Victor"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Sebastian"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Asger"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Laura"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Luca"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Julian"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Jakob"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Philip"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Lucas"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Liam"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Anna"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Valdemar"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Ella"
-  },
-  {
-    "date": [
-      "2025-05-05"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Carl"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Clara"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Sebastian"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Agnes"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Carla"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Emma"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Marius"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Victoria"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Emil"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Mikkel"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Josefine"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Alma"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Maja"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Luna"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Nikolaj"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Vera"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Luca"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Freja"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Astrid"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Oliver"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Noah"
-  },
-  {
-    "date": [
-      "2025-05-06"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Mathilde"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Elias"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Asta"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Liv"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Alexander"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Ida"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Magnus"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Josefine"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Agnes"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Frederikke"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Oscar"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Emma"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Anton"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Vera"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Julian"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Laura"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Clara"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Victoria"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Lucas"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Luna"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Noah"
-  },
-  {
-    "date": [
-      "2025-05-07"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Filip"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Felix"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Selma"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Cecilie"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Asta"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Lærke"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Aksel"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Elias"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Oscar"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Nikolaj"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Ella"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Liam"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Carla"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Bastian"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Philip"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Asger"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Josefine"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Signe"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Emma"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Anton"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Noah"
-  },
-  {
-    "date": [
-      "2025-05-08"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Sophie"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Mille"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Frederikke"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Liv"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Emil"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Marius"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Albert"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "William"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Mathias"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Sofia"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Maja"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Alma"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Valdemar"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Julian"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Ida"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Nellie"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Lucas"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Mikkel"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Freja"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Laura"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Astrid"
-  },
-  {
-    "date": [
-      "2025-05-09"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Oliver"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Anna"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Malik"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Amalie"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Luca"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Filip"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Magnus"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Nora"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Agnes"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Sebastian"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Jakob"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Vera"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Theodor"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Carl"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Luna"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Victoria"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Leon"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Victor"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Clara"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Mathilde"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Olivia"
-  },
-  {
-    "date": [
-      "2025-05-10"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Alexander"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Sofia"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Bastian"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Lærke"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Nora"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Clara"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Anna"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Amalie"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Victoria"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Mille"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Oliver"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Frederikke"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Luna"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Theodor"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Nikolaj"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Sophie"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Filip"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Luca"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Mathias"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Noah"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Carl"
-  },
-  {
-    "date": [
-      "2025-05-11"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Victor"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Freja"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Selma"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Signe"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Oscar"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Malik"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Cecilie"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Valdemar"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Felix"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Olivia"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Leon"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Alma"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Sebastian"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Julian"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Ella"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Philip"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Asger"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Victoria"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Laura"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Maja"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Jakob"
-  },
-  {
-    "date": [
-      "2025-05-12"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Anton"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Marius"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Olivia"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Ida"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Mathilde"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Emma"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Albert"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Agnes"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Liv"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Magnus"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Oliver"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Vera"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Alexander"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "William"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Mikkel"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Asger"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Luca"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Josefine"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Freja"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Mille"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Victor"
-  },
-  {
-    "date": [
-      "2025-05-13"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Elias"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Liam"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Emma"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Carla"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Aksel"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Vera"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Cecilie"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Emil"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Agnes"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Theodor"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Lucas"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Ida"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Alexander"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Nellie"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Josefine"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Asta"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Magnus"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Anton"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Ella"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Astrid"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Julian"
-  },
-  {
-    "date": [
-      "2025-05-14"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Jakob"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Anton"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Oscar"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Josefine"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Elias"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Emma"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Liam"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Asger"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Felix"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Agnes"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Bastian"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Alexander"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Frederikke"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Nikolaj"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Lucas"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Philip"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Lærke"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Liv"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Emil"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Carl"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Alma"
-  },
-  {
-    "date": [
-      "2025-05-15"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Julian"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Asta"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Nora"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Magnus"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Mille"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Astrid"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Cecilie"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Freja"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Maja"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Sebastian"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Mikkel"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Clara"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Sofia"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Oliver"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Albert"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "William"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Luca"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Ella"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Marius"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Jakob"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Laura"
-  },
-  {
-    "date": [
-      "2025-05-16"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Signe"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Aksel"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Carla"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Sophie"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Vera"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Noah"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Ida"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Selma"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Malik"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Theodor"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Victoria"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Amalie"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Mathias"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Victor"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Mathilde"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Leon"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Anna"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Nellie"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Filip"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Valdemar"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Olivia"
-  },
-  {
-    "date": [
-      "2025-05-17"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Luna"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Mathias"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Lucas"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Bastian"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Ida"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Cecilie"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Noah"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Carl"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Sofia"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Victoria"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Nora"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Luca"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Emma"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Amalie"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Oliver"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Nikolaj"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Frederikke"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Magnus"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Selma"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Julian"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Alma"
-  },
-  {
-    "date": [
-      "2025-05-18"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Anna"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Felix"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Olivia"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Lærke"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Sebastian"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Anton"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Malik"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Laura"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Liv"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Albert"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Sophie"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Freja"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Maja"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Philip"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Ella"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Josefine"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Asger"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Clara"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Valdemar"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Victor"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Oscar"
-  },
-  {
-    "date": [
-      "2025-05-19"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Leon"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Mikkel"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "William"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Carla"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Mathilde"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Agnes"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Marius"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Aksel"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Mille"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Theodor"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Liam"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Asta"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Lærke"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Luna"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Albert"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Vera"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Jakob"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Nellie"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Magnus"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Maja"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Luca"
-  },
-  {
-    "date": [
-      "2025-05-20"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Freja"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Alexander"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Aksel"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Bastian"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Anton"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Luna"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Noah"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Emil"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Sofia"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Agnes"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Lucas"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Astrid"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Mikkel"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Carla"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Oliver"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Julian"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Asger"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Liam"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Theodor"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Clara"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Emma"
-  },
-  {
-    "date": [
-      "2025-05-21"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Jakob"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Lucas"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Bastian"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Carla"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Emma"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Felix"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Frederikke"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Asta"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Nikolaj"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Aksel"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Nora"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Alexander"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Alma"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Theodor"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Oliver"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Oscar"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Luca"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Josefine"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Emil"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Liv"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Noah"
-  },
-  {
-    "date": [
-      "2025-05-22"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Astrid"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Anton"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Julian"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Albert"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Leon"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Selma"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Lærke"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Agnes"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Sebastian"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Ida"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Valdemar"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Maja"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Sofia"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Nellie"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Sophie"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Freja"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Ella"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Mille"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "William"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Carl"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Victor"
-  },
-  {
-    "date": [
-      "2025-05-23"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Amalie"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Liam"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Laura"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Cecilie"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Mathilde"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Magnus"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Jakob"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Malik"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Mathias"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Mikkel"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Elias"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Victoria"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Anna"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Philip"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Filip"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Asger"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Vera"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Signe"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Marius"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Olivia"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Luna"
-  },
-  {
-    "date": [
-      "2025-05-24"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Clara"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Anna"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Carl"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Elias"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Mathias"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Noah"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Filip"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Agnes"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Malik"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Amalie"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Sofia"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Cecilie"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Lucas"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Maja"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Olivia"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Ida"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Sophie"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Mille"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Freja"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Victor"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Leon"
-  },
-  {
-    "date": [
-      "2025-05-25"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Oliver"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Luna"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Anton"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Frederikke"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Mathilde"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Ella"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Laura"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Anna"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Sebastian"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Valdemar"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Marius"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Lærke"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Selma"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Oscar"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Felix"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Julian"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Emma"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Philip"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Asger"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Luca"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Bastian"
-  },
-  {
-    "date": [
-      "2025-05-26"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Victor"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Mikkel"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Alexander"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "William"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Leon"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Magnus"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Jakob"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Albert"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Emil"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Nora"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Asta"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Clara"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Alma"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Victoria"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Anton"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Asger"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Nikolaj"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Freja"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Aksel"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Carl"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Luca"
-  },
-  {
-    "date": [
-      "2025-05-27"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Nellie"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Josefine"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Signe"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 444,
-    "user": "Liam"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Mikkel"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Vera"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Morning",
-    "start": "07:00",
-    "minutes": 480,
-    "user": "Theodor"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "William"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Carla"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 444,
-    "user": "Sebastian"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Albert"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Maja"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Morning",
-    "start": "08:00",
-    "minutes": 480,
-    "user": "Lucas"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Philip"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Ida"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Evening",
-    "start": "11:00",
-    "minutes": 480,
-    "user": "Emma"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Clara"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Victoria"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Evening",
-    "start": "15:00",
-    "minutes": 480,
-    "user": "Magnus"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Lærke"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Agnes"
-  },
-  {
-    "date": [
-      "2025-05-28"
-    ],
-    "shift": "Night",
-    "start": "23:00",
-    "minutes": 480,
-    "user": "Jakob"
+    "allDay": false,
+    "title": "Signe",
+    "start": "2025-05-01T07:00:00+02:00",
+    "end": "2025-05-01T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Signe",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Nikolaj",
+    "start": "2025-05-01T07:00:00+02:00",
+    "end": "2025-05-01T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Nikolaj",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Alma",
+    "start": "2025-05-01T07:00:00+02:00",
+    "end": "2025-05-01T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Alma",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Leon",
+    "start": "2025-05-01T07:00:00+02:00",
+    "end": "2025-05-01T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Leon",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Amalie",
+    "start": "2025-05-01T07:00:00+02:00",
+    "end": "2025-05-01T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Amalie",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Luna",
+    "start": "2025-05-01T07:00:00+02:00",
+    "end": "2025-05-01T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Luna",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Lærke",
+    "start": "2025-05-01T08:00:00+02:00",
+    "end": "2025-05-01T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Lærke",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Luca",
+    "start": "2025-05-01T08:00:00+02:00",
+    "end": "2025-05-01T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Luca",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Asger",
+    "start": "2025-05-01T08:00:00+02:00",
+    "end": "2025-05-01T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Asger",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Emil",
+    "start": "2025-05-01T08:00:00+02:00",
+    "end": "2025-05-01T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Emil",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Albert",
+    "start": "2025-05-01T08:00:00+02:00",
+    "end": "2025-05-01T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Albert",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mikkel",
+    "start": "2025-05-01T08:00:00+02:00",
+    "end": "2025-05-01T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mikkel",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Luna",
+    "start": "2025-05-02T07:00:00+02:00",
+    "end": "2025-05-02T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Luna",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Asta",
+    "start": "2025-05-02T07:00:00+02:00",
+    "end": "2025-05-02T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Asta",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Jakob",
+    "start": "2025-05-02T07:00:00+02:00",
+    "end": "2025-05-02T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Jakob",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Astrid",
+    "start": "2025-05-02T07:00:00+02:00",
+    "end": "2025-05-02T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Astrid",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Julian",
+    "start": "2025-05-02T07:00:00+02:00",
+    "end": "2025-05-02T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Julian",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Bastian",
+    "start": "2025-05-02T07:00:00+02:00",
+    "end": "2025-05-02T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Bastian",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Josefine",
+    "start": "2025-05-02T08:00:00+02:00",
+    "end": "2025-05-02T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Josefine",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Freja",
+    "start": "2025-05-02T08:00:00+02:00",
+    "end": "2025-05-02T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Freja",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Vera",
+    "start": "2025-05-02T08:00:00+02:00",
+    "end": "2025-05-02T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Vera",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Emil",
+    "start": "2025-05-02T08:00:00+02:00",
+    "end": "2025-05-02T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Emil",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Albert",
+    "start": "2025-05-02T08:00:00+02:00",
+    "end": "2025-05-02T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Albert",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mikkel",
+    "start": "2025-05-02T08:00:00+02:00",
+    "end": "2025-05-02T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mikkel",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Luca",
+    "start": "2025-05-03T07:00:00+02:00",
+    "end": "2025-05-03T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Luca",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Magnus",
+    "start": "2025-05-03T07:00:00+02:00",
+    "end": "2025-05-03T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Magnus",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Astrid",
+    "start": "2025-05-03T07:00:00+02:00",
+    "end": "2025-05-03T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Astrid",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Josefine",
+    "start": "2025-05-03T07:00:00+02:00",
+    "end": "2025-05-03T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Josefine",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Philip",
+    "start": "2025-05-03T07:00:00+02:00",
+    "end": "2025-05-03T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Philip",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Sophie",
+    "start": "2025-05-03T07:00:00+02:00",
+    "end": "2025-05-03T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Sophie",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Nora",
+    "start": "2025-05-03T08:00:00+02:00",
+    "end": "2025-05-03T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Nora",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Lærke",
+    "start": "2025-05-03T08:00:00+02:00",
+    "end": "2025-05-03T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Lærke",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mathilde",
+    "start": "2025-05-03T08:00:00+02:00",
+    "end": "2025-05-03T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mathilde",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Emil",
+    "start": "2025-05-03T08:00:00+02:00",
+    "end": "2025-05-03T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Emil",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Albert",
+    "start": "2025-05-03T08:00:00+02:00",
+    "end": "2025-05-03T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Albert",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mikkel",
+    "start": "2025-05-03T08:00:00+02:00",
+    "end": "2025-05-03T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mikkel",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Freja",
+    "start": "2025-05-04T07:00:00+02:00",
+    "end": "2025-05-04T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Freja",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Anna",
+    "start": "2025-05-04T07:00:00+02:00",
+    "end": "2025-05-04T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Anna",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Luna",
+    "start": "2025-05-04T07:00:00+02:00",
+    "end": "2025-05-04T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Luna",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Clara",
+    "start": "2025-05-04T07:00:00+02:00",
+    "end": "2025-05-04T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Clara",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Alma",
+    "start": "2025-05-04T07:00:00+02:00",
+    "end": "2025-05-04T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Alma",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Ella",
+    "start": "2025-05-04T07:00:00+02:00",
+    "end": "2025-05-04T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Ella",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Laura",
+    "start": "2025-05-04T08:00:00+02:00",
+    "end": "2025-05-04T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Laura",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Oliver",
+    "start": "2025-05-04T08:00:00+02:00",
+    "end": "2025-05-04T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Oliver",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Lucas",
+    "start": "2025-05-04T08:00:00+02:00",
+    "end": "2025-05-04T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Lucas",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Emil",
+    "start": "2025-05-04T08:00:00+02:00",
+    "end": "2025-05-04T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Emil",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Albert",
+    "start": "2025-05-04T08:00:00+02:00",
+    "end": "2025-05-04T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Albert",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mikkel",
+    "start": "2025-05-04T08:00:00+02:00",
+    "end": "2025-05-04T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mikkel",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Anton",
+    "start": "2025-05-05T07:00:00+02:00",
+    "end": "2025-05-05T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Anton",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Nikolaj",
+    "start": "2025-05-05T07:00:00+02:00",
+    "end": "2025-05-05T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Nikolaj",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "William",
+    "start": "2025-05-05T07:00:00+02:00",
+    "end": "2025-05-05T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "William",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Agnes",
+    "start": "2025-05-05T07:00:00+02:00",
+    "end": "2025-05-05T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Agnes",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Carl",
+    "start": "2025-05-05T07:00:00+02:00",
+    "end": "2025-05-05T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Carl",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Oscar",
+    "start": "2025-05-05T07:00:00+02:00",
+    "end": "2025-05-05T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Oscar",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Nora",
+    "start": "2025-05-05T08:00:00+02:00",
+    "end": "2025-05-05T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Nora",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Olivia",
+    "start": "2025-05-05T08:00:00+02:00",
+    "end": "2025-05-05T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Olivia",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Marius",
+    "start": "2025-05-05T08:00:00+02:00",
+    "end": "2025-05-05T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Marius",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mille",
+    "start": "2025-05-06T07:00:00+02:00",
+    "end": "2025-05-06T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mille",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Ella",
+    "start": "2025-05-06T07:00:00+02:00",
+    "end": "2025-05-06T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Ella",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Felix",
+    "start": "2025-05-06T07:00:00+02:00",
+    "end": "2025-05-06T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Felix",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Oliver",
+    "start": "2025-05-06T07:00:00+02:00",
+    "end": "2025-05-06T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Oliver",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Jakob",
+    "start": "2025-05-06T07:00:00+02:00",
+    "end": "2025-05-06T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Jakob",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Liv",
+    "start": "2025-05-06T07:00:00+02:00",
+    "end": "2025-05-06T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Liv",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Laura",
+    "start": "2025-05-06T08:00:00+02:00",
+    "end": "2025-05-06T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Laura",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Lærke",
+    "start": "2025-05-06T08:00:00+02:00",
+    "end": "2025-05-06T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Lærke",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Amalie",
+    "start": "2025-05-06T08:00:00+02:00",
+    "end": "2025-05-06T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Amalie",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Olivia",
+    "start": "2025-05-07T07:00:00+02:00",
+    "end": "2025-05-07T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Olivia",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Theodor",
+    "start": "2025-05-07T07:00:00+02:00",
+    "end": "2025-05-07T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Theodor",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Oscar",
+    "start": "2025-05-07T07:00:00+02:00",
+    "end": "2025-05-07T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Oscar",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mathias",
+    "start": "2025-05-07T07:00:00+02:00",
+    "end": "2025-05-07T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mathias",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mille",
+    "start": "2025-05-07T07:00:00+02:00",
+    "end": "2025-05-07T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mille",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Frederikke",
+    "start": "2025-05-07T07:00:00+02:00",
+    "end": "2025-05-07T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Frederikke",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Vera",
+    "start": "2025-05-07T08:00:00+02:00",
+    "end": "2025-05-07T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Vera",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Alexander",
+    "start": "2025-05-07T08:00:00+02:00",
+    "end": "2025-05-07T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Alexander",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Bastian",
+    "start": "2025-05-07T08:00:00+02:00",
+    "end": "2025-05-07T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Bastian",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Agnes",
+    "start": "2025-05-08T07:00:00+02:00",
+    "end": "2025-05-08T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Agnes",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Elias",
+    "start": "2025-05-08T07:00:00+02:00",
+    "end": "2025-05-08T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Elias",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Oliver",
+    "start": "2025-05-08T07:00:00+02:00",
+    "end": "2025-05-08T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Oliver",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Luna",
+    "start": "2025-05-08T07:00:00+02:00",
+    "end": "2025-05-08T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Luna",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Sebastian",
+    "start": "2025-05-08T07:00:00+02:00",
+    "end": "2025-05-08T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Sebastian",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Nora",
+    "start": "2025-05-08T07:00:00+02:00",
+    "end": "2025-05-08T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Nora",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Magnus",
+    "start": "2025-05-08T08:00:00+02:00",
+    "end": "2025-05-08T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Magnus",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Clara",
+    "start": "2025-05-08T08:00:00+02:00",
+    "end": "2025-05-08T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Clara",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Julian",
+    "start": "2025-05-08T08:00:00+02:00",
+    "end": "2025-05-08T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Julian",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Emil",
+    "start": "2025-05-08T08:00:00+02:00",
+    "end": "2025-05-08T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Emil",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Albert",
+    "start": "2025-05-08T08:00:00+02:00",
+    "end": "2025-05-08T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Albert",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mikkel",
+    "start": "2025-05-08T08:00:00+02:00",
+    "end": "2025-05-08T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mikkel",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Selma",
+    "start": "2025-05-09T07:00:00+02:00",
+    "end": "2025-05-09T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Selma",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Asta",
+    "start": "2025-05-09T07:00:00+02:00",
+    "end": "2025-05-09T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Asta",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Astrid",
+    "start": "2025-05-09T07:00:00+02:00",
+    "end": "2025-05-09T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Astrid",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Frederikke",
+    "start": "2025-05-09T07:00:00+02:00",
+    "end": "2025-05-09T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Frederikke",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mathilde",
+    "start": "2025-05-09T07:00:00+02:00",
+    "end": "2025-05-09T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mathilde",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Signe",
+    "start": "2025-05-09T07:00:00+02:00",
+    "end": "2025-05-09T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Signe",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Freja",
+    "start": "2025-05-09T08:00:00+02:00",
+    "end": "2025-05-09T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Freja",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Anna",
+    "start": "2025-05-09T08:00:00+02:00",
+    "end": "2025-05-09T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Anna",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Lucas",
+    "start": "2025-05-09T08:00:00+02:00",
+    "end": "2025-05-09T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Lucas",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Emil",
+    "start": "2025-05-09T08:00:00+02:00",
+    "end": "2025-05-09T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Emil",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Albert",
+    "start": "2025-05-09T08:00:00+02:00",
+    "end": "2025-05-09T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Albert",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mikkel",
+    "start": "2025-05-09T08:00:00+02:00",
+    "end": "2025-05-09T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mikkel",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Nellie",
+    "start": "2025-05-10T07:00:00+02:00",
+    "end": "2025-05-10T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Nellie",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Signe",
+    "start": "2025-05-10T07:00:00+02:00",
+    "end": "2025-05-10T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Signe",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Emil",
+    "start": "2025-05-10T07:00:00+02:00",
+    "end": "2025-05-10T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Emil",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Sophie",
+    "start": "2025-05-10T07:00:00+02:00",
+    "end": "2025-05-10T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Sophie",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Ida",
+    "start": "2025-05-10T07:00:00+02:00",
+    "end": "2025-05-10T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Ida",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Oliver",
+    "start": "2025-05-10T07:00:00+02:00",
+    "end": "2025-05-10T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Oliver",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mathilde",
+    "start": "2025-05-10T08:00:00+02:00",
+    "end": "2025-05-10T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mathilde",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Marius",
+    "start": "2025-05-10T08:00:00+02:00",
+    "end": "2025-05-10T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Marius",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Carl",
+    "start": "2025-05-10T08:00:00+02:00",
+    "end": "2025-05-10T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Carl",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mikkel",
+    "start": "2025-05-11T07:00:00+02:00",
+    "end": "2025-05-11T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mikkel",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Philip",
+    "start": "2025-05-11T07:00:00+02:00",
+    "end": "2025-05-11T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Philip",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Bastian",
+    "start": "2025-05-11T07:00:00+02:00",
+    "end": "2025-05-11T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Bastian",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Sofia",
+    "start": "2025-05-11T07:00:00+02:00",
+    "end": "2025-05-11T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Sofia",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Olivia",
+    "start": "2025-05-11T07:00:00+02:00",
+    "end": "2025-05-11T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Olivia",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Elias",
+    "start": "2025-05-11T07:00:00+02:00",
+    "end": "2025-05-11T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Elias",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Ella",
+    "start": "2025-05-11T08:00:00+02:00",
+    "end": "2025-05-11T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Ella",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Filip",
+    "start": "2025-05-11T08:00:00+02:00",
+    "end": "2025-05-11T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Filip",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Emma",
+    "start": "2025-05-11T08:00:00+02:00",
+    "end": "2025-05-11T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Emma",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Emil",
+    "start": "2025-05-11T08:00:00+02:00",
+    "end": "2025-05-11T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Emil",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Albert",
+    "start": "2025-05-11T08:00:00+02:00",
+    "end": "2025-05-11T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Albert",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Lucas",
+    "start": "2025-05-12T07:00:00+02:00",
+    "end": "2025-05-12T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Lucas",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mathilde",
+    "start": "2025-05-12T07:00:00+02:00",
+    "end": "2025-05-12T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mathilde",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Laura",
+    "start": "2025-05-12T07:00:00+02:00",
+    "end": "2025-05-12T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Laura",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mille",
+    "start": "2025-05-12T07:00:00+02:00",
+    "end": "2025-05-12T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mille",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Amalie",
+    "start": "2025-05-12T07:00:00+02:00",
+    "end": "2025-05-12T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Amalie",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Luna",
+    "start": "2025-05-12T07:00:00+02:00",
+    "end": "2025-05-12T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Luna",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Alma",
+    "start": "2025-05-12T08:00:00+02:00",
+    "end": "2025-05-12T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Alma",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Felix",
+    "start": "2025-05-12T08:00:00+02:00",
+    "end": "2025-05-12T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Felix",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Cecilie",
+    "start": "2025-05-12T08:00:00+02:00",
+    "end": "2025-05-12T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Cecilie",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mille",
+    "start": "2025-05-13T07:00:00+02:00",
+    "end": "2025-05-13T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mille",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Sebastian",
+    "start": "2025-05-13T07:00:00+02:00",
+    "end": "2025-05-13T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Sebastian",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Felix",
+    "start": "2025-05-13T07:00:00+02:00",
+    "end": "2025-05-13T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Felix",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Amalie",
+    "start": "2025-05-13T07:00:00+02:00",
+    "end": "2025-05-13T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Amalie",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Victoria",
+    "start": "2025-05-13T07:00:00+02:00",
+    "end": "2025-05-13T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Victoria",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mathias",
+    "start": "2025-05-13T07:00:00+02:00",
+    "end": "2025-05-13T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mathias",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Noah",
+    "start": "2025-05-13T08:00:00+02:00",
+    "end": "2025-05-13T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Noah",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Albert",
+    "start": "2025-05-13T08:00:00+02:00",
+    "end": "2025-05-13T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Albert",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Elias",
+    "start": "2025-05-13T08:00:00+02:00",
+    "end": "2025-05-13T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Elias",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Cecilie",
+    "start": "2025-05-14T07:00:00+02:00",
+    "end": "2025-05-14T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Cecilie",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mille",
+    "start": "2025-05-14T07:00:00+02:00",
+    "end": "2025-05-14T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mille",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Selma",
+    "start": "2025-05-14T07:00:00+02:00",
+    "end": "2025-05-14T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Selma",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Liam",
+    "start": "2025-05-14T07:00:00+02:00",
+    "end": "2025-05-14T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Liam",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Oscar",
+    "start": "2025-05-14T07:00:00+02:00",
+    "end": "2025-05-14T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Oscar",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Lærke",
+    "start": "2025-05-14T07:00:00+02:00",
+    "end": "2025-05-14T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Lærke",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Bastian",
+    "start": "2025-05-14T08:00:00+02:00",
+    "end": "2025-05-14T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Bastian",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Vera",
+    "start": "2025-05-14T08:00:00+02:00",
+    "end": "2025-05-14T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Vera",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Philip",
+    "start": "2025-05-14T08:00:00+02:00",
+    "end": "2025-05-14T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Philip",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mikkel",
+    "start": "2025-05-15T07:00:00+02:00",
+    "end": "2025-05-15T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mikkel",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Magnus",
+    "start": "2025-05-15T07:00:00+02:00",
+    "end": "2025-05-15T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Magnus",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Maja",
+    "start": "2025-05-15T07:00:00+02:00",
+    "end": "2025-05-15T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Maja",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Sebastian",
+    "start": "2025-05-15T07:00:00+02:00",
+    "end": "2025-05-15T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Sebastian",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Jakob",
+    "start": "2025-05-15T07:00:00+02:00",
+    "end": "2025-05-15T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Jakob",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mille",
+    "start": "2025-05-15T07:00:00+02:00",
+    "end": "2025-05-15T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mille",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Albert",
+    "start": "2025-05-15T08:00:00+02:00",
+    "end": "2025-05-15T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Albert",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Liv",
+    "start": "2025-05-15T08:00:00+02:00",
+    "end": "2025-05-15T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Liv",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Luca",
+    "start": "2025-05-15T08:00:00+02:00",
+    "end": "2025-05-15T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Luca",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Emil",
+    "start": "2025-05-15T08:00:00+02:00",
+    "end": "2025-05-15T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Emil",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Astrid",
+    "start": "2025-05-16T07:00:00+02:00",
+    "end": "2025-05-16T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Astrid",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Selma",
+    "start": "2025-05-16T07:00:00+02:00",
+    "end": "2025-05-16T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Selma",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Nellie",
+    "start": "2025-05-16T07:00:00+02:00",
+    "end": "2025-05-16T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Nellie",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Laura",
+    "start": "2025-05-16T07:00:00+02:00",
+    "end": "2025-05-16T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Laura",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mathilde",
+    "start": "2025-05-16T07:00:00+02:00",
+    "end": "2025-05-16T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mathilde",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mille",
+    "start": "2025-05-16T07:00:00+02:00",
+    "end": "2025-05-16T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mille",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Felix",
+    "start": "2025-05-16T08:00:00+02:00",
+    "end": "2025-05-16T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Felix",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Victoria",
+    "start": "2025-05-16T08:00:00+02:00",
+    "end": "2025-05-16T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Victoria",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Freja",
+    "start": "2025-05-16T08:00:00+02:00",
+    "end": "2025-05-16T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Freja",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Emil",
+    "start": "2025-05-16T08:00:00+02:00",
+    "end": "2025-05-16T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Emil",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Albert",
+    "start": "2025-05-16T08:00:00+02:00",
+    "end": "2025-05-16T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Albert",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mikkel",
+    "start": "2025-05-16T08:00:00+02:00",
+    "end": "2025-05-16T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mikkel",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Lærke",
+    "start": "2025-05-17T07:00:00+02:00",
+    "end": "2025-05-17T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Lærke",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Albert",
+    "start": "2025-05-17T07:00:00+02:00",
+    "end": "2025-05-17T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Albert",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Carl",
+    "start": "2025-05-17T07:00:00+02:00",
+    "end": "2025-05-17T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Carl",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Valdemar",
+    "start": "2025-05-17T07:00:00+02:00",
+    "end": "2025-05-17T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Valdemar",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Malik",
+    "start": "2025-05-17T07:00:00+02:00",
+    "end": "2025-05-17T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Malik",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Nellie",
+    "start": "2025-05-17T07:00:00+02:00",
+    "end": "2025-05-17T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Nellie",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Aksel",
+    "start": "2025-05-17T08:00:00+02:00",
+    "end": "2025-05-17T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Aksel",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Asger",
+    "start": "2025-05-17T08:00:00+02:00",
+    "end": "2025-05-17T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Asger",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Filip",
+    "start": "2025-05-17T08:00:00+02:00",
+    "end": "2025-05-17T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Filip",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Emil",
+    "start": "2025-05-17T08:00:00+02:00",
+    "end": "2025-05-17T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Emil",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Valdemar",
+    "start": "2025-05-18T07:00:00+02:00",
+    "end": "2025-05-18T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Valdemar",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Sofia",
+    "start": "2025-05-18T07:00:00+02:00",
+    "end": "2025-05-18T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Sofia",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Liv",
+    "start": "2025-05-18T07:00:00+02:00",
+    "end": "2025-05-18T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Liv",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Freja",
+    "start": "2025-05-18T07:00:00+02:00",
+    "end": "2025-05-18T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Freja",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Liam",
+    "start": "2025-05-18T07:00:00+02:00",
+    "end": "2025-05-18T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Liam",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Bastian",
+    "start": "2025-05-18T07:00:00+02:00",
+    "end": "2025-05-18T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Bastian",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Filip",
+    "start": "2025-05-18T08:00:00+02:00",
+    "end": "2025-05-18T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Filip",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Philip",
+    "start": "2025-05-18T08:00:00+02:00",
+    "end": "2025-05-18T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Philip",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Malik",
+    "start": "2025-05-18T08:00:00+02:00",
+    "end": "2025-05-18T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Malik",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Emil",
+    "start": "2025-05-18T08:00:00+02:00",
+    "end": "2025-05-18T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Emil",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Albert",
+    "start": "2025-05-18T08:00:00+02:00",
+    "end": "2025-05-18T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Albert",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mikkel",
+    "start": "2025-05-18T08:00:00+02:00",
+    "end": "2025-05-18T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mikkel",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Sebastian",
+    "start": "2025-05-19T07:00:00+02:00",
+    "end": "2025-05-19T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Sebastian",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Jakob",
+    "start": "2025-05-19T07:00:00+02:00",
+    "end": "2025-05-19T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Jakob",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mikkel",
+    "start": "2025-05-19T07:00:00+02:00",
+    "end": "2025-05-19T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mikkel",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Marius",
+    "start": "2025-05-19T07:00:00+02:00",
+    "end": "2025-05-19T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Marius",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Lucas",
+    "start": "2025-05-19T07:00:00+02:00",
+    "end": "2025-05-19T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Lucas",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Ida",
+    "start": "2025-05-19T07:00:00+02:00",
+    "end": "2025-05-19T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Ida",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Nikolaj",
+    "start": "2025-05-19T08:00:00+02:00",
+    "end": "2025-05-19T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Nikolaj",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Julian",
+    "start": "2025-05-19T08:00:00+02:00",
+    "end": "2025-05-19T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Julian",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Luna",
+    "start": "2025-05-19T08:00:00+02:00",
+    "end": "2025-05-19T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Luna",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Leon",
+    "start": "2025-05-20T07:00:00+02:00",
+    "end": "2025-05-20T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Leon",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Elias",
+    "start": "2025-05-20T07:00:00+02:00",
+    "end": "2025-05-20T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Elias",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Amalie",
+    "start": "2025-05-20T07:00:00+02:00",
+    "end": "2025-05-20T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Amalie",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Malik",
+    "start": "2025-05-20T07:00:00+02:00",
+    "end": "2025-05-20T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Malik",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Cecilie",
+    "start": "2025-05-20T07:00:00+02:00",
+    "end": "2025-05-20T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Cecilie",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Felix",
+    "start": "2025-05-20T07:00:00+02:00",
+    "end": "2025-05-20T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Felix",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Luna",
+    "start": "2025-05-20T08:00:00+02:00",
+    "end": "2025-05-20T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Luna",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Signe",
+    "start": "2025-05-20T08:00:00+02:00",
+    "end": "2025-05-20T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Signe",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Marius",
+    "start": "2025-05-20T08:00:00+02:00",
+    "end": "2025-05-20T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Marius",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Sofia",
+    "start": "2025-05-21T07:00:00+02:00",
+    "end": "2025-05-21T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Sofia",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Frederikke",
+    "start": "2025-05-21T07:00:00+02:00",
+    "end": "2025-05-21T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Frederikke",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Valdemar",
+    "start": "2025-05-21T07:00:00+02:00",
+    "end": "2025-05-21T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Valdemar",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mathias",
+    "start": "2025-05-21T07:00:00+02:00",
+    "end": "2025-05-21T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mathias",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "William",
+    "start": "2025-05-21T07:00:00+02:00",
+    "end": "2025-05-21T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "William",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Ella",
+    "start": "2025-05-21T07:00:00+02:00",
+    "end": "2025-05-21T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Ella",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Cecilie",
+    "start": "2025-05-21T08:00:00+02:00",
+    "end": "2025-05-21T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Cecilie",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Bastian",
+    "start": "2025-05-21T08:00:00+02:00",
+    "end": "2025-05-21T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Bastian",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Malik",
+    "start": "2025-05-21T08:00:00+02:00",
+    "end": "2025-05-21T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Malik",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Albert",
+    "start": "2025-05-22T07:00:00+02:00",
+    "end": "2025-05-22T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Albert",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Julian",
+    "start": "2025-05-22T07:00:00+02:00",
+    "end": "2025-05-22T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Julian",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Theodor",
+    "start": "2025-05-22T07:00:00+02:00",
+    "end": "2025-05-22T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Theodor",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Anna",
+    "start": "2025-05-22T07:00:00+02:00",
+    "end": "2025-05-22T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Anna",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Asger",
+    "start": "2025-05-22T07:00:00+02:00",
+    "end": "2025-05-22T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Asger",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Jakob",
+    "start": "2025-05-22T07:00:00+02:00",
+    "end": "2025-05-22T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Jakob",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Agnes",
+    "start": "2025-05-22T08:00:00+02:00",
+    "end": "2025-05-22T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Agnes",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Felix",
+    "start": "2025-05-22T08:00:00+02:00",
+    "end": "2025-05-22T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Felix",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Selma",
+    "start": "2025-05-22T08:00:00+02:00",
+    "end": "2025-05-22T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Selma",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Emil",
+    "start": "2025-05-22T08:00:00+02:00",
+    "end": "2025-05-22T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Emil",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Victoria",
+    "start": "2025-05-23T07:00:00+02:00",
+    "end": "2025-05-23T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Victoria",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mathilde",
+    "start": "2025-05-23T07:00:00+02:00",
+    "end": "2025-05-23T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mathilde",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Valdemar",
+    "start": "2025-05-23T07:00:00+02:00",
+    "end": "2025-05-23T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Valdemar",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Luca",
+    "start": "2025-05-23T07:00:00+02:00",
+    "end": "2025-05-23T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Luca",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Ida",
+    "start": "2025-05-23T07:00:00+02:00",
+    "end": "2025-05-23T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Ida",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Nellie",
+    "start": "2025-05-23T07:00:00+02:00",
+    "end": "2025-05-23T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Nellie",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Alexander",
+    "start": "2025-05-23T08:00:00+02:00",
+    "end": "2025-05-23T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Alexander",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Lucas",
+    "start": "2025-05-23T08:00:00+02:00",
+    "end": "2025-05-23T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Lucas",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Josefine",
+    "start": "2025-05-23T08:00:00+02:00",
+    "end": "2025-05-23T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Josefine",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Emil",
+    "start": "2025-05-23T08:00:00+02:00",
+    "end": "2025-05-23T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Emil",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Albert",
+    "start": "2025-05-23T08:00:00+02:00",
+    "end": "2025-05-23T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Albert",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mikkel",
+    "start": "2025-05-23T08:00:00+02:00",
+    "end": "2025-05-23T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mikkel",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Josefine",
+    "start": "2025-05-24T07:00:00+02:00",
+    "end": "2025-05-24T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Josefine",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Luca",
+    "start": "2025-05-24T07:00:00+02:00",
+    "end": "2025-05-24T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Luca",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mathilde",
+    "start": "2025-05-24T07:00:00+02:00",
+    "end": "2025-05-24T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mathilde",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mille",
+    "start": "2025-05-24T07:00:00+02:00",
+    "end": "2025-05-24T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mille",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Valdemar",
+    "start": "2025-05-24T07:00:00+02:00",
+    "end": "2025-05-24T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Valdemar",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "William",
+    "start": "2025-05-24T07:00:00+02:00",
+    "end": "2025-05-24T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "William",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Alexander",
+    "start": "2025-05-24T08:00:00+02:00",
+    "end": "2025-05-24T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Alexander",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Asger",
+    "start": "2025-05-24T08:00:00+02:00",
+    "end": "2025-05-24T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Asger",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Ida",
+    "start": "2025-05-24T08:00:00+02:00",
+    "end": "2025-05-24T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Ida",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Emil",
+    "start": "2025-05-24T08:00:00+02:00",
+    "end": "2025-05-24T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Emil",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Albert",
+    "start": "2025-05-24T08:00:00+02:00",
+    "end": "2025-05-24T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Albert",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mikkel",
+    "start": "2025-05-24T08:00:00+02:00",
+    "end": "2025-05-24T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mikkel",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Emma",
+    "start": "2025-05-25T07:00:00+02:00",
+    "end": "2025-05-25T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Emma",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Oliver",
+    "start": "2025-05-25T07:00:00+02:00",
+    "end": "2025-05-25T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Oliver",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Oscar",
+    "start": "2025-05-25T07:00:00+02:00",
+    "end": "2025-05-25T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Oscar",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Liam",
+    "start": "2025-05-25T07:00:00+02:00",
+    "end": "2025-05-25T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Liam",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Anton",
+    "start": "2025-05-25T07:00:00+02:00",
+    "end": "2025-05-25T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Anton",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Bastian",
+    "start": "2025-05-25T07:00:00+02:00",
+    "end": "2025-05-25T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Bastian",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Carla",
+    "start": "2025-05-25T08:00:00+02:00",
+    "end": "2025-05-25T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Carla",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Liv",
+    "start": "2025-05-25T08:00:00+02:00",
+    "end": "2025-05-25T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Liv",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Elias",
+    "start": "2025-05-25T08:00:00+02:00",
+    "end": "2025-05-25T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Elias",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Emil",
+    "start": "2025-05-25T08:00:00+02:00",
+    "end": "2025-05-25T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Emil",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Albert",
+    "start": "2025-05-25T08:00:00+02:00",
+    "end": "2025-05-25T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Albert",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mikkel",
+    "start": "2025-05-25T08:00:00+02:00",
+    "end": "2025-05-25T16:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mikkel",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Cecilie",
+    "start": "2025-05-26T07:00:00+02:00",
+    "end": "2025-05-26T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Cecilie",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Maja",
+    "start": "2025-05-26T07:00:00+02:00",
+    "end": "2025-05-26T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Maja",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Sofia",
+    "start": "2025-05-26T07:00:00+02:00",
+    "end": "2025-05-26T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Sofia",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Agnes",
+    "start": "2025-05-26T07:00:00+02:00",
+    "end": "2025-05-26T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Agnes",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Liv",
+    "start": "2025-05-26T07:00:00+02:00",
+    "end": "2025-05-26T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Liv",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Filip",
+    "start": "2025-05-26T07:00:00+02:00",
+    "end": "2025-05-26T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Filip",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Lucas",
+    "start": "2025-05-26T08:00:00+02:00",
+    "end": "2025-05-26T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Lucas",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mille",
+    "start": "2025-05-26T08:00:00+02:00",
+    "end": "2025-05-26T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mille",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Liam",
+    "start": "2025-05-26T08:00:00+02:00",
+    "end": "2025-05-26T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Liam",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Vera",
+    "start": "2025-05-27T07:00:00+02:00",
+    "end": "2025-05-27T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Vera",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Selma",
+    "start": "2025-05-27T07:00:00+02:00",
+    "end": "2025-05-27T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Selma",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Theodor",
+    "start": "2025-05-27T07:00:00+02:00",
+    "end": "2025-05-27T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Theodor",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Liv",
+    "start": "2025-05-27T07:00:00+02:00",
+    "end": "2025-05-27T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Liv",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Liam",
+    "start": "2025-05-27T07:00:00+02:00",
+    "end": "2025-05-27T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Liam",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Noah",
+    "start": "2025-05-27T07:00:00+02:00",
+    "end": "2025-05-27T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Noah",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Felix",
+    "start": "2025-06-01T07:30:00+02:00",
+    "end": "2025-06-01T14:54:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Felix",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Signe",
+    "start": "2025-05-27T08:00:00+02:00",
+    "end": "2025-05-27T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Signe",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Laura",
+    "start": "2025-05-27T08:00:00+02:00",
+    "end": "2025-05-27T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Laura",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Leon",
+    "start": "2025-05-28T07:00:00+02:00",
+    "end": "2025-05-28T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Leon",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mille",
+    "start": "2025-05-28T07:00:00+02:00",
+    "end": "2025-05-28T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mille",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Valdemar",
+    "start": "2025-05-28T07:00:00+02:00",
+    "end": "2025-05-28T14:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Valdemar",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Cecilie",
+    "start": "2025-05-28T07:00:00+02:00",
+    "end": "2025-05-28T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Cecilie",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Malik",
+    "start": "2025-05-28T07:00:00+02:00",
+    "end": "2025-05-28T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Malik",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Laura",
+    "start": "2025-05-28T07:00:00+02:00",
+    "end": "2025-05-28T15:00:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Laura",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Sophie",
+    "start": "2025-05-28T08:00:00+02:00",
+    "end": "2025-05-28T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Sophie",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Mathilde",
+    "start": "2025-05-28T08:00:00+02:00",
+    "end": "2025-05-28T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Mathilde",
+      "shift": "Morning"
+    }
+  },
+  {
+    "allDay": false,
+    "title": "Liam",
+    "start": "2025-05-28T08:00:00+02:00",
+    "end": "2025-05-28T15:24:00+02:00",
+    "backgroundColor": "rgb(60, 72, 135)",
+    "borderColor": "rgb(60, 72, 135)",
+    "extendedProps": {
+      "isUserEvent": false,
+      "user": "Liam",
+      "shift": "Morning"
+    }
   }
 ]

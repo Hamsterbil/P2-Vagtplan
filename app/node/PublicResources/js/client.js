@@ -1,5 +1,13 @@
 // Using IIFE to encapsulate the client code and avoid polluting the global namespace
 var client = (function() {
+  function saveSchedule(events) {
+    const data = { events };
+    client.jsonPost("/database", { data, entry: "schedule" })
+    .then(response => {
+        console.log("Schedule saved successfully:", response);
+        alert("Schedule saved successfully!");
+    });
+  }
   
   async function findUser() {
     const response = await client.jsonFetch("/user").catch(err => {
@@ -14,23 +22,20 @@ var client = (function() {
     });
 
     const allEvents = schedule.map(event => {
-      const startDateTime = new Date(`${event.date}T${event.start}`);
-      const endDateTime = new Date(startDateTime.getTime() + event.minutes * 60000); // Add minutes to start time
-      const isUserEvent = event.user === user;
+      const isUserEvent = event.title === user;
 
       // https://fullcalendar.io/docs/event-object
       return {
-        title: `${isUserEvent ? event.shift : event.user}`,
-        start: startDateTime,
-        end: endDateTime,
-        //Softer colors for user events
+        title: `${isUserEvent ? event.extendedProps.shift : event.title}`,
+        start: event.start,
+        end: event.end,
         backgroundColor: isUserEvent ? 'rgb(80, 188, 255)' : 'rgb(60, 72, 135)',
         borderColor: isUserEvent ? 'rgb(80, 188, 255)' : 'rgb(60, 72, 135)',
-        isUserEvent
+        isUserEvent,
+        user: event.title,
+        shift: event.extendedProps.shift,
       };
     }) || [];
-
-    console.log(schedule);
 
     const userEvents = allEvents.filter(event => event.isUserEvent);
     return { allEvents, userEvents };
@@ -60,35 +65,40 @@ var client = (function() {
       weekNumbers: true,
       navLinks: true,
       dayMaxEvents: true,
-      eventMouseover: function(info) {
-        const tooltip = document.createElement('div');
-        tooltip.innerHTML = `<strong>${info.event.title}</strong><br>${info.event.start.toLocaleString()} - ${info.event.end.toLocaleString()}`;
-        tooltip.className = 'tooltip';
-        document.body.appendChild(tooltip);
-        tooltip.style.position = 'absolute';
-        tooltip.style.left = `${info.jsEvent.pageX}px`;
-        tooltip.style.top = `${info.jsEvent.pageY}px`;
-      },
-      eventMouseout: function(info) {
-        const tooltips = document.querySelectorAll('.tooltip');
-        tooltips.forEach(tooltip => {
-          tooltip.remove();
+      aspectRatio: 2,
+      eventDidMount: function(info) {
+        new bootstrap.Tooltip(info.el, {
+          title: info.event.title + "<br>" + info.event.start.toLocaleString() + " - " + info.event.end.toLocaleString(),
+          placement: 'top',
+          trigger: 'hover',
+          container: 'body',
+          html: true,
         });
       },
-      aspectRatio: 2,
-      //Create custom "Save button" for admin to save the schedule
       customButtons: {
         saveSchedule: {
           text: 'Save Schedule',
           click: function() {
-            const events = calendar.getEvents();
-            saveSchedule(events);
+            saveSchedule(calendar.getEvents());
           }
         },
         generateSchedule: {
           text: 'Generate Schedule',
           click: function() {
-            scheduler.generate()
+            scheduler.generate().then(newEvents => {
+              const currentDate = new Date();
+              const filteredEvents = newEvents.filter(event => new Date(event.start) > currentDate);
+              calendar.getEvents().forEach(event => {
+                if (new Date(event.start) > currentDate) {
+                  event.remove();
+                }
+              });
+              filteredEvents.forEach(event => {
+                calendar.addEvent(event);
+              });
+              calendar.render();
+              alert("New Schedule generated");
+            });
           }
         }
       },  
@@ -189,7 +199,7 @@ return {
     updateCheckbox(preferredElem, user.preferred);
     updateCheckbox(notPreferredElem, user.notPreferred);
 
-    for (let i = 0; i < 7; i++) { 
+    for (let i = 0; i < 3; i++) { 
       shiftsElem[i].value = user.shiftPreference[i] || "";
     }
 
