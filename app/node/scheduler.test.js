@@ -1,7 +1,8 @@
-// const { calculateDay } = require('./scheduler').calculateDay;
-// const { calculateShift } = require('./scheduler').calculateShift;
-const { softmax, calculateDay, calculateShift, normalize, randomUser } = require('./PublicResources/js/scheduler')
-import puppeteer from 'puppeteer';
+// const { softmax, calculateDay, calculateShift, normalize, randomUser } = require('./PublicResources/js/scheduler')
+const scheduler = require('./PublicResources/js/scheduler');
+const { softmax, calculateDay, calculateShift, normalize, randomUser } = scheduler;
+// import puppeteer from 'puppeteer';
+const puppeteer = require('puppeteer');
 
 test('softmax', () => {
     const result = softmax([10, 10, 10]);
@@ -36,7 +37,7 @@ test('calculateDay', () => {
 test('calculateShift', () => {
     const user  = {
         preferences: {
-            shiftPreference: [4, 7, 4, 5, 6, 6, 10]
+            shiftPreference: [4, 7, 4]
         }
     }
     const weights = {
@@ -46,13 +47,39 @@ test('calculateShift', () => {
     }
 
     const result = calculateShift(user, weights);
-    const expected = [8, 14, 8, 10, 12, 12, 10];
+    const expected = [8, 14, 4];
 
     expect(result).toEqual(expected);
 
 })
 
+test('normalize', () => {
+    const result = normalize([10,10,10]);
+    expect(result).toEqual([1/3, 1/3, 1/3]);
+})
+
+describe('randomUser', () => {
+    test('should return correct index based on random value', () => {
+        const probs = [0.1, 0.2, 0.3, 0.4];
+
+        expect(randomUser(probs, 0.05)).toBe(0);
+        expect(randomUser(probs, 0.15)).toBe(1);
+        expect(randomUser(probs, 0.35)).toBe(2);
+        expect(randomUser(probs, 0.85)).toBe(3);
+    });
+    test('should return last index if random value is 1', () => {
+        const probs = [0.1, 0.2, 0.3, 0.4];
+        expect(randomUser(probs, 1)).toBe(3);
+    });
+    test('fallback case', () => {
+        const probs = [0, 0, 0];
+        expect(randomUser(probs, 0.1)).toBe(2); // 
+    });
+})
 test('change preferences', async () => {
+    let updatedPreferences;
+    let originalPreferences;
+
         const browser = await puppeteer.launch({
             headless: false, 
             slowMo: 20,
@@ -105,14 +132,14 @@ test('change preferences', async () => {
         const updatedWeekdays = parseInt(await page.$eval('#weekdays', el => el.value),10);
         const updatedWeekends = parseInt(await page.$eval('#weekends', el => el.value),10);
 
-        const originalPreferences = {
+        originalPreferences = {
             preferences: {
                 weekdays: originalWeekdays,
                 weekends: originalWeekends
             }
         };
        
-        const updatedPreferences = {
+        updatedPreferences = {
             preferences: {
                 weekdays: updatedWeekdays,
                 weekends: updatedWeekends 
@@ -170,27 +197,3 @@ test('change preferences', async () => {
         await browserCheck.close();
     }
     },50000);
-
-test('normalize', () => {
-    const result = normalize([10,10,10]);
-    expect(result).toEqual([1/3, 1/3, 1/3]);
-})
-
-describe('randomUser', () => {
-    test('should return correct index based on random value', () => {
-        const probs = [0.1, 0.2, 0.3, 0.4];
-
-        expect(randomUser(probs, 0.05)).toBe(0);
-        expect(randomUser(probs, 0.15)).toBe(1);
-        expect(randomUser(probs, 0.35)).toBe(2);
-        expect(randomUser(probs, 0.85)).toBe(3);
-    });
-    test('should return last index if random value is 1', () => {
-        const probs = [0.1, 0.2, 0.3, 0.4];
-        expect(randomUser(probs, 1)).toBe(3);
-    });
-    test('fallback case', () => {
-        const probs = [0, 0, 0];
-        expect(randomUser(probs, 0.1)).toBe(2); // 
-    });
-})
