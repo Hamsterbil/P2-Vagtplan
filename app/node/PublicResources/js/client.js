@@ -23,14 +23,29 @@ var client = (function() {
 
     const allEvents = schedule.map(event => {
       const isUserEvent = event.title === user;
+      let color = "";
+      switch (event.extendedProps.shift) {
+        case "Morning":
+          color = "rgb(0, 86, 139)"; // Morning shift color
+          break;
+        case "Evening":
+          color = "rgb(60, 72, 135)"; // Evening shift color
+          break;
+        case "Night":
+          color = "rgb(0, 14, 65)"; // Night shift color
+          break;
+        default:
+          color = "white";
+          break;
+      }
+      color = isUserEvent ? "rgb(83, 195, 189)" : color;
 
       // https://fullcalendar.io/docs/event-object
       return {
         title: `${isUserEvent ? event.extendedProps.shift : event.title}`,
         start: event.start,
         end: event.end,
-        backgroundColor: isUserEvent ? 'rgb(80, 188, 255)' : 'rgb(60, 72, 135)',
-        borderColor: isUserEvent ? 'rgb(80, 188, 255)' : 'rgb(60, 72, 135)',
+        backgroundColor: color,
         isUserEvent,
         user: event.title,
         shift: event.extendedProps.shift,
@@ -336,10 +351,6 @@ return {
 
     const { allEvents } = await getEvents();
     setSchedule(allEvents, user);
-
-    const saveBtnElem = document.getElementById("saveScheduleBtn");
-    //After admin has set the schedule, save it to the database
-
   }
 }
 })();

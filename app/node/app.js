@@ -59,6 +59,10 @@ function softmax(array) {
   return exp.map(expValue => expValue / sum);
 }
 
+//Count amount of employees in the database
+let employeeCount = DB.users.filter(user => user.type === "employee").length;
+console.log("Employee count: ", employeeCount);
+
 // testUserScore();
 function testUserScore() {
   let averageDay = 0;
