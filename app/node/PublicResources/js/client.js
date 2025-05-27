@@ -81,6 +81,14 @@ var client = (function() {
       navLinks: true,
       dayMaxEvents: true,
       aspectRatio: 2,
+
+      eventClick: function(info) {
+        if (isAdmin) {
+          if (confirm("Are you sure you want to delete this event?")) {
+            info.event.remove();
+          }
+        }
+      },
       eventDidMount: function(info) {
         new bootstrap.Tooltip(info.el, {
           title: info.event.title + "<br>" + info.event.start.toLocaleString() + " - " + info.event.end.toLocaleString(),
